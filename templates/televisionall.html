@@ -1,0 +1,1179 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productall.css' %}">
+    <title>G-mart | You Desire We Deliver</title>
+</head>
+
+<body>
+    <!-- Navbar-1 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ps-5 ms-5">
+            <a class="navbar-brand ps-5 ms-5" href="/">G-Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" id="searchbar">
+                <input class="form-control me-2" width="400px" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success bi bi-search" type="submit"></button>
+
+            </form>
+            <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item pe-4">
+                        <a href="" type="button" class="btn btn-outline-light">LOGIN</a>
+                    </li>
+                    <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle drp" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a href="" type="button" class="btn btn-dark position-relative bi bi-cart3"> Cart
+                            <span class="badge bg-danger rounded-pill">0</span>
+                            </span>
+                        </a>
+                        <!-- <a class="nav-link " href="#"></a> -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5 nav2">
+        <div class="container-fluid ps-5 ms-5 pe-5 me-5">
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/mobile">Mobiles</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/fashion/Men">Men</a></li>
+                        <li><a class="dropdown-item" href="/fashion/Women">Women</a></li>
+                        <!-- <li> -->
+                        <!-- <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/fashion/Kids">Kids</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/tablet">Tablets</a></li>
+                        <li><a class="dropdown-item" href="/headphone">Headphones</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/camera">Camera</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/television">Televisions</a></li>
+                        <li><a class="dropdown-item" href="/washingmachine">Washing Machine</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/refrigerator">Refrigerator</a></li>
+                        <li><a class="dropdown-item" href="/airconditioner">Air conditioner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/books">Books</a>
+            </div>
+        </div>
+    </nav>
+    <!-- all item in div -->
+    <div class="maincon" height="5000px">
+        <div class="d-flex flex-row">
+            <div class="leftcon">
+                <img width="100%" height="" src="{% static 'images/tvleft.jpg' %}" alt="">
+            </div>
+            <div class="rightcon">
+                <div class="rightcondiv1">
+                    <p>
+                        What would you rather do on a humid day? Spend your day outdoors, getting more anxious and
+                        frustrated by the minute, or stay in at home under the cool comfort of the AC, with good TV
+                        shows to keep you company? If we had a choice, we would all opt for the latter. Comfortable
+                        clothing, good company, and sinful treats, these are three things that make for an enjoyable TV
+                        viewing experience. But you know what’s also important? It’s bringing home a high-resolution
+                        television. What’s the point of watching TV if the images are blurred and the sound muffled? To
+                        gift your family and yourself the best visual entertainment, we’re here to indulge you with a
+                        wide range of televisions, in varying sizes and styles. Go ahead. Make the move and bring home
+                        the best in entertainment; because you deserve it.Imagine watching a horror movie on a 54 inch
+                        TV screen? Sounds like fun, doesn’t it? Documentaries, animated movies, music videos, and
+                        cricket matches, everything is more vivid and seems more interesting when you watch them on a TV
+                        that supports crisp images and clear sound. Want to install a TV in the kitchen so you can draw
+                        inspiration from your favourite chef as you cook? Install a medium-sized 24 inches TV in the
+                        kitchen. For general viewing, 32 inches Led TV screens will give you the desired outcome. Not
+                        satisfied with playing video games 32 inches TV screen? There are televisions ranging from 40
+                        inches led TV to 55 inches Tv and above that make console gaming more fun with highly detailed
+                        graphics.Explore an extensive range of television sets from VU, LG, Samsung, CloudWalker,
+                        Videocon, Philips, Sansui, Cloud Tv and Onida each equipped with features that are more
+                        impressive than the next, your best bet at bringing home the latest in home entertainment is to
+                        buy televisions on India's best online shopping site.
+                    </p>
+                    <div class="d-flex flex-row">
+                        <h1>Televisions &nbsp</h1>
+                        <p style="margin-bottom: 8px; vertical-align: baseline; line-height: 24.4px">(Showing 1 – 6
+                            products of 6 products)</p>
+                    </div>
+                    <div class="d-flex flex-row" style="width:'100px'">
+                        <h2 class="sortbyhead">Sort by</h2>
+                        <div class="sortby">Popularity</div>
+                        <div class="sortby">Price -- Low to High</div>
+                        <div class="sortby">Price -- High to Low</div>
+                    </div>
+                </div>
+                <a class="divhigh" href="">
+                    {% for m in i %}
+                    <div class="cardd">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex flex-column justify-content-center">
+                                <div class="d-flex justify-content-center" max-height="200px" max-width="200px">
+                                    <img src="{{m.img1.url}}" class="" width="210px" height="110%" alt="">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div style="padding-left: 25px;">
+                                    <h5 class="nav2link" style="margin: 0px;">{{m.product_name}}</h5>
+                                    <div class="d-flex flex-row">
+                                        <p class="card-text" style="margin-bottom: 0.2rem;"><span
+                                                class="badge bg-success">{{m.rating }} <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"
+                                                    style="vertical-align: baseline;">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg></span></p>
+                                        {% for j in r1 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in r2 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <h6 style="color:#878787; font-size:14px;line-height: 28px;margin:0;">&nbsp
+                                            {{j}} Ratings & {{k}} Reviews</h6>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="divhigh"
+                                        style="font-size:14px;font-family: Roboto, Arial, sans-serif;line-height: 22px;margin: 4px;">
+                                        {%for m2 in m1%}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {%for i in m2%}
+                                        <li>{{i}}</li>
+                                        {%endfor%}
+                                        {% endif %}
+                                        {%endfor%}
+                                        <li>{{m.warranty}}</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="padding-left: 25px;">
+                                    <div class="d-flex flex-row">
+                                        <h5 style="font-family: Roboto, Arial, sans-serif;
+                                    font-size: 25px;
+                                    font-weight: 600;
+                                    line-height: 25px;">₹{{m.price}}&nbsp&nbsp&nbsp</h5>
+                                        <img height="21px" width="77px" style="padding-top:1px;"
+                                            src="{% static 'images/assured.png' %}" alt="">
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        {% for j in ep %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in o %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <p class="extraprices">{{j}}</p>
+                                        <p class="offer">&nbsp&nbsp{{k}}% off</p>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="rightcondiv1 downdiv" style="padding: 25px 25px; background-color:white">
+        <div>
+            <h2><strong>Buy Latest Television Online at Best Prices from G-mart</strong></h2>
+
+            <p><span>When it comes to TVs, there are choices galore on G-mart. Browse from an extensive range from Vu,
+                    Mi, Samsung, Sony, LG, iFFALCON, Thomson, Onida &amp; More. TVs are majorly differentiated based on
+                    screen type, resolution, screen size and value-added features. Most popular screen types are LED TV,
+                    Curved TV, and 3D TV. OLED TVs. Screen resolution varies between HD, HD Ready, Full HD TV, and 4K
+                    Ultra HD televisions. Screen size is a choice. It ranges from 21 to 55 inches and more.</span><br>
+                <br>
+                &nbsp;</p>
+
+            <h2><strong>New Television Launches:</strong></h2>
+
+            <h2><strong>Realme TV - Affordable, Convenient, and Innovative</strong></h2>
+
+            <p>When you are extremely bored, but you still don’t feel like going out and doing something adventurous,
+                then watching TV is always a great option for just about anyone to consider. And, if you have a <a
+                    href="/launching-realme-smart-led-tv-store">Realme TV</a> to help you do that, then is there
+                anything more that one can ask for? A good TV, like we all know, helps you watch programs from all over
+                the world. But, that’s where things have changed. TVs have become so much more that if you aren’t a tech
+                enthusiast, then you’ll probably face some difficulty in catching up with the different features that
+                most present-day TVs boast, and the features that you should be looking for. Luckily for you, we have
+                listed most of those features below so that you won’t have to spend additional time on the Internet
+                looking for them. Here, take a look:</p>
+
+            <h3><b>Seamless Design</b></h3>
+
+            <p>Almost everyone today mounts their Realme TVs onto walls. And, if the bezels of your TVs are too wide,
+                then they will look tacky. That’s why a TV with wide bezels is highly undesirable nowadays. What you
+                might want to look for is a Realme LED TV that boasts a bezel-less design. Such a design not only helps
+                the TV look incredible, but it also adds a whole new component of aesthetics to your home/office’s
+                interior. On top of that, a bezel-less design helps make the display look seamless, making the video
+                content you’re watching more immersive.</p>
+
+            <h3><b>Powerful Sound</b></h3>
+
+            <p>What’s one thing that makes a TV different from a radio? Its screen. But, that doesn’t mean that good
+                picture-quality is all a TV should offer; it should offer good sound as well. That’s why most Realme
+                smart TVs come with Dolby Audio technology, which augments the overall entertainment experience by
+                delivering heart-thumping bass and crisp highs. Looks like your favourite video content just got more
+                enjoyable - doesn’t it?</p>
+
+            <h3><b>Visuals</b></h3>
+
+            <p>We can talk about all the aspects of a modern TV, but the primary thing that you should be looking for in
+                a TV is its picture quality - isn’t it? Almost all the TVs from Realme feature the Chroma Boost Picture
+                Engine and a 64-bit MediaTek processor to make for seamless and lag-free visuals that are also rich,
+                clear, crisp, and full of vibrant colours.<br>
+                &nbsp;</p>
+
+            <p>Apart from what we’ve mentioned above, Realme TVs also come with other incredible features, such as the
+                Google Assistant, Chromecast built-in, and 24W quad speakers, among other things. So, why waste your
+                time looking for other TVs that boast similar features, especially when you know that TVs from Realme
+                are loaded with them? So, hurry up. Go online now and purchase a TV of your choice from Realme
+                today.<br>
+                <br>
+                &nbsp;</p>
+
+            <h2><strong>What the Vu 4K Android TV 9 Pie Has to Offer You</strong></h2>
+
+            <p>That’s right! If you have been planning to upgrade your television, then say hello to this worthy
+                competitor - the Vu 4K Android TV 9 Pie. This television is just like the one you have been dreaming
+                about -smart, stylish, and powerful. Your favourite shopping app is home to this TV model that comes in
+                different sizes. So, what is it that makes the <a
+                    href="/launch-vu-4k-uhd-premium-tvs-with-android-pie-9-store">Vu Android TV 9 Pie</a> totally worth
+                your money? We give you five good reasons for the same, right here:</p>
+
+            <h3><b>Vu 4K 9 Pie TV: Designed to Grab Your Attention</b></h3>
+
+            <p>What’s the first thing that comes to your mind when someone says “living room”? If you thought of a TV
+                immediately then you know how important this entertainment unit is for your home. This particular range
+                of TVs from Vu features a bezel-less design. Well, what does that mean? This means that it’s all the
+                more sleek and stylish, thereby being the perfect suitor for your hall.</p>
+
+            <h3><b>Enlivening Sound&nbsp;</b></h3>
+
+            <p>When you have the Vu 4K Android TV 9 Pie at home, you can forget about having to buy an extra set of
+                speakers. This television comes with audio features such as Dolby Audio and 30 W box speakers for
+                enhanced sound. That’s not all, you can enjoy a surround-sound experience with the DTX Virtual X.&nbsp;
+            </p>
+
+            <h3><b>Just Picture-perfect Streaming</b></h3>
+
+            <p>Be it the cute scenic locales from your favourite show or the mouth-watering dishes from a cooking show,
+                everything will appear clear and vivid on the Vu 4K Android TV 9 Pie. This television is packed with a
+                host of features such as the Dolby Vision and HDR 10 to ensure that every visual on screen is totally
+                worth admiring.&nbsp;</p>
+
+            <h3><b>Accessing Entertainment Is Easy</b></h3>
+
+            <p>You don’t have to struggle to find your preferred apps. This television’s remote comes with dedicated
+                hotkeys for your favourite apps such as Netflix, YouTube, Prime Video, and Google Play. So, the next
+                time you want to start from where you had stopped, all you have to do is take the remote and click on
+                the hotkey to access your preferred streaming application.&nbsp;</p>
+
+            <h3><b>Android PIE 9 Interface</b></h3>
+
+            <p>The Vu 4K 9 Pie TV has a simple interface. This interface will definitely make your TV viewing experience
+                a hassle-free one.<br>
+                &nbsp;</p>
+
+            <p>So, that brings us to an end of all the reasons why you have to bring home the Vu 4K Android TV 9 Pie.
+                Can’t wait to make your home a paradise for entertainment? You will find models having the following
+                screen sizes - 108 cm, 126 cm, and 139 cm. Head to your preferred app and buy Vu TVs online. You can
+                have the unit delivered to your doorstep without any problem.<br>
+                <br>
+                &nbsp;</p>
+
+            <h2><strong>Kodak CA Series 4K TVs - TVs for Modern Homes</strong></h2>
+
+            <p>Like every other thing in this world, large home appliances, such as TVs, need to stay updated with the
+                latest technologies. And, a <a href="/launching-kodak-ca-series-4k-tvs-with-android9-store">Kodak CA
+                    Series 4K TV</a> is one such TV that’s up there with some innovative features. But, for you to be
+                certain that the TV you’re buying isn’t outdated, you need to check for the following factors:<br>
+                &nbsp;</p>
+
+            <p>Seamless Design - Since you’ll be setting up your TV in your living room or your bedroom, you need to
+                ensure that it has the design to complement your decor. Otherwise, what’s the point? Almost all Kodak CA
+                Series TVs today come with bezel-less design that makes them look like magnificent pieces of art when
+                you mount them onto a wall. On top of that, such a design maximises the viewing area, adding to your
+                viewing experience.<br>
+                &nbsp;</p>
+
+            <p>Google Assistant - When you’re glued to the couch, watching your favourite TV show, any task that
+                requires you to leave your seat seems extremely annoying - doesn’t it? Fortunately, a lot of Kodak TVs
+                feature the Google Assistant. You can take advantage of it to check what the weather’s like, how much
+                your favourite team has scored, or even look for the answers to stupid questions on Google, among other
+                things. Thanks to that, you won’t have to reach for your phone or even your computer, which may not be
+                near you at that point. Convenient, right?<br>
+                &nbsp;</p>
+
+            <p>Fast Refresh Rate - What separates a great TV from the good ones is its refresh rate. I mean, most
+                expensive TV have more or less the same picture quality, but are their screens equally responsive?
+                Probably not. Kodak CA Series 4K TVs come with MEMC and a refresh rate of 60 Hz, so you don’t have to
+                deal with lag especially when you’re busy gaming.<br>
+                &nbsp;</p>
+
+            <p>Display and Sound - You can have all the features in the world in a TV, but if the image and sound
+                quality aren’t up to the mark, then it is a bad investment - isn’t it? Technologies, such as Dolby
+                Vision and Dolby Digital Plus, help certain Kodak TVs deliver high-quality visuals and incredible audio
+                that augment each other to ensure that you enjoy an entertaining experience.<br>
+                &nbsp;</p>
+
+            <h3>Buy Kodak CA Series 4K TVs Online</h3>
+
+            <p>Be it a Kodak CA Series LED 4K TV or any other TV from Kodak, you can find them all on online shopping
+                portals. You can do everything from shortlisting different models to comparing their features and
+                prices, among other things, in a jiffy. Also, installing the TV is not your headache as professionals
+                will take care of it after it is delivered to you by the e-commerce website you bought it from. So,
+                don’t wait any longer. Go online now and order a Kodak CA Series 4K TV for your lovely home.<br>
+                <br>
+                &nbsp;</p>
+
+            <h2><b>Lose Yourself in Endless Entertainment with Coocaa TVs</b></h2>
+
+            <p><span>With <b>Coocaa TVs</b>, you never have to face another dull moment. With these stylish and
+                    innovative TVs, you can gain access to quality content that will keep you immersed for long hours.
+                    From action movies, romantic movies, and comedies to music, TV shows, sports matches, and more - you
+                    can have it all.</span><br>
+                &nbsp;</p>
+
+            <p><span>You can even connect various gaming peripherals to the TVs so that you can game on a large TV
+                    screen. You can invite your friends and family home and delight them by showcasing all your old
+                    videos and pictures on the TV screen. You all can laugh, cry, and chat the night away. Add bowls of
+                    popcorn, nachos, and other snacks to the mix for a fun-filled evening. Since shopping sites offer
+                    fabulous Coocaa TV sales and Coocaa TV offers, you can buy TVs without burning a hole through your
+                    hard-earned savings.</span><br>
+                &nbsp;</p>
+
+            <p><span>With these TVs, you will look forward to spending all your weekends in your cosy home so that you
+                    can watch endless quality content. Since most of these TVs offer access to various apps, you can
+                    stream content, play games, and much more at the click of a button.</span></p>
+
+            <h3><br>
+                <b>Dazzle Your Senses with Coocaa TVs&nbsp;</b></h3>
+
+            <p><span>Coocaa TVs are here to ensure that your TV-watching experience is as good as the kind you get in a
+                    movie theatre. All of us know how expensive it can be to watch a movie in a theatre, right? Even if
+                    the movie ticket doesn’t cost too much, you end up shelling out a lot of money on popcorn, nachos,
+                    sandwiches, hotdogs, and so on. So, invest in the best Coocaa TV for your home to cut down your
+                    monthly expenses. You can use all the money that you have saved on frequent trips with your loved
+                    ones.</span><br>
+                &nbsp;</p>
+
+            <p><span>Now, let’s talk about some of the TVs that you can find online so that you can pick the best
+                    option</span><br>
+                &nbsp;</p>
+
+            <h3><span><b>Coocaa (32S3U)</b></span></h3>
+
+            <p><span>With this TV, you can enjoy rich visuals, dynamic sound, and innovative features. You can access
+                    various apps, such as YouTube, Hungama, and more. And, the icing on the cake is its stylish design.
+                    It features a thin bezel to give it a premium look.</span><br>
+                &nbsp;</p>
+
+            <p><span>Once you bring home, this TV, the aesthetic appeal of your home will reach new levels.</span><br>
+                &nbsp;</p>
+
+            <p><span>This TV features a full-screen design that gives you a complete view of your favourite movie, TV
+                    show, sports match, and so on. Thanks to its high-quality sound, you can listen to every minute
+                    detail of your favourite song, favourite movie dialogue, and more in crystal-clear quality. Its
+                    speakers deliver powerful sound for an immersive TV-watching experience.</span><br>
+                &nbsp;</p>
+
+            <p><span><b>Coocaa (50S3G)</b></span></p>
+
+            <p><span>Spend your long weekend catching up on all the latest episodes of your favourite TV show on the
+                    large screen of this Coocaa TV. Its remote features dedicated buttons for Prime Video, YouTube, and
+                    Google Play so that entertainment is never out of your reach. Thanks to its HDR 10 feature, you can
+                    enjoy a lifelike feel of all that’s happening on screen.</span></p>
+
+            <p><span>This 4K UHD TV is here to ensure that you get a TV-watching experience that is so entertaining that
+                    you find it difficult to leave your home once you turn the TV on. With its thin bezel, this TV adds
+                    a luxurious look to your home. This TV also keeps your well-being in mind; that is why it has
+                    included the anti-blue-light technology so that your eyes stay free from damage and so that you
+                    don’t experience eye fatigue.</span></p>
+
+            <p><br>
+                <span><b>Buy Coocaa TVs Online</b></span></p>
+
+            <p><span>You can sit in the comfort of your home and gain access to the latest Coocaa TV sales and Coocaa TV
+                    offers by shopping online. Shopping sites feature filters, product images, descriptions, customer
+                    reviews, buying guides, and much more to help you pick a product that best suits your needs. As
+                    shopping sites offer festive deals and offers, you can buy TVs, washing machines, air conditioners,
+                    and much more at reasonable prices. You can even choose to buy and gift Coocaa TVs to your loved
+                    ones. You can type in their address while ordering the product so that the delivery agent can
+                    directly deliver the product to them. Happy shopping!</span><br>
+                &nbsp;</p>
+
+            <p><b>What’s the Display Resolution?</b></p>
+
+            <p>A good display can pave the way for picture-perfect visuals. Whether it’s a fight scene or a romantic
+                scene by a serene lake, everything will seem more real when you are viewing it on a television that has
+                a good resolution. Most of the TVs today come in three display resolutions - HD, Full HD, and 4K (Ultra
+                HD). A 4K television will bring out even the most minute details into life, thereby making it one of the
+                best display resolutions to have.<br>
+                &nbsp;</p>
+
+            <p><b>Say Hello to Smart TVs</b></p>
+
+            <p>This World TV Day sale, it’s time to say goodbye to conventional television models and bring home a smart
+                TV. When you have a smart television at home, you can find and enjoy refreshing content from various
+                streaming sites easily. That’s not all; you have the freedom to pick from a variety of applications and
+                download the ones that will enhance your viewing experience. Some of the smart television models also
+                come with the voice search feature which allows you to use your voice and instantly access your
+                shows.<br>
+                &nbsp;</p>
+
+            <p><b>Televisions with Built-in Chromecast</b></p>
+
+            <p>Want to directly cast your smartphone to the TV screen? Then you can buy a television that comes with
+                built-in Chromecast which allows you to cast your preferred content from your phone directly to your
+                television.<br>
+                &nbsp;</p>
+
+            <p>So, these are some of the new features that you can look for while upgrading your television. Besides
+                these, you can also have a quick look at the television’s audio features and connectivity options. This
+                way, you can connect any peripherals and utilise your TV screen for gaming purposes as well.</p>
+
+            <h2><b>A True Cinematic Experience at Home with the Nokia TV</b></h2>
+
+            <p><span>Have a great time watching movies and TV shows on the Nokia Smart TV that is sure to give you an
+                    immersive multimedia experience. Right from the visual content to the aural aspects, the Nokia 139.7
+                    cm (55) TV is going to be an absolute delight to have at home. Explore this TV from Nokia online and
+                    make Friday nights fun movie nights for you and your family.</span><br>
+                &nbsp;</p>
+
+            <p><b><span>Let’s explore a few remarkable features of this iconic TV from Nokia:</span></b></p>
+
+            <p><b><span>Amazing Picture Quality with Nokia PureCinema Televisions</span></b></p>
+
+            <p>These TVs come with the PureX quad-core processor that optimises the picture quality. With its bright
+                display of up to 350 nits and Video Noise Reduction feature this TV delivers an enhanced viewing
+                experience. HDR content and action sequences will be crystal-clear. Thanks to the Clear View technology,
+                the content that you stream online will have reduced compression noise.<br>
+                &nbsp;</p>
+
+            <p>Weddings are an emotional affair, and this TV will recreate a wedding scene with 16.7 million shades of
+                colour to make you feel like you are in the middle of all the emotional drama. Thanks to the 178-degree
+                wide-angle display, wider colour gamut and 100% colour accuracy, you and your family can enjoy enriched
+                content on the screen from any spot in the room.<br>
+                &nbsp;</p>
+
+            <p>With features like the Intelligent Dimming Technology, Dolby Vision and HDR 10, this TV will optimise the
+                brightness, contrast and colour to keep the content sharp and vivid.<br>
+                &nbsp;</p>
+
+            <p><b>PureSound with Nokia PureCinema</b></p>
+
+            <p>The bottom-firing speakers, along with the Dolby Digital and DTS TruSurround technologies, deliver
+                hi-fidelity audio, while keeping every subtle detail intact. For your digitally streamed movies and
+                songs, the Clear Sound technology reduces the compression so that the audio is crystal-clear. With the
+                Drama, Action, Music and High Bass modes, you can truly enjoy your content the way it is supposed to
+                be.<br>
+                &nbsp;</p>
+
+            <p>Dolby Audio makes it possible for you to enjoy the nuances of your audio, thanks to features like
+                Dialogue Enhancement and Volume Levelling. Reimagine your listening affair with JBL - listen to your
+                favourite songs like never before.<br>
+                &nbsp;</p>
+
+            <p><b>Elegant Design</b></p>
+
+            <p>Right from the build quality to design elements, everything that the Nokia TV flaunts has been carefully
+                thought of. While possessing a simple and clean form factor, the Nokia 139.7 cm (55) TV stays true to
+                its geometric design - quite sacred, we’d say. Its bezel-less design gives you a seamless infinity-edge
+                viewing experience.<br>
+                &nbsp;</p>
+
+            <p><b>Powerful Performance</b></p>
+
+            <p>With a powerful quad-core processor, 2.25 GB of RAM, 16 GB of internal memory and MEMC technology, this
+                Nokia TV gives you a blur-free viewing experience while ensuring that your favourite apps are just a
+                click away. Furthermore, the Android Pie v9.0 OS is here to make your experience hassle-free and
+                seamless.<br>
+                &nbsp;</p>
+
+            <p>With the Google Voice Assistant by your side, you can use your voice to find the content you love. Thanks
+                to the hotkeys for Netflix and YouTube, you are just a click away from finding great content. Use the
+                built-in Chromecast to watch your smartphone’s content on the bigger screen of the Nokia TV.<br>
+                <br>
+                &nbsp;</p>
+
+            <h2><b>MOTOROLA TV</b></h2>
+
+            <p><span>Are you planning on buying a Television for your home? If yes, then meet Motorola’s range of
+                    Televisions. These <a href="/motorola-tv-store">Motorola TV</a> offer you an immersive visual
+                    experience, along with multiple features to ensure that you can enjoy your movies or games to the
+                    hilt. G-mart hosts a range of Motorola TVs like Motorola 127 cm (50) 4K smart TV, Motorola 109 cm
+                    (43) Full HD Android TV, Motorola 139 cm (55) Ultra HD LED smart Android TV, Motorola 109 (43) smart
+                    Android TV and so on. However, before you go shopping online for any of these Moto TVs, here are a
+                    few features you should know about.</span><br>
+                &nbsp;</p>
+
+            <p><b>Moto TV - Redefine the Way You Watch Television</b></p>
+
+            <p><span>It’s time to keep everything aside and have a look at the Moto TV. Smart and stylish, the range of
+                    televisions from Motorola will elevate your viewing experience with tons of features. But, before we
+                    get to its features, wouldn’t you like to know where you can buy the Motorola TV from? Your
+                    favourite shopping app has all the different models of the Motorola TV for you to pick from. Whether
+                    it’s the Motorola 127 cm 4K Smart TV or the Motorola 109.22 cm Full HD Android TV, any model from
+                    this brand will be a delightful addition to your home. And, here we will reveal some of the features
+                    that make this television totally worth its price</span><br>
+                &nbsp;</p>
+
+            <p><span><b>Moto TVs Feature the AutotuneX Display Technology</b></span></p>
+
+            <p><span>Get set to have a truly immersive viewing experience with the Moto TV. It features the AutotuneX
+                    Display technology which will spoil you with images that are brighter and lifelike, which means that
+                    a truly delightful watching experience awaits you. That’s not all, this television will bring finer
+                    elements in each pixel, thereby ensuring that the darker shades and highlights are emphasized just
+                    right. Some of the other display features that you can expect on your Motorola television include
+                    the 10 Bit Color Depth feature.</span><br>
+                &nbsp;</p>
+
+            <p><span><b>Get Ready for an Impressive Gaming Experience</b></span></p>
+
+            <p><span>A good display can do wonders to your gaming experience. This television from Motorola is a great
+                    fit to enhance your gaming affair, thanks to the MEMC technology. What does this mean? This means
+                    that this television has a frame-to-frame motion and good screen refresh rates, thereby making your
+                    game’s visuals appear clearly without any lag, especially during fast-paced gaming. That’s not all,
+                    the Moto TVs come with the Mali GPU which paves the way for unmatched processing power and great
+                    performance.&nbsp;</span><br>
+                &nbsp;</p>
+
+            <p><span><b>Enlivening Sound for Equally Appealing Visuals</b></span></p>
+
+            <p><span>Your visual experience will seem complete only when you have audio that’s just as good as the
+                    video. With the Moto TV at home, you will be audience to brilliant audio, thanks to its features,
+                    including an in-built soundbar with DTS Surround Sound and Dolby Audio. The features don’t end here,
+                    as this television’s front-firing speakers facilitate Dialogue Enhancement and Volume Levelling for
+                    more immersive sound output.</span><br>
+                &nbsp;</p>
+
+            <p><span><b>The Different Models of Motorola Televisions</b></span></p>
+
+            <p><span>The Motorola 127 cm 4K Smart TV, the Motorola 109.22 cm Smart Android TV, and the Motorola 139.7 cm
+                    Ultra HD LED Smart Android TV are some of the popular models that you can pick from. Oh, and not to
+                    forget, you can explore a variety of entertainment, as this television series is backed by the
+                    Android Pie (version 9.0) operating system. Since most of these television models also support
+                    Chromecast and Google Assistant, searching and playing your favourite content will be quick and
+                    seamless.</span><br>
+                &nbsp;</p>
+
+            <p><span>Aren’t you already enticed to buy a Motorola television for your home? Head to your favourite
+                    shopping app and bring one home at the earliest for a visual treat.</span><br>
+                &nbsp;</p>
+
+            <p><b>Display</b></p>
+
+            <p>Are you ready to lose yourself in the life-like video experience that these TVs will deliver to you? If
+                yes, then gear up as this range of Moto TVs come with specific technologies and features to ensure that
+                your experience of watching TV or playing your favourite game is immersive.<br>
+                &nbsp;</p>
+
+            <p><b>AutotuneX Technology</b></p>
+
+            <p>Most TVs in this Motorola TV range come with the AutotuneX technology, which ensures that you see every
+                detail of a scene with enhanced clarity.<br>
+                &nbsp;</p>
+
+            <p><b>Dolby Vision, HDR10, and 10 Bit Color Depth</b></p>
+
+            <p>Some Motorola TVs employ the Dolby Vision, HDR10 and 10 Bit Color Depth to deliver life-like images by
+                balancing and combining colour reproduction, brightness and contrast.<br>
+                &nbsp;</p>
+
+            <p><b>Super Bright Display</b></p>
+
+            <p>Some Moto TVs also, boast the Super Bright display which emphasizes on darker shades to ensure that the
+                colours pop-out the way they were intended to.<br>
+                &nbsp;</p>
+
+            <p><b>Performance</b></p>
+
+            <p>These Motorola smart Android TVs are designed to offer you enhanced performance, which allow you to
+                switch between apps with lightning-fast speed. These Android TVs are also designed to offer you a
+                superior graphic experience as you play your favourite online games.<br>
+                &nbsp;</p>
+
+            <p><b>MEMC</b></p>
+
+            <p>The MEMC technology (in some Motorola TVs) allows you to enjoy a seamless screen-to-screen motion. It
+                also boasts an enhanced refresh rate, which ensures that you can enjoy your high-speed games without a
+                hitch.<br>
+                &nbsp;</p>
+
+            <p><b>BlazeX Performance</b></p>
+
+            <p>The MEMC technology featured by some Moto TVs delivers high-speed processing, which leads to enhanced
+                performance as you play your favourite action movies or action-based games.<br>
+                &nbsp;</p>
+
+            <p><b>Mali GPU</b></p>
+
+            <p>Most Motorola TVs boast the Triple Core Mali GPU, which offers enhanced performance due to faster
+                processing power.<br>
+                &nbsp;</p>
+
+            <p><b>Audio Experience</b></p>
+
+            <p>The third pillar of experiencing a good movie or game on a high-quality TV is the sound quality. Your
+                audio experience should be as immersive as your video experience. This makes whatever you are watching
+                more life-like and relatable. These Motorola TVs boast a range of features to ensure that you have an
+                immersive audio experience.<br>
+                &nbsp;</p>
+
+            <p><b>DTS Trusurround Sound</b></p>
+
+            <p>Some Motorola TVs come with DTS Trusurround Sound, which projects sound through the entire expanse of the
+                room, allowing you to experience sound clarity from every corner.<br>
+                &nbsp;</p>
+
+            <p><b>AmphisoundX</b></p>
+
+            <p>Most Moto TVs boast the AmphisoundX feature which delivers rich audio spectrum with the help of the DTS
+                Surround System and an in-built sound bar.<br>
+                &nbsp;</p>
+
+            <p><b>Front Speakers</b></p>
+
+            <p>Most Motorola TVs boast 30 W front-firing soundbar and box speakers that come loaded with the Dolby audio
+                technology, which delivers Volume Leveling and Dialogue Enhancement so that you can enjoy an enhanced
+                audio experience.&nbsp;<span>If your interest has been piqued, then go ahead and explore the Motorola
+                    TVs online and gift yourself a theatre-like experience at home.</span><br>
+                &nbsp;</p>
+
+            <p><b>Buy High-end TVs Online for Immersive Visual Delight</b></p>
+
+            <p>Once upon a time and not too long ago, the words “home entertainment” were synonymous with TV. For your
+                regular dosage of sitcoms, the latest songs, classic movies, news updates, and sporting actions, TV was
+                the only available option. There was a time when weekly sitcoms brought together families, and political
+                debates among friends took place in front of a television during news hours, and people stood in front
+                of the glass windows of television showrooms and cheered for their national team with strangers. People
+                witnessed history being created, world leaders addressing nations, and the evolution of home
+                entertainment through the tube. In other words, the world opened up in our living rooms through a screen
+                attached to a cathode-ray tube (CRT).<br>
+                &nbsp;</p>
+
+            <p>However, the concept of home entertainment has changed and so is the television. From adjusting an
+                antenna of a television set to adjusting the angle of a wall-mounted smart TV, this home entertainment
+                device has undergone dramatic changes. In fact, rapid technological advancement is leading to
+                developments of various cutting-edge technologies that are making our viewing experience immersive and
+                exciting. There are global electronic giants who are designing, developing, making, and selling various
+                types of televisions including OLED TVs, smart TVs, and Android TVs. You can find and buy televisions on
+                online shopping websites and get them delivered to your home without hassles. On online electronic
+                stores, you can check and compare different brands, read user reviews, see the ratings, and even compare
+                the prices of different models to make a well-informed buying decision.<br>
+                &nbsp;</p>
+
+            <p>If your home, living room, or bedroom needs a television, then here are some of the popular brands and
+                their products that you can select and buy online:&nbsp;<br>
+                &nbsp;</p>
+
+            <p><b>Samsung TV</b></p>
+
+            <p>South Korean multinational conglomerate, Samsung, has a wide range of televisions to offer. It has QLED
+                8K devices, UHD, HD, 4K UHD, and smart ones to choose from among others. You can choose to buy one as
+                per the resolution or screen size or type. If you are looking for specific options, then 2 m 47 cm (98)
+                Q900R 8K Smart QLED is an impressive choice. This appliance offers close-to-reality visuals with
+                impressive depth and details. Furthermore, the 8K resolution and 33-million pixel resolution offer
+                detailed and crisp visuals. You can also check out the 1 m 63 cm (65) Q90R 4K Smart QLED that comes with
+                the Direct Full Array 16X for true clarity, fine details, and enhanced depth. Furthermore, this device
+                features the Quantum HDR 16X that magnifies brightness for lifelike visuals and natural shades. Also, to
+                lower image noise, loss of details, and to sharpen edges, this device has the AI Upscaling technology.
+                Samsung also has the 1 m 38 cm (55) The Frame 4K UHD TV that has an Art Mode, color volume of 100%, and
+                a customizable frame for a painting-like aesthetic. You can check out all the models of Samsung
+                television on online shopping websites and read their specifications before making a buying
+                decision.<br>
+                &nbsp;</p>
+
+            <p><b>Sony TV</b></p>
+
+            <p><span>The Japanese company, Sony Corporation, has various television and home cinema devices to offer. It
+                    has televisions, home theatre and soundbars, and Blu-ray discs and DVD players. This brand has smart
+                    Android TVs, full-array LED televisions, 4K HDR televisions, etc. The OLED devices of Sony have more
+                    than eight million self-illuminating pixels for perfect contrast, black, and other shades. The full
+                    array LEDs feature independent LED zones along with local dimming for high brightness and deep
+                    shadows in each frame. The 4K HDR devices offer stunning contrast and fine clarity. The full HD and
+                    HD ready televisions let you enjoy HDTV broadcasts and Blu-ray discs in their full glory. App,
+                    games, and more - explore the world of entertainment and much more with the Sony Android devices.
+                    All these types of Sony televisions are available in different display sizes, and you can choose one
+                    as per the size of your living room or bedroom.</span><br>
+                &nbsp;</p>
+
+            <p><b><a href="/televisions/lg~brand/pr?sid=ckf,czl">LG TV</a></b></p>
+
+            <p>Another South Korean tech giant that offers high-end televisions is LG Corporation. This brand offers
+                Nanocell 4K, OLED, UHD 4K, and many other types of television models. Currently, the LG OLED AI ThinQ
+                television is gaining popularity among many users. This entertainment appliance offers AI pictures and
+                AI brightness for stunning clarity. To compliment the visuals with blasting audio, this LG television
+                has AI sound and AI acoustic tuning. Furthermore, the LG AI ThinQ technology offers a complete smart
+                solution to your daily entertainment needs. LG televisions also come with Magic Remotes for
+                user-friendly, easy, and fast controls. This remote features point, click, and scroll functions, single
+                click access, universal controls, hot keys, and voice command among others. Also, to ensure seamless and
+                fast entertainment, this device is powered by the α9 Intelligent Processor. This processor ensures clear
+                details, vibrant shades, and stunning depth for your visual pleasure.<br>
+                &nbsp;</p>
+
+            <p><b><a href="/televisions/vu~brand/pr?sid=ckf,czl">Vu TV</a></b></p>
+
+            <p>Vu is a television brand, and it also makes LED TVs and displays. This company was founded in the United
+                States of America in the year 2006, and this brand has basic and luxury televisions, apart from the
+                smart, 4K, and Android devices. The Vu HD Ready LED television with FM Radio comes with an A+ Grade
+                Panel, Digital Noise Reduction technology, and a Wide Viewing Angle for easy and comfortable viewing
+                experience. To ensure that the audio is as good as the visuals, this television comes with the Vu
+                AmpliFi Sound and In-built Box Speakers. The Vu Android televisions feature an Adaptive Contrast,
+                Digital MPEG Noise Reduction, and PC and Game Mode. The built-in Dolby Audio and DTS Surround Sound
+                Technologies offer an immersive aural experience for exciting entertainment in your living room or
+                bedroom. For fast, easy, and quick connectivity, these devices come with Google ChromeCast, Bluetooth
+                5.0, HDMI CEC, and ARC.<br>
+                &nbsp;</p>
+
+            <p><b>Enhance Your Visual Experience with the Perfect TV</b></p>
+
+            <p><span>What’s the best way to spend your weekend? Sitting at home, sipping on your favourite drinks,
+                    munching on a big tub of popcorn, and watching your preferred shows sounds like a great plan,
+                    doesn’t it? With plenty of options in store, we know that you might be confused about which
+                    television model to go with. Let us introduce you to some of the most sought-after brands so that
+                    you can make an informed buying decision -&nbsp;</span><br>
+                &nbsp;</p>
+
+            <p><span><b><a href="/televisions/mi~brand/pr?sid=ckf,czl">Mi TV</a>s: Bright and Vivid Pictures</b></span>
+            </p>
+
+            <p>It’s yet another Saturday evening. You and your partner are planning to catch up on the latest show. When
+                you have a television model from Mi at home, you know that you are in for a great viewing experience.
+                Most models are packed with features, such as the PatchWall, to help you access whatever you want to
+                watch, almost effortlessly.<br>
+                &nbsp;</p>
+
+            <p><span><b>Vu TVs: Treat Yourself to Some Bright Visuals!</b></span></p>
+
+            <p>A leader in the premium television segment, Vu is definitely a brand you can count on to make your
+                movie-watching experience a vivid one. Offering detailed picture quality and sound clarity, a television
+                from Vu will definitely spoil you with a fabulous visual experience. Some of the popular models from
+                this brand include the Vu 80 cm (32) HD Ready LED television with FM Radio (32BFM).<br>
+                &nbsp;</p>
+
+            <p><span><b>Samsung TVs: Pictures Just Got Real</b></span></p>
+
+            <p>When it comes to Samsung televisions, movie watching is more than just an experience; it’s a part of your
+                lifestyle. Known for a variety of models, this brand will definitely make your viewing experience even
+                more delightful. Some of the popular models from this brand are The Frame, 4K UHD screens, and QLED 8K
+                models.<br>
+                &nbsp;</p>
+
+            <p><b>LG TVs: Say Hello to the World of Entertainment</b></p>
+
+            <p>Every model from LG is a treat for the eye. Why you may ask? Because this brand has a variety of features
+                in place to enhance your watching experience. Some of the features that you can expect in your LG model
+                include the IPS Panel, webOS, ULTRA Luminance technology, Triple XD Engine, and Live Zoom.<br>
+                &nbsp;</p>
+
+            <p><b><a href="/televisions/iffalcon-by-tcl~brand/pr?sid=ckf,czl">iFFALCON by TCL</a> TVs: Make Way for
+                    Great Visuals</b></p>
+
+            <p>Get ready to be floored by wonderful picture quality when you have a television from iFFALCON by TCL. You
+                can pick from their enticing range of Smart televisions that will surely redefine the way you watch
+                television.<br>
+                &nbsp;</p>
+
+            <p><b><a href="/televisions/thomson~brand/pr?sid=ckf,czl">Thomson TV</a>s: Home Entertainment Redefined</b>
+            </p>
+
+            <p>Thomson is a brand that combines friendly technology with innovation to provide you with home
+                entertainment units that will enhance your viewing experience. You can pick and choose from a variety of
+                models that come with a host of features such as precise audio output, good refresh rate, and a
+                user-friendly interface for fuss-free entertainment time.<br>
+                &nbsp;</p>
+
+            <p><b><a href="/motorola-tv-store">Motorola TV</a>s: Hello Gorgeous Visuals!</b></p>
+
+            <p>You would have definitely been in awe of the Motorola phones. Well, get ready to be bowled over with
+                their television range too. Packed with a number of features such as AutotuneX Display technology and
+                AmphisoundX, this brand will make sure that nothing is compromised when it comes to watching your
+                favourite shows.<br>
+                &nbsp;</p>
+
+            <p><b>Nokia TVs: Enjoy Life-like Images</b></p>
+
+            <p>Intelligent dimming, wide colour gamut, sound by JBL - these are some of the features that you can expect
+                on your Nokia television. This model is designed to make your movie marathon nights truly memorable.<br>
+                &nbsp;</p>
+
+            <p><b>Sony Televisions: Clarity in Every Visual</b></p>
+
+            <p>Wider colour spectrum and exceptional colour contrast! What more do you need for a beautiful visual
+                experience, right? So, the next time you have an important sports match to watch, call your friends home
+                and view it, clearly, on your Sony television.<br>
+                &nbsp;</p>
+
+            <p>You can check out these and more television by various brands on your favorite online shopping websites.
+                This home entertainment appliance is also aesthetically pleasing, and you can buy one that complements
+                your lovely humble abode.<br>
+                &nbsp;</p>
+
+            <p><b>A TV for every occasion</b></p>
+
+            <p><span>What would you rather do on a humid day? Spend your day outdoors, getting more anxious and
+                    frustrated by the minute, or stay in at home under the cool comfort of the AC, with good TV shows to
+                    keep you company? If we had a choice, we would all opt for the latter. Comfortable clothing, good
+                    company, and sinful treats, these are three things that make for an enjoyable TV viewing experience.
+                    But you know what’s also important? It’s bringing home a high-resolution television. What’s the
+                    point of watching TV if the images are blurred and the sound muffled? To gift your family and
+                    yourself the best visual entertainment, we’re here to indulge you with a wide range of televisions,
+                    in varying sizes and styles. Go ahead. Make the move and bring home the best in entertainment;
+                    because you deserve it.</span><br>
+                &nbsp;</p>
+
+            <p><span><b>The size of your TV screen does matter</b></span></p>
+
+            <p>Imagine watching a horror movie on a 54 inch TV screen? Sounds like fun, doesn’t it? Documentaries,
+                animated movies, music videos, and cricket matches, everything is more vivid and seems more interesting
+                when you watch them on a TV that supports crisp images and clear sound. Want to install a TV in the
+                kitchen so you can draw inspiration from your favourite chef as you cook? Install a
+                medium-sized&nbsp;&nbsp;<a href="/q/24-inches-led-tv">24 inches TV</a> in the kitchen. For general
+                viewing, <a href="/q/32-inches-led-tv">32 inches Led TV</a>&nbsp;screens will give you the desired
+                outcome. Not satisfied with playing video games 32 inches TV screen? There are televisions ranging from
+                <a href="/q/40-inches-led-tv">40 inches led TV</a> to <a
+                    href="/home-entertainment/televisions/55-above~screen-size/pr?sid=ckf,czl">55 inches Tv and
+                    above</a> that make console gaming more fun with highly detailed graphics.<br>
+                &nbsp;</p>
+
+            <p><b>What are the different TV resolution types?</b></p>
+
+            <p>If you’re looking for Wall TV for business-related purposes, WXGA resolution TVs are the ideal choice.
+                These TVs come with a screen resolution of approximately 1280x800, and are ideal for watching DVDs. For
+                regular home-viewing, you can choose from HD, HD Ready, <a
+                    href="/home-entertainment/televisions/full-hd~resolution/pr?sid=ckf%2Cczl">Full HD TV</a>, and <a
+                    href="/home-entertainment/televisions/ultra-hd-4k-~resolution/pr?sid=ckf,czl">4K Ultra HD
+                    televisions</a>. The picture-quality of a TV depends on its pixel quantity. The more pixels it has,
+                the better its picture-clarity will be.<br>
+                &nbsp;</p>
+
+            <p><b>What impact does screen type have on televisions?</b></p>
+
+            <p>The screen type of televisions is one major factor that you should look into before making a purchase.
+                The popular TV screen types include <a
+                    href="/home-entertainment/televisions/led~screen-type/pr?sid=ckf%2Cczl">LED TV</a>, <a
+                    href="/home-entertainment/televisions/curved-tv~features/pr?sid=ckf%2Cczl">Curved TV</a>, and <a
+                    href="/home-entertainment/televisions/3d-tv~features/pr?sid=ckf%2Cczl">3D TV</a>. OLED TVs, also
+                known as Organic Light Emitting Diode TVs, are self-illuminating and need no backlight. For TVs that
+                offer excellent picture contrast, black levels, and color saturation, go for Plasma screen TVs. LCD TVs
+                are pocket-friendly, while LED TVs are preferred for their energy-efficiency.<br>
+                <br>
+                &nbsp;</p>
+
+            <p><b>Why get a Smart TV?&nbsp;</b></p>
+
+            <p>Want to fully lose yourself to the thrill of watching an action movie? Watch it on 3D televisions for a
+                truly immersive experience. If you want an internet-enabled television set, <a
+                    href="/home-entertainment/televisions/smart-tv~features/pr?sid=ckf%2Cczl">Smart TVs</a> that feature
+                built-in <a href="/q/wifi-tv">Wi-Fi</a> and Ethernet connections are a good bet. Then you have Curved
+                TVs that feature a high pixel count, offering you a wider field of view so you have an immersive TV
+                viewing experience.<br>
+                &nbsp;</p>
+
+            <p>Explore an extensive range of television sets from VU, LG, Samsung, CloudWalker, Videocon, Philips,
+                Sansui, Cloud Tv and Onida each equipped with features that are more impressive than the next, your best
+                bet at bringing home the latest in home entertainment is to buy televisions on India's best online
+                shopping site.<br>
+                &nbsp;</p>
+
+            <p><strong>Shop by Top Brands</strong>: <a href="/televisions/qfx~brand/pr?sid=ckf,czl">Realme TV</a>
+                |&nbsp;<a href="/televisions/oneplus~brand/pr?sid=ckf,czl">Oneplus TV</a> | <a
+                    href="/televisions/thomson~brand/pr?sid=ckf,czl">Thomson TV</a> | <a
+                    href="/televisions/mi~brand/pr?sid=ckf,czl">Mi TV</a> | <a
+                    href="/televisions/coocaa~brand/pr?sid=ckf,czl">Coocaa TV</a> | <a
+                    href="/televisions/sony~brand/pr?sid=ckf,czl">Sony TV</a> | <a
+                    href="/televisions/abaj~brand/pr?sid=ckf,czl">Abaj TV</a> | <a
+                    href="/televisions/aisen~brand/pr?sid=ckf,czl">Aisen TV</a> | <a
+                    href="/televisions/akai~brand/pr?sid=ckf,czl">Akai TV</a> | <a
+                    href="/televisions/blackox~brand/pr?sid=ckf,czl">Blackox TV</a> | <a
+                    href="/televisions/blaupunkt~brand/pr?sid=ckf,czl">Blaupunkt TV</a> | <a
+                    href="/televisions/bpl~brand/pr?sid=ckf,czl">Bpl TV</a> | <a
+                    href="/televisions/candes~brand/pr?sid=ckf,czl">Candes TV</a> | <a
+                    href="/televisions/cloudwalker~brand/pr?sid=ckf,czl">Cloudwalker TV</a> | <a
+                    href="/televisions/compaq~brand/pr?sid=ckf,czl">Compaq TV</a> | <a
+                    href="/televisions/croma~brand/pr?sid=ckf,czl">Croma TV</a> | <a
+                    href="/televisions/daiwa~brand/pr?sid=ckf,czl">Daiwa TV</a> | <a
+                    href="/televisions/dektron~brand/pr?sid=ckf,czl">Dektron TV</a> | <a
+                    href="/televisions/detel~brand/pr?sid=ckf,czl">Detel TV</a> | <a
+                    href="/televisions/dyanora~brand/pr?sid=ckf,czl">Dyanora TV</a> | <a
+                    href="/televisions/g-ten~brand/pr?sid=ckf,czl">G Ten TV</a> | <a
+                    href="/televisions/haier~brand/pr?sid=ckf,czl">Haier TV</a> | <a
+                    href="/televisions/hi-tech~brand/pr?sid=ckf,czl">Hi Tech TV</a> | <a
+                    href="/televisions/hisense~brand/pr?sid=ckf,czl">Hisense TV</a> | <a
+                    href="/televisions/hitachi~brand/pr?sid=ckf,czl">Hitachi TV</a> | <a
+                    href="/televisions/huidi~brand/pr?sid=ckf,czl">Huidi TV</a> | <a
+                    href="/televisions/hyundai~brand/pr?sid=ckf,czl">Hyundai TV</a> | <a
+                    href="/televisions/iffalcon-by-tcl~brand/pr?sid=ckf,czl">Iffalcon By Tcl TV</a> | <a
+                    href="/televisions/igo-by-onida~brand/pr?sid=ckf,czl">Igo By Onida TV</a> | <a
+                    href="/televisions/impex~brand/pr?sid=ckf,czl">Impex TV</a> | <a
+                    href="/televisions/inb~brand/pr?sid=ckf,czl">Inb TV</a> | <a
+                    href="/televisions/infinix~brand/pr?sid=ckf,czl">Infinix TV</a> | <a
+                    href="/televisions/infocus~brand/pr?sid=ckf,czl">Infocus TV</a> | <a
+                    href="/televisions/intex~brand/pr?sid=ckf,czl">Intex TV</a> | <a
+                    href="/televisions/jvc~brand/pr?sid=ckf,czl">Jvc TV</a> | <a
+                    href="/televisions/kodak~brand/pr?sid=ckf,czl">Kodak TV</a> | <a
+                    href="/televisions/krisons~brand/pr?sid=ckf,czl">Krisons TV</a> | <a
+                    href="/televisions/lg~brand/pr?sid=ckf,czl">Lg TV</a> | <a
+                    href="/televisions/lloyd~brand/pr?sid=ckf,czl">Lloyd TV</a> | <a
+                    href="/televisions/lumx~brand/pr?sid=ckf,czl">Lumx TV</a> | <a
+                    href="/televisions/marq-by-G-mart~brand/pr?sid=ckf,czl">Marq By G-mart TV</a> | <a
+                    href="/televisions/maser~brand/pr?sid=ckf,czl">Maser TV</a> | <a
+                    href="/televisions/micromax~brand/pr?sid=ckf,czl">Micromax TV</a> | <a
+                    href="/televisions/mitashi~brand/pr?sid=ckf,czl">Mitashi TV</a> | <a
+                    href="/televisions/motorola~brand/pr?sid=ckf,czl">Motorola TV</a> | <a
+                    href="/televisions/murphy~brand/pr?sid=ckf,czl">Murphy TV</a> | <a
+                    href="/televisions/noble~brand/pr?sid=ckf,czl">Noble TV</a> | <a
+                    href="/televisions/noble-skiodo~brand/pr?sid=ckf,czl">Noble Skiodo TV</a> | <a
+                    href="/televisions/nokia~brand/pr?sid=ckf,czl">Nokia TV</a> | <a
+                    href="/televisions/one-ro~brand/pr?sid=ckf,czl">One Ro TV</a> | <a
+                    href="/televisions/onida~brand/pr?sid=ckf,czl">Onida TV</a> | <a
+                    href="/televisions/onix~brand/pr?sid=ckf,czl">Onix TV</a> | <a
+                    href="/televisions/oxygen~brand/pr?sid=ckf,czl">Oxygen TV</a> | <a
+                    href="/televisions/panasonic~brand/pr?sid=ckf,czl">Panasonic TV</a> | <a
+                    href="/televisions/philips~brand/pr?sid=ckf,czl">Philips TV</a> | <a
+                    href="/televisions/polaroid~brand/pr?sid=ckf,czl">Polaroid TV</a> | <a
+                    href="/televisions/power-guard~brand/pr?sid=ckf,czl">Power Guard TV</a> | <a
+                    href="/televisions/qfx~brand/pr?sid=ckf,czl">Qfx TV</a> | <a
+                    href="/televisions/rbx~brand/pr?sid=ckf,czl">Rbx TV</a> | <a
+                    href="/televisions/rgl~brand/pr?sid=ckf,czl">Rgl TV</a> | <a
+                    href="/televisions/salora~brand/pr?sid=ckf,czl">Salora TV</a> | <a
+                    href="/televisions/samsung~brand/pr?sid=ckf,czl">Samsung TV</a> | <a
+                    href="/televisions/sansui~brand/pr?sid=ckf,czl">Sansui TV</a> | <a
+                    href="/televisions/sanyo~brand/pr?sid=ckf,czl">Sanyo TV</a> | <a
+                    href="/televisions/sharp~brand/pr?sid=ckf,czl">Sharp TV</a> | <a
+                    href="/televisions/skyworth~brand/pr?sid=ckf,czl">Skyworth TV</a> | <a
+                    href="/televisions/sun-king~brand/pr?sid=ckf,czl">Sun King TV</a> | <a
+                    href="/televisions/svl~brand/pr?sid=ckf,czl">Svl TV</a> | <a
+                    href="/televisions/t-series~brand/pr?sid=ckf,czl">T Series TV</a> | <a
+                    href="/televisions/tcl~brand/pr?sid=ckf,czl">Tcl TV</a> | <a
+                    href="/televisions/toshiba~brand/pr?sid=ckf,czl">Toshiba TV</a> | <a
+                    href="/televisions/vg~brand/pr?sid=ckf,czl">Vg TV</a> | <a
+                    href="/televisions/videocon~brand/pr?sid=ckf,czl">Videocon TV</a> | <a
+                    href="/televisions/vu~brand/pr?sid=ckf,czl">Vu TV</a> | <a
+                    href="/televisions/weston~brand/pr?sid=ckf,czl">Weston TV</a> |<br>
+                &nbsp;</p>
+
+            <p><b>Shop TV by Price Range:</b> <a href="/televisions/~television-under-49999/pr?sid=ckf,czl">Television
+                    Under Rs.49,999</a>, <a href="/televisions/~tvs-between-rs23000-to-37999/pr?sid=ckf,czl">TVs Between
+                    Rs.23,000 to Rs.37,999</a>, <a href="/televisions/~tvs-between-rs18000-to-22999/pr?sid=ckf,czl">Tvs
+                    Between Rs18000 To Rs.22999</a>, <a
+                    href="/televisions/~television-under-17999/pr?sid=ckf,czl">Television Under Rs.17,999</a><br>
+                <br>
+                <b>Also Check:</b> <a href="/televisions/~best-tv-brands/pr?sid=ckf,czl">Best TV Brands</a>, <a
+                    href="/televisions/~best-tv-under-rs15000/pr?sid=ckf,czl">Best TV under Rs.15000</a>, <a
+                    href="/televisions/~best-tv-under-rs20000/pr?sid=ckf,czl">Best TV Under Rs.20000</a>, <a
+                    href="/televisions/~best-tv-under-rs30000/pr?sid=ckf,czl">Best TV under Rs.30000</a>, <a
+                    href="/televisions/~best-32-inch-tvs/pr?sid=ckf,czl">Best 32 inch TV</a>, <a
+                    href="/televisions/~large-flat-screen-tvs/pr?sid=ckf,czl">Large Flat Screen TVs</a><br>
+                <br>
+                <b>New Launches</b>: <a href="/q/redmi-smart-tvs">Redmi TV</a></p>
+        </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <div class="footerdiv1 d-flex flex-row">
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            ABOUT
+                        </div>
+                        <a href="">Contact Us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">G-mart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">G-mart Wholesales</a>
+                        <a href="">Corporate Information</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            HELP
+                        </div>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringement</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            POLICY
+                        </div>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms Of Use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            SOCIAL
+                        </div>
+                        <a href="">Facebook</a>
+                        <a href="">Twitter</a>
+                        <a href="">YouTube</a>
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="border-left: 1px solid  #454D5E; padding: 0 25px 0 25px;">
+                        <div class="footersubhead">
+                            Mail Us:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="margin: 0 0 10px 0;
+                    padding: 0 0 0 14px;
+                    ">
+                        <div class="footersubhead">
+                            Registered Office Address:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                            <p style="margin: 0px; padding: 0px; line-height: 1.5;">CIN : U51109KA2012PTC066107</p>
+                            <p style="margin: 0px; line-height: 1.5;">Telephone: <a
+                                    style="margin: 0px;line-height: 1.5;color: #2874F0;" href="">1800 202 9898</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerdiv2 d-flex justify-content-evenly" width="100%">
+                <div class="footer2con d-flex align-items-baseline" style="vertical-align: baseline;">
+                    <img src="{% static 'images/1.svg' %}" alt="">
+                    <a href="">&nbsp Sell On G-mart</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/2.svg' %}" alt="">
+                    <a href="">&nbsp Advertise</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/3.svg' %}" alt="">
+                    <a href="">&nbsp Gift Cards</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/4.svg' %}" alt="">
+                    <a href="">&nbsp Help Center</a>
+                </div>
+                <div>
+                    <p class="footer2con ">© 2007-2021 G-mart.com</p>
+                </div>
+                <div>
+                    <img style="vertical-align:inherit" src="{% static 'images/5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

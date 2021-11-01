@@ -1,0 +1,645 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productall.css' %}">
+    <title>Mobiles | G-mart | You Desire We Deliver</title>
+    <style>
+        .comp {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 19.6px;
+            text-decoration: none solid rgb(135, 135, 135);
+            color: #878787;
+        }
+
+        .product_name {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 19.6px;
+            text-decoration: none solid rgb(33, 33, 33);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: #212121;
+            padding-top: 5px;
+        }
+
+        .product_name a {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 19.6px;
+            text-decoration: none solid rgb(33, 33, 33);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: #212121;
+        }
+
+        .fprice a {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22.4px;
+            text-decoration: none solid rgb(33, 33, 33);
+            word-spacing: 0px;
+            color: rgb(33, 33, 33);
+        }
+
+        .fexp a {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 19.6px;
+            text-decoration: line-through solid rgb(135, 135, 135);
+            word-spacing: 0px;
+            color: #878787;
+        }
+
+        .foffer a {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            line-height: 18.2px;
+            text-decoration: none solid rgb(56, 142, 60);
+            word-spacing: 0px;
+            color: #388E3C;
+            vertical-align: middle;
+        }
+
+        .title_desc {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 16.8px;
+            text-decoration: none solid rgb(135, 135, 135);
+            word-spacing: 0px;
+            color: #878787;
+            padding: 5px 0 5px 0
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar-1 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ps-5 ms-5">
+            <a class="navbar-brand ps-5 ms-5" href="/">G-Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" id="searchbar">
+                <input class="form-control me-2" width="400px" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success bi bi-search" type="submit"></button>
+
+            </form>
+            <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item pe-4">
+                        <a href="" type="button" class="btn btn-outline-light">LOGIN</a>
+                    </li>
+                    <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle drp" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a href="" type="button" class="btn btn-dark position-relative bi bi-cart3"> Cart
+                            <span class="badge bg-danger rounded-pill">0</span>
+                            </span>
+                        </a>
+                        <!-- <a class="nav-link " href="#"></a> -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5 nav2">
+        <div class="container-fluid ps-5 ms-5 pe-5 me-5">
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/mobile">Mobiles</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/fashion/Men">Men</a></li>
+                        <li><a class="dropdown-item" href="/fashion/Women">Women</a></li>
+                        <!-- <li> -->
+                        <!-- <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/fashion/Kids">Kids</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/tablet">Tablets</a></li>
+                        <li><a class="dropdown-item" href="/headphone">Headphones</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/camera">Camera</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/television">Televisions</a></li>
+                        <li><a class="dropdown-item" href="/washingmachine">Washing Machine</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/refrigerator">Refrigerator</a></li>
+                        <li><a class="dropdown-item" href="/airconditioner">Air conditioner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/books">Books</a>
+            </div>
+        </div>
+    </nav>
+    <!-- all item in div -->
+    <div class="maincon" height="5000px">
+        <div class="d-flex flex-row">
+            <div class="leftcon">
+                <img width="100%" height="" src="{% static 'images/bl.jpg' %}" alt="">
+                <img width="100%" height="" src="{% static 'images/bl1.jpg' %}" alt="">
+            </div>
+            <div class="rightcon">
+                <div class="rightcondiv1">
+                    <p>
+                        If you have planned to read more books this year, then you must make sure to include reading
+                        materials from different types of genres. This tactic will keep you hooked. You will also end up
+                        learning things from various genres and thereby enhance your knowledge. You can find these
+                        reading materials on G-mart at prices that are pocket-friendly.
+
+                        If you want to read something that will let you enhance your business-related skills, then you
+                        can take help of the several business books that are available on the site. For example, you can
+                        read materials like Magbook Indian Economy 2020, Eat that Frog! - 21 Great Ways to Stop
+                        Procrastinating and Get More Done in Less Time, and so on. If you want to read self-help books,
+                        you can check materials like Ikigai - The Japanese Secret to a Long and Happy Life, The 5 AM
+                        Club, and more.
+
+                        Also, if you are a student, we suggest you read books that are not in your course or syllabus.
+                        This will help you learn new things. If you are a university student, then you can use the ideas
+                        that are mentioned in the various reading materials and utilise them accordingly. You can also
+                        read test books, fiction books, and more.
+                    </p>
+                    <div class="d-flex flex-row">
+                        <h1>Books &nbsp</h1>
+                        <p style="margin-bottom: 8px; vertical-align: baseline; line-height: 24.4px">(Showing 1 – 6
+                            products of 6 products)</p>
+                    </div>
+                    <div class="d-flex flex-row" style="width:'100px'">
+                        <h2 class="sortbyhead">Sort by</h2>
+                        <div class="sortby">Popularity</div>
+                        <div class="sortby">Price -- Low to High</div>
+                        <div class="sortby">Price -- High to Low</div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row flex-wrap">
+                    {% for m in i %}
+                    <div style="width: 25%" style="margin-bottom:8px;">
+                        <div class="d-flex flex-column" style="margin:0px 8px ;">
+                            <div>
+                                <a href="">
+                                    <div class="d-flex justify-content-center" style="margin:10px">
+                                        <img src="{{m.img1.url}}" alt="" height="340px">
+                                    </div>
+                                </a>
+                            </div>
+                            <div style="padding: 5px 16px 12px;">
+                                <div>
+                                    <div class="comp">
+                                        {{m.company_name}}
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        <div class="product_name" title="{{m.title}}">
+                                            <a href="">{{m.title}}&nbsp&nbsp</a>
+                                        </div>
+                                    </div>
+                                    <div class="title_desc">
+                                        {{m.title_desc}}
+                                    </div>
+                                    <div class="d-flex flex-row align-items-end">
+                                        <div>
+                                            <p class="card-text" style="margin-bottom: 0.2rem;"><span
+                                                class="badge bg-success">{{m.rating }} <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"
+                                                    style="vertical-align: baseline;">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg></span></p>
+                                        </div>
+                                        <div>{% for j in r1 %}
+                                            {% if forloop.counter == forloop.parentloop.counter %}
+                                            {% for k in r2 %}
+                                            {% if forloop.counter == forloop.parentloop.counter %}
+                                            <h6 style="color:#878787; font-size:14px;line-height: 28px;margin:0;">&nbsp&nbsp({{k}})&nbsp&nbsp</h6>
+                                            {% endif %}
+                                            {% endfor %}
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                        <div>
+                                            <img height="18px" width="66px" style="padding-top:1px;vertical-align: text-top;"
+                                                src="{% static 'images/assured.png' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-end">
+                                        <div class="fprice">
+                                            <a href="">₹{{m.price}}&nbsp&nbsp&nbsp</a>
+                                        </div>
+                                        <div class="fexp">
+                                            {% for j in ep %}
+                                            {% if forloop.counter == forloop.parentloop.counter %}
+                                            <a href="">
+                                                <div>₹{{j}}</div>
+                                            </a>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                        <div class="foffer">
+                                            {% for k in o %}
+                                            {% if forloop.counter == forloop.parentloop.counter %}
+                                            <a href="">&nbsp&nbsp&nbsp{{k}}% off</a>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="rightcondiv1 downdiv" style="padding: 25px 25px; background-color:white">
+        <div>
+            <h2>Buy Books Online at the Best Prices</h2>
+
+            <p>If you want to learn about the various things that are there in the world or the universe, then there is
+                no better way to do so than by reading about them. You can read novels, journals, essays, and even more
+                if you want to gain more knowledge about several topics. If you have access to a public library, then
+                you can go to one and read books from several genres. However, if you do not have access to one, then
+                you can create your personal library at home. To do so, you can skip the task of going to various stores
+                to search for different reading materials. You can instead search for them online on different
+                e-commerce sites. If you want to find reading materials of different genres easily, then you can check
+                them on G-mart. You can also check the site if you wish to buy study materials for competitive
+                exams.&nbsp;</p>
+
+            <p><strong>Buy Business Books, Fiction Books, and More on G-mart</strong></p>
+
+            <p>You can check the following, and more on the site:&nbsp;</p>
+
+            <p><strong><a href="/books/test-preparation-books/pr?sid=bks,4b5">Test Books</a>: </strong>There are several
+                such study materials that you can purchase. If you are planning to appear for exams such as CAT, MAT,
+                UPSC, CLET, and more, then you can check the study materials that are related to those exams on the
+                site. You can check the study materials that are written by several noted writers. You can refer to
+                those materials and go about with your preparations. For example, if you have been selected to appear
+                for the SSB interview, you can prepare yourself by reading SSB Interview - The Complete Guide. You can
+                also check study materials like Quantitative Aptitude for Competitive Examinations, and so on.&nbsp;</p>
+
+            <p><strong><a href="/books/selfhelp-books/pr?sid=bks,5uw">Self-help Books</a>: </strong>There are several
+                reading materials that you will find in this section. They are helpful if you want to feel motivated,
+                increase your confidence, and so on. You can also read them if you want to learn the teachings of
+                religious gurus. Also, if you feel that your life is not going in the direction that you planned, then
+                you can read them and incorporate those ideas in your life. They can also help you gain new insights to
+                lead a better life.&nbsp;</p>
+
+            <p><strong>Target High Books</strong>: Target High is a comprehensive book that can be ideal for
+                preparations for nursing recruitment examinations. The fifth coloured edition of the book contains
+                thoroughly revisited, up-to-date, and error-free content. You can find over 400 coloured image-based
+                questions that cover a wide range of subjects. Over 150 updated topics and synopses based on all nursing
+                subjects are present in the book. Improved chapter-wise summaries help provide a cohesive approach for
+                medical surgical nursing. A study planner with detailed subject-wise and topic-wise analysis of the
+                recent exams combined with the exam question papers of the past years helps the readers prepare for
+                their upcoming exams in a better way. The theory is presented for each topic followed by multiple-choice
+                questions to help the readers quickly recall the concept studied. The book has played a vital role in
+                the preparation and success of the top scorers of nursing exams from the AIIMS, JIPMER, and ESIC. This
+                useful book is brought to the market by CBS Publishers and Distributors. It is co-written by
+                Muthuvenkatachalam Srinivasan and Ambili M. Venugopal, who are experienced professionals in the field of
+                nursing at AIIMS, New Delhi. You can shop <a href="/target-high/p/itme67d9f895acff">Target High
+                    books</a> online at G-mart.</p>
+
+            <p><strong><a href="/objective-ncert-your-fingertips-neet-aiims-biology/p/itmf6m5fmv7rdadg">Objective NCERT
+                        at your Fingertips</a>: </strong>NEET is the qualifying test for entrance to medical and dental
+                colleges in India. Therefore, it becomes crucial for the candidates who want to pursue their careers as
+                doctors to prepare well for the test in order to obtain a seat in medical institutions. Objective NCERT
+                at your Fingertips by MTG Editorial Board Publishers is an excellent option for your preparations for
+                NEET. It is a highly competitive and challenging exam to which lakhs of students register and appear. It
+                includes the subject content of class 11 and class 12 Biology, from which the questions in the entrance
+                test are primarily based on. The book makes scoring in the test easy by providing the readers
+                multiple-choice questions extracted from every line of the latest NCERT textbooks. The NCERT notes are
+                presented in HD pages to make it easy for the readers to go through the matter. The topic-wise
+                objective-type questions based on the textbook and exemplar problems help students understand the
+                subject quickly and easily. Also, you can add in physics and chemistry books by the brand to create a
+                comprehensive study material that can help you crack NEET. You can shop MTG NCERT at your
+                Fingertips-Biology online at G-mart.</p>
+
+            <p dir="ltr">An atlas can be an excellent means to develop knowledge of the geography of the world. Students
+                can gain a lot of understanding about the landforms, continents, countries, and oceans through them. The
+                Oxford Student Atlas For India is an up-to-date and thoroughly researched atlas. Young kids can
+                comprehend the maps easily as they are easy to read. The <a
+                    href="/oxford-student-atlas-india/p/itmczyt9gpdg6uxp">Oxford Student Atlas For India</a> 3rd Edition
+                contains accurate maps produced using state-of-the-art techniques. It carries the latest socio-economic
+                maps and data picked up from reliable sources. It includes 24 maps that focus on the history of India
+                and eight maps on natural calamities and environmental concerns of the subcontinent. The atlas caters to
+                the needs of aspirants trying to clear competitive examinations conducted by&nbsp; UPSC and other State
+                Public Service Commissions. Its exam-oriented features like practice guides, questions based on the
+                examination question patterns, and map references to solve practice questions can help the students be
+                well-prepared for their examinations. The atlas also comes with pull-out posters of maps, which you can
+                put up in your room for a glance and easy reference. Bringing home this atlas can thus help improve
+                students’ knowledge of Indian and world geography. It can be your guide to provide information on all
+                things related to maps. You can shop the atlas online at G-mart.</p>
+
+            <p dir="ltr"></p>
+
+            <p dir="ltr">
+                <meta charset="utf-8">
+            </p>
+
+            <p dir="ltr"><a href="/manorama-year-book-2021-covid-19/p/itmcdbf71032cf14">The Manorama Yearbook 2021</a>
+                is the current year’s addition to the annual information encyclopedia published by the Malayala Manorama
+                Group. The first edition was published in 1959, and over the years, the book has been educating and
+                imparting knowledge to its readers about current affairs and general knowledge. Originally, the book was
+                intended for the purpose of bridging the knowledge divisions that were present in India. Over time, the
+                book has evolved and includes a wide variety of topics such as science, games, law, economy, etc. The
+                yearbook has helped change the lives and careers of lakhs of people across the nation by guiding them
+                through their highly competitive examinations such as the UPSC, civil services, and defence. The 2021
+                edition of the book covers the content of the covid-19 pandemic that has changed the lives of everyone
+                drastically. It gives an insight into post-covid careers, working from home, international relations,
+                the fourth industrial revolution, and other informative topics that can be put to good use in the time
+                of global health crisis. The book is one of the country’s largest-selling general knowledge update
+                books. You can check out the Manorama Yearbook 2021 price by browsing through G-mart, and buy it
+                online.<br>
+                &nbsp;</p>
+
+            <p>English is a beautiful language that is spoken by many people around the world and thus academically also
+                it is an important subject to learn. You can find many books in the market that offer knowledge about
+                different aspects of this language, and you can read as many books as you want. However, if you are
+                looking for one good to get your basic knowledge right, then the <a
+                    href="/objective-general-english/p/itmb7d63679088b6">Objective General English</a> is an excellent
+                option. From school goers to UPSC aspirants, the Objective General English book by SP Bakshi can be very
+                helpful to clear all confusions related to this language. The Objective General English book has four
+                parts and each part has multiple chapters that cover fundamentals as well as concepts that can further
+                enhance your language skills. In other words, this SP Bakshi book can help you prepare for any direction
+                you want to move forward when it comes to this language. This and any other book is available on online
+                shopping websites, and you can buy them from the comfort of your home. Whether you need a children’s
+                book, academic book, or a bestselling novel, you can find and buy anything online.&nbsp;</p>
+
+            <p>Quantitative aptitude is a skill that is essential in the modern-day world. Most companies hire their
+                employees only after they get through rigorous aptitude tests. It is also tested in various competitive
+                exams like the Civil Services Aptitude Test (CSAT), which is a qualifying paper for the prelims exam of
+                the UPSC. The Quantitative Aptitude for Competitive Examinations by <a
+                    href="/books/r-s-agarwal~contributor/pr?sid=bks">R.S. Aggarwal</a> can be your partner in mastering
+                the subject of numerical ability and problem-solving. It can be a source of great information to gain
+                entry into IAS, IPS, nationalised banks, RBI, SSC, railways, and many other professions. The revised
+                edition comes with completely solved problems for the latest questions. It includes topics, such as
+                profit and loss, height and distance, percentage, logarithm, simple and compound interest, and speed,
+                time and distance travelled, and so many others. This helps the readers understand and solve the
+                questions with the right approach. Each topic from the book can be picked up for a certain number of
+                days and practiced to achieve proficiency. This greatly helps in solving the aptitude tests that are
+                present for various exams. You can shop the <a
+                    href="/quantitative-aptitude-competitive-examinations-r-s-agrawal-s-chand-english-medium-0-disc/p/itmer8s9qvpyzh5s">Quantitative
+                    Aptitude R.S. Aggarwal book online</a> from G-mart for convenience of delivery.</p>
+
+            <p><strong>Frequently Asked Questions (FAQs) About Books</strong></p>
+
+            <p><strong>Q1. What Are the Top 10 Must-read Books?</strong></p>
+
+            <p><strong>Ans: </strong>You can check the following list to know more:</p>
+
+            <p>1.&nbsp;The Great Gatsby&nbsp;</p>
+
+            <p>2. To Kill a Mocking Bird</p>
+
+            <p>3. Harry Potter Series</p>
+
+            <p>4. Pride and Prejudice</p>
+
+            <p>5. Jane Eyre</p>
+
+            <p>6. The Christmas Carol</p>
+
+            <p>7. Animal Farm</p>
+
+            <p>8. The Diary of a Young Girl</p>
+
+            <p>9. Little Women</p>
+
+            <p>10. Lord of the Rings</p>
+
+            <p><strong>Q2. What Are Some Good Books to Read?</strong></p>
+
+            <p><strong>Ans:</strong> Here is a list that you check:</p>
+
+            <p>1.&nbsp;<a href="/girl-knew-too-much-if-loved-one-you-lost-were-come-back/p/itmeshtfd8gxa2bb">The Girl
+                    Who Knew Too Much</a></p>
+
+            <p>2. Gardens of the Moon</p>
+
+            <p>3. Ulysses</p>
+
+            <p>4. Frankenstein</p>
+
+            <p>5. Hard Times</p>
+
+            <p><strong>Q3. Which Is the Most Famous Book?</strong></p>
+
+            <p><strong>Ans: </strong>The following is a list of the most famous books which you can buy and read:</p>
+
+            <p>1.&nbsp;A Tale of Two Cities</p>
+
+            <p>2. Gone with the Wind</p>
+
+            <p>3. Alice in Wonderland</p>
+
+            <p>4. <a href="/the-kite-runner/p/itmfc9k4w6qmryzp">The Kite Runner</a></p>
+
+            <p>5. The Hitchhikers Guide to the Galaxy</p>
+
+            <h2></h2>
+
+
+        </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <div class="footerdiv1 d-flex flex-row">
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            ABOUT
+                        </div>
+                        <a href="">Contact Us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">G-mart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">G-mart Wholesales</a>
+                        <a href="">Corporate Information</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            HELP
+                        </div>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringement</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            POLICY
+                        </div>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms Of Use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            SOCIAL
+                        </div>
+                        <a href="">Facebook</a>
+                        <a href="">Twitter</a>
+                        <a href="">YouTube</a>
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="border-left: 1px solid  #454D5E; padding: 0 25px 0 25px;">
+                        <div class="footersubhead">
+                            Mail Us:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="margin: 0 0 10px 0;
+                    padding: 0 0 0 14px;
+                    ">
+                        <div class="footersubhead">
+                            Registered Office Address:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                            <p style="margin: 0px; padding: 0px; line-height: 1.5;">CIN : U51109KA2012PTC066107</p>
+                            <p style="margin: 0px; line-height: 1.5;">Telephone: <a
+                                    style="margin: 0px;line-height: 1.5;color: #2874F0;" href="">1800 202 9898</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerdiv2 d-flex justify-content-evenly" width="100%">
+                <div class="footer2con d-flex align-items-baseline" style="vertical-align: baseline;">
+                    <img src="{% static 'images/1.svg' %}" alt="">
+                    <a href="">&nbsp Sell On G-mart</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/2.svg' %}" alt="">
+                    <a href="">&nbsp Advertise</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/3.svg' %}" alt="">
+                    <a href="">&nbsp Gift Cards</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/4.svg' %}" alt="">
+                    <a href="">&nbsp Help Center</a>
+                </div>
+                <div>
+                    <p class="footer2con ">© 2007-2021 G-mart.com</p>
+                </div>
+                <div>
+                    <img style="vertical-align:inherit" src="{% static 'images/5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

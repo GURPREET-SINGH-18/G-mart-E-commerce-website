@@ -1,0 +1,507 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productall.css' %}">
+    <title>G-mart | You Desire We Deliver</title>
+</head>
+
+<body>
+    <!-- Navbar-1 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ps-5 ms-5">
+            <a class="navbar-brand ps-5 ms-5" href="/">G-Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" id="searchbar">
+                <input class="form-control me-2" width="400px" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success bi bi-search" type="submit"></button>
+
+            </form>
+            <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item pe-4">
+                        <a href="" type="button" class="btn btn-outline-light">LOGIN</a>
+                    </li>
+                    <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle drp" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a href="" type="button" class="btn btn-dark position-relative bi bi-cart3"> Cart
+                            <span class="badge bg-danger rounded-pill">0</span>
+                            </span>
+                        </a>
+                        <!-- <a class="nav-link " href="#"></a> -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5 nav2">
+        <div class="container-fluid ps-5 ms-5 pe-5 me-5">
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/mobile">Mobiles</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/fashion/Men">Men</a></li>
+                        <li><a class="dropdown-item" href="/fashion/Women">Women</a></li>
+                        <!-- <li> -->
+                        <!-- <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/fashion/Kids">Kids</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/tablet">Tablets</a></li>
+                        <li><a class="dropdown-item" href="/headphone">Headphones</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/camera">Camera</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/television">Televisions</a></li>
+                        <li><a class="dropdown-item" href="/washingmachine">Washing Machine</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/refrigerator">Refrigerator</a></li>
+                        <li><a class="dropdown-item" href="/airconditioner">Air conditioner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/books">Books</a>
+            </div>
+        </div>
+    </nav>
+    <!-- all item in div -->
+    <div class="maincon" height="5000px">
+        <div class="d-flex flex-row">
+            <div class="leftcon">
+                <img width="100%" height="" src="{% static 'images/acleft.jpg' %}" alt="">
+            </div>
+            <div class="rightcon">
+                <div class="rightcondiv1">
+                    <p>
+                        Say goodbye to the smelting heat of Indian summers by investing in an air conditioner (in)
+                        India. Available in window and split design options, there are many variants for you to choose
+                        from. Buy air conditioners (in) India online and select a model that suits your needs. TThere
+                        are ACs of different capacities, energy ratings, inverter technologies, and condenser coils
+                        across e-stores. Choose from ACs of various capacities ranging from 0.8 to 2 Tons depending upon
+                        your requirements. ACs of small capacities are sufficient for smaller rooms with lesser exposure
+                        to the sunlight. You can find air conditioners with energy ratings varying from one star to five
+                        stars. This rating indicates how efficient the machine is in terms of electricity consumption. A
+                        five star rated machine will be more efficient than lower ratings, thus helping you save on your
+                        electricity bills. The inverter technology used in the device also reduces the load on the
+                        compressor and further reduces your power consumption. Browse air conditioners (in) India from
+                        top brands such as Voltas, LG, Daikin, Samsung, Hitachi and more. Browse and choose a model that
+                        fits your needs and preferences. Add it to your shopping cart and keep your space cool in all
+                        seasons. Shop for energy-saving ACs online on G-mart from Midea, Panasonic, Voltas, Samsung,
+                        Daikin and Lloyd among other big names in the large appliance ac industry. This Information is
+                        updated on 17-Oct-21
+                    </p>
+                    <div class="d-flex flex-row">
+                        <h1>Air Conditioners &nbsp</h1>
+                        <p style="margin-bottom: 8px; vertical-align: baseline; line-height: 24.4px">(Showing 1 – 6
+                            products of 6 products)</p>
+                    </div>
+                    <div class="d-flex flex-row" style="width:'100px'">
+                        <h2 class="sortbyhead">Sort by</h2>
+                        <div class="sortby">Popularity</div>
+                        <div class="sortby">Price -- Low to High</div>
+                        <div class="sortby">Price -- High to Low</div>
+                    </div>
+                </div>
+                <a class="divhigh" href="">
+                    {% for m in i %}
+                    <div class="cardd">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex flex-column justify-content-center">
+                                <div class="d-flex justify-content-center" max-height="200px" max-width="200px">
+                                    <img src="{{m.img1.url}}" class="" width="220px" height="110%" alt="">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div style="padding-left: 25px;">
+                                    <h5 class="nav2link" style="margin: 0px;">{{m.product_name}}</h5>
+                                    <div class="d-flex flex-row">
+                                        <p class="card-text" style="margin-bottom: 0.2rem;"><span
+                                                class="badge bg-success">{{m.rating }} <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"
+                                                    style="vertical-align: baseline;">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg></span></p>
+                                        {% for j in r1 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in r2 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <h6 style="color:#878787; font-size:14px;line-height: 28px;margin:0;">&nbsp
+                                            {{j}} Ratings & {{k}} Reviews</h6>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="divhigh"
+                                        style="font-size:14px;font-family: Roboto, Arial, sans-serif;line-height: 22px;margin: 4px;">
+                                        {%for m2 in m1%}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {%for i in m2%}
+                                        <li>{{i}}</li>
+                                        {%endfor%}
+                                        {% endif %}
+                                        {%endfor%}
+                                        <li>{{m.warranty}}</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="padding-left: 25px;">
+                                    <div class="d-flex flex-row">
+                                        <h5 style="font-family: Roboto, Arial, sans-serif;
+                                    font-size: 25px;
+                                    font-weight: 600;
+                                    line-height: 25px;">₹{{m.price}}&nbsp&nbsp&nbsp</h5>
+                                        <img height="21px" width="77px" style="padding-top:1px;"
+                                            src="{% static 'images/assured.png' %}" alt="">
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        {% for j in ep %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in o %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <p class="extraprices">{{j}}</p>
+                                        <p class="offer">&nbsp&nbsp{{k}}% off</p>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="rightcondiv1 downdiv" style="padding: 25px 25px; background-color:white">
+        <div>
+
+            <h2><strong>Buy Air Conditioners(AC) Online at Best Prices in India</strong></h2>
+            
+            <p><br>
+            Beat the heat by bringing home a new air conditioner. Cooling appliances like ACs or coolers can be found in most households today. Various big brands like Haier, Daikin, Voltas, Samsung, LG, Blue Star, Panasonic, Hitachi, and more, offer a wide range of options to choose from. The core function of any AC is to maintain the desired room temperature. You can choose from different types of air conditioners for your home or workplace. Some of the popular variants include central systems, ductless mini-split, window units, portable AC, inverter AC, and more. Each variant has its own pros and cons. Before buying an AC for a home or office, you need to decide on the features you are looking for. Making the right choice is crucial as your home’s cooling, comfort, and energy consumption depend on it. Check out the energy-saving options of AC available online, and don’t forget to check their star rating. After comparing prices and reviews, narrow down your search based on the capacity, your room’s size and buy air conditioners online. Now you don’t have to worry about being uncomfortable in your own home or office. Order an AC online and get it delivered to your doorstep easily.&nbsp;<br>
+            <br>
+            Are you tired of tossing and turning all night long because your room is too hot and you’re unable to sleep because of the heat? Is the summer heat getting to you and making it uncomfortable to stay indoors? Is your ceiling fan also circulating hot air around the room? If you’ve been bugged by these issues, then air conditioners are for you. You can purchase ACs for your home, depending on the type, room size, the features required, and other criteria. Stay cool and relaxed all through the summer and other humid months by purchasing the right type of AC from your favorite online shopping store. Not only do these appliances help cool your room, but some of them also help heat up your room during the winters. Depending on the weather conditions in your area and the amount of cooling you’re looking for, you can shop for the best ACs from e-commerce portals. Various brands, such as LG, MarQ by G-mart, Blue Star, Voltas, Panasonic, Daikin, Hitachi, Samsung, and more, offer a plethora of air conditioners that you can purchase at attractive prices.</p>
+            
+            <p>When Mother Nature turns the heat up, air conditioners help you keep cool and comfortable at your home or office. Due to various factors contributing to the global warming, nowadays air conditioners are becoming a necessity in many households and offices. An air conditioner is also said to be HVAC that stands for heating, ventilation and air conditioning appliance, and helps in maintaining suitable humidity and proper ventilation. An air conditioner also filters dust, soot and other microorganisms from the outside air in order to create a healthy ambience for you.</p>
+            
+            <p><span>There are several types of air conditioners available online. But which air conditioner to use depends upon a number of factors such as, the size of the area that has to be cooled and the total heat generated inside the enclosed area. The most common types of air conditioners that you can buy online include the following:</span></p>
+            
+            <p>Unlike a few colder regions in the western world, summers in most parts of India is not something that people look forward to. With the temperatures touching almost 50°C in some parts of the country, ACs have become an inevitable part of our lives. However, before we go ahead let us look into the basics of an air conditioner.</p>
+            
+            <h2><strong>What is an Air Conditioner and How Does it Work?</strong></h2>
+            
+            <p>An air conditioner is an electric appliance that helps you control the temperature of your room in a manner such that it is optimal and comfortable. A few advanced air conditioners can automatically adjust the temperature within the room as per the outside temperature, thus keeping you cool and comfortable.</p>
+            
+            <p>An air conditioner works almost on the same principle as a refrigerator. However, unlike a refrigerator that takes heat away from the items stored within it, an air conditioner absorbs the heat from an entire room. This helps reduce the temperature within the room. This process is done with the help of a chemical called refrigerant. During the cooling process, the indoor unit (IDU) of the air conditioner produces waste water which is drained out.<br>
+            <br>
+            Now that you know how an air conditioner functions, let us take a look at some of the most common types of air conditioners available in India.</p>
+            
+            <p><br>
+            &nbsp;</p>
+            
+            <h2><b>Split AC</b></h2>
+            
+            <p>For rooms that do not have a proper window or if you’re looking to install an appliance that not only helps keep the room cool but also enhances its aesthetic appeal, then split ACs are for you. A Split air conditioner consists of two units - a unit which is mounted outside the home and another which is in the room. The unit which is installed outside comes with a compressor and condenser which are connected to the indoor unit with a pipe. The compressor sucks air from outside, cools it and throws out cold air into the room using the blower of the indoor unit.&nbsp;<br>
+            <br>
+            These types of air cooling units are very common in households today, with LG ACs being a popular choice. Split air conditioners are more aesthetically pleasing compared to other types of air conditioners. They are easy to install and are capable of cooling your bedroom or even larger areas such as a living room. They can also be used in commercial establishments.</p>
+            
+            <p><br>
+            &nbsp;</p>
+            
+            <h2><strong>Window AC</strong></h2>
+            
+            <p>One of the older forms of air conditioners, a window air cooling unit comprises a single unit with a combination of compressor and blower within it. It can be installed only in the window frame with the blower side of the air conditioner facing inside the room and the compressor facing outside. If your room has a window, then you can install window ACs.&nbsp;</p>
+            
+            <p><b>Portable AC</b><br>
+            If you’re looking for a cooling appliance that you can move from one place to another, then portable ACs are for you. This type of an air conditioner is fairly new to the Indian market and is designed just like an air cooler. Portable air conditioner can move from one room to another instantly and is a great option for homes where there is no feasibility to mount split / window units. You can move these types of cooling units from room to room in your home as per your convenience.<br>
+            <br>
+            If you are looking for a split air conditioner, Daikin AC or a Hitachi AC would be a good choice. O-General ACs would be another great option, if you are looking for a window air conditioner. Apart from these brands you can also look at other popular brands such as Blue Star, Voltas, MarQ, Samsung and more. Having an air conditioner at home is not an expensive affair. You can shop for energy-saving air conditioners online and get great discounts and prices.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Beat the Heat with the Cooling Days Summer Sale</b></h2>
+            
+            <p>It is time to start thinking about how to convert all your hot summer days into optimum cooling days. The first order of business would be to ensure that you have the necessary cooling appliances such as a refrigerator so that you can chill multiple bottles of water, juice, and other beverages. You can also use the freezer to store ice-creams, ice cubes and more. Online shopping sites like G-mart are ready to bring to you some attractive summer sale deals and offers so that you can buy your cooling days appliances with ease. However, before you start shopping for appliances at the summer sale let’s take a quick look at the kind of products you can buy online.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Air Conditioners</b></h2>
+            
+            <p>Air conditioners are a basic necessity in places that suffer from high humidity. An air conditioner helps maintain the humidity inside your room, making it comfortable for you. The choice of your air condition units depends on the size of the room, the maximum number of people who could potentially occupy the room at a moment, and the modes and features you wish to have. G-mart hosts several reputed brands of air conditioners such as MarQ, Midea, Voltas, Carrier and so on.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Air Coolers</b></h2>
+            
+            <p>Air coolers are ideal for places that experience dry summers. Powerful air coolers can make your room breezy and sufficiently cool and comfortable. These air coolers replenish the lack of moisture in your ambient environment to make your room cooler than the outside world. You can find a range of different types of air coolers online from famous brands such as Symphony, Bajaj, Singer and many more.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Fans</b></h2>
+            
+            <p>Fans are necessary in Indian homes during the summer, and this necessity is not just limited to the availability of a power ceiling fan. You also need pedestal fans, table fans and more because if you live in areas that suffer from frequent power cuts. As these fans can run easily on a home inverter and ensure that the summer heat is sufficiently contained. You can find a wide variety of fans from brands such as V-Guard, Havells, Orient and more on G-mart.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Other Cooling Days Products&nbsp;</b></h2>
+            
+            <p>While you need appliances like refrigerators, air coolers and more to beat the summer heat, you also need supplementary products to ensure that these appliances are able to function smoothly or are utilized optimally. On top of that, you can also find attractive cooling days summer sale deals for stabilizers, which protect your AC and fridge from sudden voltage fluctuation. Additionally, if you live in areas that suffer from frequent power cuts you can also find attractive summer sale offers on home inverters, which ensure that your necessary appliances continue functioning despite a power cut. Apart from these products, you can opt for a juicer mixer grinder, which can help you press fresh fruit juice, crush ice for some cool drinks, blend milkshakes, grind fresh chutneys and more. Furthermore, if you are chilling water in your fridge, then make sure that you have an adequate water purifier installed in your home for safe and healthy water.<br>
+            <br>
+            The above-mentioned are some products you can find at G-mart during the G-mart summer sale. So go ahead and shop for your favourite products today!<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Beat the Heat with Blue Star ACs</b></h2>
+            
+            <p>When the weather heats up, our thoughts turn to only one thing - chilling out. After spending an hour in the hot sun, all you want to do is to come home and chill in a cool and comfortable place. With the advent of air conditioners, it is easy to stay cool and comfortable at home or at work. You can buy an inexpensive and energy-efficient air conditioner and be prepared to beat the scorching heat. There are a number of popular brands which manufacture efficient ACs. One such brand is Blue Star which hosts a number of innovative features to ensure that you remain comfortable even in the hottest of summers. Depending on your specific requirements, you can choose from a Blue Star 1.2 ton AC, Blue Star 1.5 ton AC, Blue Star 1 ton AC, Blue Star 1.2 ton inverter AC, Blue Star 1.5 ton inverter AC, or a Blue Star 1 ton split AC.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Work Peacefully and Sleep Comfortably with Blue Star ACs</b></h2>
+            
+            <p>Whether it is a hot summer or a humid monsoon, you can make sure that you and your family members stay comfortable and relaxed by bringing home a Blue Star split AC or a Blue Star inverter AC. There are many factors that you need to consider before choosing any particular model of an air conditioner. Some of the few factors include type, capacity, power consumption, features, and energy efficiency.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>AC Type</b></h2>
+            
+            <p>When it comes to the type, you can go for a Blue Star 1 ton 3-star Split AC or a Blue Star 1 ton portable AC. A split AC consists of two units - one unit mounted outside of the home while the other mounted inside the room. Portable models are ideal for homes in which configurations or the regulations of the building prevent the installation of AC units. Or you may simply want to move your AC from room to room easily.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>AC Size and Capacity</b></h2>
+            
+            <p>The capacity of your air conditioner is probably one of the most vital factors to consider. An AC with a high capacity cools your room faster but may consume a lot of power, while an air conditioner with a low capacity needs to work hard to cool the room. Before buying an AC, calculate the required size and capacity and then make an informed decision.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Buy Blue Star ACs Online</b></h2>
+            
+            <p>After taking into consideration the above-mentioned factors, log on to your favourite shopping website and get a Blue Star AC for your home. With a wide range of models available online, you should have no trouble comparing models and prices. Going either for a Blue Star 1 ton AC, a Blue Star 1.2 ton AC, a Blue Star 1.5 ton ac or a Blue Star portable AC is entirely up to you. But, there’s no need to suffer the blistering heat during summers anymore. Bring home a Blue Star AC and relax in the cool comfort of your home.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Split Air Conditioners</b></h2>
+            
+            <p><a href="/home-kitchen/home-appliances/air-conditioners/split~type/pr?sid=j9e,abm,c54">Split air conditioners</a> comprise of outdoor and indoor units. The outdoor unit, installed outside the building, houses components like the compressor, condenser, fan and expansion valve. This helps in reducing the noise. The indoor unit accommodates the evaporator or cooling coil and the cooling fan. These kinds of air conditioners are cost-effective and do not require any major installation work.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Window Air Conditioners</b></h2>
+            
+            <p>Window air conditioners are one of the most commonly used air conditioners and can easily fit in a window frame or a slot made in the wall. Comprising of a compressor, condenser, expansion valve or coil, evaporator and cooling coil, all enclosed in a single box, window air conditioners provide cool air inside a room and absorbs the heat. In these kinds of air conditioners you need to clean the air filters on a regular basis. Window air conditioners also come with anti-bacterial filters, cooling and heating functions, dehumidification functions and dust filters.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><b>Packaged Air Conditioners</b></h2>
+            
+            <p>These types of air conditioners are ideal if you want to cool more than two rooms or a larger space at your home or office. There are two arrangements possible with a packaged air conditioner. In the first one, the compressor, condenser, expansion valve and evaporator are housed in a single box. The cooled air is thrown by the high capacity blower, and that reaches to the various rooms through air ducts. In the second arrangement, the compressor and condenser are housed together in one casing, while the compressed gas passes through individual units, like the expansion valve and cooling coil, located in various rooms.List of Best Brands in Air Conditioners are <b><a href="/air-conditioners/voltas~brand/pr?sid=j9e,abm,c54">Voltas</a></b>, <b><a href="/air-conditioners/blue-star~brand/pr?sid=j9e,abm,c54">Blue Star</a></b>, <b><a href="/air-conditioners/lg~brand/pr?sid=j9e,abm,c54">LG</a></b>,&nbsp;<b><a href="/air-conditioners/hitachi~brand/pr?sid=j9e,abm,c54">Hitachi</a></b>, <b><a href="/air-conditioners/daikin~brand/pr?sid=j9e,abm,c54">Daikin</a></b>, <a href="/home-kitchen/home-appliances/air-conditioners/carrier~brand/pr?sid=j9e,abm,c54"><b>Carrier</b></a>, <a href="/home-kitchen/home-appliances/air-conditioners/electrolux~brand/pr?sid=j9e,abm,c54"><b>Electrolux</b></a>, <a href="/home-kitchen/home-appliances/air-conditioners/godrej~brand/pr?sid=j9e,abm,c54"><b>Godrej</b></a>, <a href="/home-kitchen/home-appliances/air-conditioners/haier~brand/pr?sid=j9e,abm,c54"><b>Haier</b></a>, <a href="/home-kitchen/home-appliances/air-conditioners/ifb~brand/pr?sid=j9e,abm,c54"><b>IFB</b></a>, <b><a href="/air-conditioners/lloyd~brand/pr?sid=j9e,abm,c54">Lloyd</a></b>, O General, <a href="/home-kitchen/home-appliances/air-conditioners/onida~brand/pr?sid=j9e,abm,c54"><b>Onida</b></a>, <a href="/home-kitchen/home-appliances/air-conditioners/panasonic~brand/pr?sid=j9e,abm,c54"><b>Panasonic</b></a>, <a href="/home-kitchen/home-appliances/air-conditioners/samsung~brand/pr?sid=j9e,abm,c54"><b>Samsung</b></a>, <a href="/home-kitchen/home-appliances/air-conditioners/sansui~brand/pr?sid=j9e,abm,c54"><b>Sansui</b></a>, <a href="/home-kitchen/home-appliances/air-conditioners/sharp~brand/pr?sid=j9e,abm,c54"><b>Sharp</b></a>, <a href="/home-kitchen/home-appliances/air-conditioners/videocon~brand/pr?sid=j9e,abm,c54"><b>Videocon</b></a>, <b><a href="/home-kitchen/home-appliances/air-conditioners/whrilpool~brand/pr?sid=j9e,abm,c54">Whirlpool</a>&nbsp;</b>and &nbsp;many more brands&nbsp;shop online for best prices.</p>
+            
+            
+            
+            
+            </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <div class="footerdiv1 d-flex flex-row">
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            ABOUT
+                        </div>
+                        <a href="">Contact Us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">G-mart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">G-mart Wholesales</a>
+                        <a href="">Corporate Information</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            HELP
+                        </div>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringement</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            POLICY
+                        </div>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms Of Use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            SOCIAL
+                        </div>
+                        <a href="">Facebook</a>
+                        <a href="">Twitter</a>
+                        <a href="">YouTube</a>
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="border-left: 1px solid  #454D5E; padding: 0 25px 0 25px;">
+                        <div class="footersubhead">
+                            Mail Us:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="margin: 0 0 10px 0;
+                    padding: 0 0 0 14px;
+                    ">
+                        <div class="footersubhead">
+                            Registered Office Address:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                            <p style="margin: 0px; padding: 0px; line-height: 1.5;">CIN : U51109KA2012PTC066107</p>
+                            <p style="margin: 0px; line-height: 1.5;">Telephone: <a
+                                    style="margin: 0px;line-height: 1.5;color: #2874F0;" href="">1800 202 9898</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerdiv2 d-flex justify-content-evenly" width="100%">
+                <div class="footer2con d-flex align-items-baseline" style="vertical-align: baseline;">
+                    <img src="{% static 'images/1.svg' %}" alt="">
+                    <a href="">&nbsp Sell On G-mart</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/2.svg' %}" alt="">
+                    <a href="">&nbsp Advertise</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/3.svg' %}" alt="">
+                    <a href="">&nbsp Gift Cards</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/4.svg' %}" alt="">
+                    <a href="">&nbsp Help Center</a>
+                </div>
+                <div>
+                    <p class="footer2con ">© 2007-2021 G-mart.com</p>
+                </div>
+                <div>
+                    <img style="vertical-align:inherit" src="{% static 'images/5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

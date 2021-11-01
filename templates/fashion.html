@@ -1,0 +1,462 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productall.css' %}">
+    <title>Mobiles | G-mart | You Desire We Deliver</title>
+    <style>
+        .comp {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 19.6px;
+            text-decoration: none solid rgb(135, 135, 135);
+            color: #878787;
+        }
+
+        .product_name {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 19.6px;
+            text-decoration: none solid rgb(33, 33, 33);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: #212121;
+        }
+
+        .product_name a {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 19.6px;
+            text-decoration: none solid rgb(33, 33, 33);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: #212121;
+        }
+
+        .fprice a {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22.4px;
+            text-decoration: none solid rgb(33, 33, 33);
+            word-spacing: 0px;
+            color: rgb(33, 33, 33);
+        }
+
+        .fexp a {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 19.6px;
+            text-decoration: line-through solid rgb(135, 135, 135);
+            word-spacing: 0px;
+            color: #878787;
+        }
+
+        .foffer a {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            line-height: 18.2px;
+            text-decoration: none solid rgb(56, 142, 60);
+            word-spacing: 0px;
+            color: #388E3C;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar-1 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ps-5 ms-5">
+            <a class="navbar-brand ps-5 ms-5" href="/">G-Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" id="searchbar">
+                <input class="form-control me-2" width="400px" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success bi bi-search" type="submit"></button>
+
+            </form>
+            <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item pe-4">
+                        <a href="" type="button" class="btn btn-outline-light">LOGIN</a>
+                    </li>
+                    <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle drp" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a href="" type="button" class="btn btn-dark position-relative bi bi-cart3"> Cart
+                            <span class="badge bg-danger rounded-pill">0</span>
+                            </span>
+                        </a>
+                        <!-- <a class="nav-link " href="#"></a> -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5 nav2">
+        <div class="container-fluid ps-5 ms-5 pe-5 me-5">
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/mobile">Mobiles</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/fashion/Men">Men</a></li>
+                        <li><a class="dropdown-item" href="/fashion/Women">Women</a></li>
+                        <!-- <li> -->
+                        <!-- <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/fashion/Kids">Kids</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/tablet">Tablets</a></li>
+                        <li><a class="dropdown-item" href="/headphone">Headphones</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/camera">Camera</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/television">Televisions</a></li>
+                        <li><a class="dropdown-item" href="/washingmachine">Washing Machine</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/refrigerator">Refrigerator</a></li>
+                        <li><a class="dropdown-item" href="/airconditioner">Air conditioner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/books">Books</a>
+            </div>
+        </div>
+    </nav>
+    <!-- all item in div -->
+    <div class="maincon" height="5000px">
+        <div class="d-flex flex-row">
+            <div class="leftcon">
+                <img width="100%" height="" src="{% static 'images/f.jpg' %}" alt="">
+            </div>
+            <div class="rightcon">
+                <div class="rightcondiv1">
+                    <p>
+                        Given how powerful social media has become these days, everyone around the world wants to look
+                        their best at all times. Thus, the right clothing and accessories are almost always in demand.
+                        Good-quality shirts, T-shirts, trousers, jeans, shorts, tops, sarees, kurtis, lehenga, dresses,
+                        skirts, bra, innerwear, and more are some of the examples that people love and need to wear.
+                        Watches, earrings, rings, bracelets, chains, etc can accentuate the look of every outfit. Thus,
+                        it’s important to wear complementing accessories when you dress up in your finest.
+                    </p>
+                    <div class="d-flex flex-row">
+                        <h1>{{t}} Fashion &nbsp</h1>
+                        <p style="margin-bottom: 8px; vertical-align: baseline; line-height: 24.4px">(Showing 1 – 6
+                            products of 6 products)</p>
+                    </div>
+                    <div class="d-flex flex-row" style="width:'100px'">
+                        <h2 class="sortbyhead">Sort by</h2>
+                        <div class="sortby">Popularity</div>
+                        <div class="sortby">Price -- Low to High</div>
+                        <div class="sortby">Price -- High to Low</div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row flex-wrap">
+                    {% for m in i %}
+                    <div style="width: 25%" style="margin-bottom:8px;">
+                        <div class="d-flex flex-column" style="margin:0px 8px ;">
+                            <div>
+                                <a href="">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="{{m.img1.url}}" alt="" height="348px">
+                                    </div>
+                                </a>
+                            </div>
+                            <div style="padding: 5px 16px 12px;">
+                                <div>
+                                    <div class="comp">
+                                        {{m.company_name}}
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        <div class="product_name" title="{{m.title}}">
+                                            <a href="">{{m.title}}&nbsp&nbsp</a>
+                                        </div>
+                                        <div>
+                                            <img height="18px" width="66px" style="padding-top:1px;vertical-align: top;"
+                                                src="{% static 'images/assured.png' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-end">
+                                        <div class="fprice">
+                                            <a href="">₹{{m.price}}&nbsp&nbsp&nbsp</a>
+                                        </div>
+                                        <div class="fexp">
+                                            {% for j in ep %}
+                                            {% if forloop.counter == forloop.parentloop.counter %}
+                                            <a href="">
+                                                <div>₹{{j}}</div>
+                                            </a>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                        <div class="foffer">
+                                            {% for k in o %}
+                                            {% if forloop.counter == forloop.parentloop.counter %}
+                                            <a href="">&nbsp&nbsp&nbsp{{k}}% off</a>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="rightcondiv1 downdiv" style="padding: 25px 25px; background-color:white">
+        <div><h2>Make the Right Impression with the Best Clothing and Accessories&nbsp;</h2>
+
+            <p>Stylish clothing and accessories can make you look and feel good about yourself. Women’s clothing options include<a href="/q/sarees"> saree</a>, kurtis, lehengas, dresses, etc. These outfits can be worn to work, parties, festive occasions, wedding receptions, and so on. Based on your preference, budget, etc., you can buy the best clothing and accessories for yourself. Some of the brands that you can find online are Maniac, Duke, Try This, Saara, Metronaut, Allen Solly, Online Bazaar, Urbano Fashion, Stylum, and more. You can even buy <a href="/watches/pr?sid=r18">watches</a>, <a href="/earrings/pr?sid=mcr,96v,k9d">earrings</a>,<a href="/jewellery/rings/pr?sid=mcr,ykh,3ob"> rings</a>,<a href="/bangles-bracelets-armlets/pr?sid=mcr,96v,fbc"> bracelets</a>, <a href="/necklaces-chains/necklaces/pr?sid=mcr,96v,0vq,izm">necklaces</a>, shoes, makeup, and more online.&nbsp;</p>
+            
+            
+            
+            <p><b>Perks of Wearing the Right Outfits&nbsp;</b></p>
+            
+            
+            
+            <p><b>Confidence&nbsp;</b></p>
+            
+            <p>When you dress well from head to toe, your need to worry about your look either disappears or isn’t as strong as it was before. This gives you the ability to conduct business presentations much more confidently as you won’t feel conscious about your appearance and you won’t be uncomfortable. You will also feel comfortable and open to talk to new people at work, parties, and other events. So, make sure that every time you dress in your finest, you ensure that you feel comfortable. If you’re not comfortable, you will end up fidgeting and feeling uneasy the entire time.&nbsp;</p>
+            
+            
+            
+            <p><b>Praise&nbsp;</b></p>
+            
+            <p>When you dress well, people notice. Well-fitting, T-shirts, shirts, trousers, etc., are some of the options that can catch anyone’s eye. Once you choose your outfit, make sure that you wear complementing watches, chains, etc., so that you get a more balanced and fashionable look. Dressing well to work, parties, and other events will draw praises from all your friends, colleagues, and even strangers. And, if you want to make the best first impression on a date, make sure that you sport the right outfit, makeup, <a href="/footwear/pr?sid=osp">footwear</a>, and hairstyle.&nbsp;</p>
+            
+            
+            
+            <p><b>Better Mood&nbsp;</b></p>
+            
+            <p>When you’re dressed comfortably and fashionably, you’ll be in a better mind space as you won’t be fidgeting or uncomfortable wherever you are. You will feel more proactive, productive, friendly, and so on. This will help you perform better at work. And, you’ll be able to network and socialise with people at parties and other events. This way, you’ll be noticed, which will help you do more at work. And before you know it, you’ll be promoted and given responsibilities that you’ve always wanted.&nbsp;</p>
+            
+            
+            
+            <p><b>Better Photos&nbsp;</b></p>
+            
+            <p>Parties, events, and even regular days at work are some of the times when pictures are taken. People like taking pictures as you never know when they’ll come of use in the future. And, when you wear clothes that you like and are comfortable in, you will stand out in every picture that is taken. You can edit the pictures to suit your liking. Think of a suitable witty caption to go along with the pictures and upload them across all your social media profiles. Once you do so, you can sit back and watch all the likes and comments pour in.</p>
+            
+            
+            
+            <p><b>Shop Online&nbsp;</b></p>
+            
+            <p>Thanks to online shopping, you can buy clothing and accessories such as <a href="/clothing-and-accessories/bottomwear/skirts/womens-skirts/pr?sid=clo%2Cvua%2Ciku%2Cw5t">skirts</a>, dresses, tops, and even kids’ clothing and men's clothing at the click of a button. You will find many options available and the best part is that you can take all the time you want to go through the products. Product images, descriptions, customer reviews, etc., are available across the sites to help you make informed purchases. Once you place your order, it will be delivered to your doorstep as soon as possible. Happy shopping!&nbsp;</p>
+            
+            
+            
+            <p><b>Popular Searches:</b><a href="/clothing-and-accessories/kurtas-ethnic-sets-and-bottoms/kurtas/mens-kurtas/pr?sid=clo%2Ccfv%2Ccib%2Cjks"> Kurta For Men</a> | <a href="/mens-sherwanis/pr?sid=clo%2Ccfv%2Cdra%2Cbrt">Sherwani </a>| <a href="/q/palazzo-pants">Palazzo</a> | <a href="/womens-dresses/party~occasion/pr?sid=clo%2Codx%2Cmaj%2Cjhy">Party Dresses</a> | <a href="/womens-night-suits/pr?sid=clo%2C1hc%2C5d2%2Ccny">Night Suits</a> | <a href="/womens-sarees/banarasi~type/pr?sid=clo%2C8on%2Czpd%2C9og">Banarasi Sarees </a>| <a href="/womens-sarees/pure-cotton~fabric/pr?sid=clo%2C8on%2Czpd%2C9og">Cotton Sarees</a> | <a href="/sunglasses/pr?sid=26x">Sunglasses</a> | <a href="/watches/pr?sid=r18">Watches</a> | <a href="/bags-wallets-belts/wallets-clutches/wallets/pr?sid=reh%2Ccca%2Ch76">Wallets</a> | <a href="/bags-wallets-belts/belts/pr?sid=reh%2Cwq9">Belt </a>| <a href="/jewellery/pr?sid=mcr">Jewellery</a> | <a href="/womens-gowns/pr?sid=clo%2Codx%2Cod7%2C0xx">Gowns</a> | <a href="/womens-dresses/maxi~type/pr?sid=clo%2Codx%2Cmaj%2Cjhy">Maxi Dresses</a> | <a href="/womens-night-dresses-and-nighties/pr?sid=clo%2C1hc%2Ckc4%2Cnmu">Nighty</a>&nbsp;| <a href="/q/pathani-kurta-pajama">Pathani Kurta</a>&nbsp;| <a href="/q/mens-dhoti-kurta">Dhoti Kurta</a>&nbsp;| <a href="/womens-ethnic-sets/pr?sid=clo%2Ccfv%2Citg%2Ctys">Kurta Set</a>&nbsp;| <a href="/mens-jackets/pr?sid=clo%2Cqvw%2Cz0g%2Cjbm">Jackets</a>&nbsp;| <a href="/clothing-and-accessories/sleepwear/pr?sid=clo%2C1hc">Sleepwear</a> | <a href="/womens-night-dresses-and-nighties/pr?sid=clo%2C1hc%2Ckc4%2Cnmu">Nightwear</a> | <a href="/clothing-and-accessories/innerwear-and-swimwear/swimsuits/pr?sid=clo%2Cqfl%2Cdru">Swimsuits</a> | <a href="/womens-blouse-materials/pr?sid=clo%2C8on%2C5n9%2Chny">Blouse</a> | <a href="/q/cardigans">Cardigans</a> | <a href="/womens-ethnic-sets/pr?sid=clo%2Ccfv%2Citg%2Ctys">Ethnic Sets</a> | <a href="/clothing-and-accessories/winter-wear/gloves/mens-gloves/pr?sid=clo%2Cqvw%2Ctog%2Cjvu">Gloves&nbsp;</a>| <a href="/q/banarsi-suit">Banarasi Suit</a>&nbsp;| <a href="/q/krishna-costume-dress">Krishna Dress</a>&nbsp;| <a href="/q/designer-sarees">Designer Sarees</a> | <a href="/q/designer-kurtis">Designer Kurtis</a> | <a href="/mens-ethnic-sets/kurta-and-pyjama-set~type/pr?sid=clo%2Ccfv%2Citg%2Cpme">Kurta Pajama</a> | <a href="/mens-formal-shirts/pr?sid=clo%2Cash%2Caxc%2Cmmk%2Cbk1">Formal Shirts</a> | <a href="/mens-casual-shirts/pr?sid=clo%2Cash%2Caxc%2Cmmk%2Ckp7">Casual Shirts</a>&nbsp;| <a href="/q/party-wear-gowns">Party Wear Gowns</a>&nbsp;| <a href="/q/designer-salwar-suits">Designer Suits</a>&nbsp;| <a href="/dress-materials/pr?sid=clo%2Cqfi%2Cxcx%2Cms4">Dress Material</a>&nbsp;| <a href="/q/long-dresses">Long Dresses</a>&nbsp;| <a href="/mens-briefs-and-trunks/pr?sid=clo%2Cqfl%2Cszr%2C3xl">Briefs</a>&nbsp;| <a href="/q/designer-dresses">Designer Dresses</a>&nbsp;| <a href="/q/girls-gowns">Girls Gowns</a> | <a href="/q/linen-sarees">Linen Sarees</a>&nbsp;| <a href="/womens-kurtas-kurtis/chikan-embroidery~pattern/pr?sid=clo%2Ccfv%2Ccib%2Crkt">Chikankari kurtis</a>&nbsp;| <a href="/womens-dupattas/pr?sid=clo%2Cqd8%2Ct6b%2Cpjy">Dupatta</a>&nbsp;| <a href="/q/ruffle-sarees">Ruffle Sarees</a>&nbsp;| <a href="/womens-sarees/kanjivaram~type/pr?sid=clo%2C8on%2Czpd%2C9og">Kanjivaram Sarees</a>&nbsp;|&nbsp; <a href="/q/organza-sarees">Organza Sarees</a>&nbsp;| <a href="/q/maheshwari-sarees">Maheshwari Sarees</a>&nbsp;| <a href="/womens-sarees/georgette~fabric/pr?sid=clo%2C8on%2Czpd%2C9og">Georgette Sarees</a>&nbsp;| <a href="/bras/daisy-dee~brand/pr?sid=clo%2Cqfl%2Cv5v%2Ckzg">Daisy Dee Bra</a>&nbsp;| <a href="/womens-panties/jockey~brand/pr?sid=clo%2Cqfl%2Cq5u%2Cla2">Jockey Panties</a>&nbsp;| <a href="/womens-tops/crop-top~type/pr?sid=clo%2Cash%2Cohw%2C36j">Crop Tops</a>&nbsp;| <a href="/womens-tops/off-shoulder-top~type/pr?sid=clo%2Cash%2Cohw%2C36j">Off Shoulder Tops</a>&nbsp;| <a href="/mens-track-pants/joggers~theme/pr?sid=clo%2Cvua%2Cjlk%2C6ql">Joggers</a></p>
+            
+            
+            
+            <p><b>Latest winter wear collections:</b> <a href="/mens-jackets/pr?sid=clo%2Cqvw%2Cz0g%2Cjbm">Mens Jackets</a> | <a href="/womens-jackets/pr?sid=clo%2Cqvw%2Cz0g%2Crwo">Ladies Jackets</a> | <a href="/mens-sweaters/pr?sid=clo%2Cqvw%2Cvkb%2Cieq">Sweaters</a> | <a href="/clothing-and-accessories/winter-wear/sweaters-and-cardigans/womens-sweaters/pr?sid=clo%2Cqvw%2Cvkb%2Chbp">Womens Sweaters</a> | <a href="/mens-sweatshirts/pr?sid=clo%2Cqvw%2C64a%2Cvui">Sweatshirts</a> | <a href="/womens-sweatshirts/pr?sid=clo%2Cqvw%2C64a%2Clzz">Women Sweatshirts</a> | <a href="/q/pullover">Pullover</a> | <a href="/q/cardigans">Cardigans</a> | <a href="/q/denim-jackets">Denim Jackets</a> | <a href="/q/leather-jackets">Leather Jackets</a> | <a href="/clothing-and-accessories/winter-wear/shawls/womens-shawls/pr?sid=clo%2Cqvw%2Ckpn%2C9pk">Shawls</a> | <a href="/womens-shrugs/pr?sid=clo%2Cqvw%2Cvvr%2Csyu">Shrugs</a> | <a href="/clothing-and-accessories/clothing-accessories/stoles/womens-stoles/pr?sid=clo%2Cqd8%2C90q%2Cq07">Stoles</a> | <a href="/q/scarfs">Scarf</a> |<a href="/q/winter-jackets"> Winter Jackets</a> |<a href="/clothing-and-accessories/blazers-waistcoats-and-suits/coats/womens-coats/pr?sid=clo%2Cupk%2C6zw%2Chkw"> Ladies Coats </a>| <a href="/clothing-and-accessories/blazers-waistcoats-and-suits/coats/womens-coats/overcoat~type/pr?sid=clo%2Cupk%2C6zw%2Chkw">Overcoat</a> | <a href="/q/woolen-caps">Woolen Caps</a> | <a href="/q/wool-socks">Woolen Socks</a> | <a href="/mens-thermals/pr?sid=clo%2Cqvw%2Cugg%2Coak">Thermals</a> | <a href="/q/hoodies">Hoodie</a> | <a href="/clothing-and-accessories/tracksuits/mens-tracksuits/pr?sid=clo%2Cnyk%2Czp4">Tracksuits</a>&nbsp;| <a href="/mens-jackets/sports~theme/pr?sid=clo%2Cqvw%2Cz0g%2Cjbm">Sports Jackets</a>&nbsp;| <a href="/mens-jackets/monte-carlo~brand/pr?sid=clo%2Cqvw%2Cz0g%2Cjbm">Monte Carlo Jackets</a>&nbsp;| <a href="/waistcoats/pr?sid=clo%2Cupk%2C8mn%2Cmik">Waistcoat</a></p>
+            
+            
+            
+            <p>Also check our clothing stores: <a href="/q/ethnic-wear">Ethnic Wear</a> | <a href="/q/western-wear">Western Wear</a> | <a href="/clothing-and-accessories/winter-wear/pr?sid=clo%2Cqvw">Winter Wear</a> | <a href="/q/sports-wear">Sports Wear</a> | <a href="/q/maternity-wear">Maternity Wear</a>&nbsp;| <a href="/mens-clothing-store">Mens Clothing</a> | <a href="/q/kids-clothing">Kids Clothing</a> | <a href="/q/kids-girls-clothing">Girls Clothing</a>&nbsp;| <a href="/fashion-max-launch-store">MAX Fashion online shopping</a>&nbsp;| <a href="/clothing-and-accessories/max~brand/pr?sid=clo">MAX Clothing</a>&nbsp;| <a href="/q/winter-wear-for-women">Womens Winter Wear</a>&nbsp;| <a href="/fashion-boss-intrigue-2020-store">G-mart Best of Season Sale</a>&nbsp;| <a href="/fashion-decathlon-launch-store">Decathlon Online Fashion Store</a>&nbsp;| <a href="/q/christmas-party-dress">Christmas Party Dresses</a>&nbsp;| <a href="/mens-jackets/louis-philippe~brand/pr?sid=clo,qvw,z0g,jbm">Louis Philippe Jackets</a>&nbsp;| <a href="/women-ethnic-wear-fest-store">Women's Ethnic Wear Fest</a></p>
+            
+            
+            </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <div class="footerdiv1 d-flex flex-row">
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            ABOUT
+                        </div>
+                        <a href="">Contact Us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">G-mart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">G-mart Wholesales</a>
+                        <a href="">Corporate Information</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            HELP
+                        </div>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringement</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            POLICY
+                        </div>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms Of Use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            SOCIAL
+                        </div>
+                        <a href="">Facebook</a>
+                        <a href="">Twitter</a>
+                        <a href="">YouTube</a>
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="border-left: 1px solid  #454D5E; padding: 0 25px 0 25px;">
+                        <div class="footersubhead">
+                            Mail Us:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="margin: 0 0 10px 0;
+                    padding: 0 0 0 14px;
+                    ">
+                        <div class="footersubhead">
+                            Registered Office Address:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                            <p style="margin: 0px; padding: 0px; line-height: 1.5;">CIN : U51109KA2012PTC066107</p>
+                            <p style="margin: 0px; line-height: 1.5;">Telephone: <a
+                                    style="margin: 0px;line-height: 1.5;color: #2874F0;" href="">1800 202 9898</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerdiv2 d-flex justify-content-evenly" width="100%">
+                <div class="footer2con d-flex align-items-baseline" style="vertical-align: baseline;">
+                    <img src="{% static 'images/1.svg' %}" alt="">
+                    <a href="">&nbsp Sell On G-mart</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/2.svg' %}" alt="">
+                    <a href="">&nbsp Advertise</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/3.svg' %}" alt="">
+                    <a href="">&nbsp Gift Cards</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/4.svg' %}" alt="">
+                    <a href="">&nbsp Help Center</a>
+                </div>
+                <div>
+                    <p class="footer2con ">© 2007-2021 G-mart.com</p>
+                </div>
+                <div>
+                    <img style="vertical-align:inherit" src="{% static 'images/5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

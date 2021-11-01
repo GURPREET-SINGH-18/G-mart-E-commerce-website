@@ -1,0 +1,552 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productall.css' %}">
+    <title>G-mart | You Desire We Deliver</title>
+</head>
+
+<body>
+    <!-- Navbar-1 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ps-5 ms-5">
+            <a class="navbar-brand ps-5 ms-5" href="/">G-Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" id="searchbar">
+                <input class="form-control me-2" width="400px" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success bi bi-search" type="submit"></button>
+
+            </form>
+            <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item pe-4">
+                        <a href="" type="button" class="btn btn-outline-light">LOGIN</a>
+                    </li>
+                    <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle drp" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a href="" type="button" class="btn btn-dark position-relative bi bi-cart3"> Cart
+                            <span class="badge bg-danger rounded-pill">0</span>
+                            </span>
+                        </a>
+                        <!-- <a class="nav-link " href="#"></a> -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5 nav2">
+        <div class="container-fluid ps-5 ms-5 pe-5 me-5">
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/mobile">Mobiles</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/fashion/Men">Men</a></li>
+                        <li><a class="dropdown-item" href="/fashion/Women">Women</a></li>
+                        <!-- <li> -->
+                        <!-- <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/fashion/Kids">Kids</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/tablet">Tablets</a></li>
+                        <li><a class="dropdown-item" href="/headphone">Headphones</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/camera">Camera</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/television">Televisions</a></li>
+                        <li><a class="dropdown-item" href="/washingmachine">Washing Machine</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/refrigerator">Refrigerator</a></li>
+                        <li><a class="dropdown-item" href="/airconditioner">Air conditioner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/books">Books</a>
+            </div>
+        </div>
+    </nav>
+    <!-- all item in div -->
+    <div class="maincon" height="5000px">
+        <div class="d-flex flex-row">
+            <div class="leftcon">
+                <img width="100%" height="" src="{% static 'images/cameraleft.jpg' %}" alt="">
+            </div>
+            <div class="rightcon">
+                <div class="rightcondiv1">
+                    <p>
+                        Cameras, especially digital cameras, have become the rage in recent times. Most of the
+                        photography enthusiasts have armed themselves with dslr camera recently from brands like Canon,
+                        Nikon, Sony, GoPro cameras and are travelling to picturesque locations to capture stunning
+                        moments and convert them into photographic images. Although point and shoot cameras from Kodak
+                        and Sony are the still the preferred version of many expert photographers, digital cameras are
+                        the ones that have expanded the possibilities of experimenting with different styles of
+                        photography and help amateurs to click good pictures. Camera bags, tripods and lenses are
+                        significant accessories that photographers need to carry with them always.
+                    </p>
+                    <div class="d-flex flex-row">
+                        <h1>Cameras &nbsp</h1>
+                        <p style="margin-bottom: 8px; vertical-align: baseline; line-height: 24.4px">(Showing 1 – 6
+                            products of 6 products)</p>
+                    </div>
+                    <div class="d-flex flex-row" style="width:'100px'">
+                        <h2 class="sortbyhead">Sort by</h2>
+                        <div class="sortby">Popularity</div>
+                        <div class="sortby">Price -- Low to High</div>
+                        <div class="sortby">Price -- High to Low</div>
+                    </div>
+                </div>
+                <a class="divhigh" href="">
+                    {% for m in i %}
+                    <div class="cardd">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex flex-column justify-content-center">
+                                <div class="d-flex justify-content-center" max-height="200px" max-width="200px">
+                                    <img src="{{m.img1.url}}" class="" width="180px" height="100%" alt="">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div style="padding-left: 25px;">
+                                    <h5 class="nav2link" style="margin: 0px;">{{m.product_name}}</h5>
+                                    <div class="d-flex flex-row">
+                                        <p class="card-text" style="margin-bottom: 0.2rem;"><span
+                                                class="badge bg-success">{{m.rating }} <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"
+                                                    style="vertical-align: baseline;">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg></span></p>
+                                        {% for j in r1 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in r2 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <h6 style="color:#878787; font-size:14px;line-height: 28px;margin:0;">&nbsp
+                                            {{j}} Ratings & {{k}} Reviews</h6>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="divhigh"
+                                        style="font-size:14px;font-family: Roboto, Arial, sans-serif;line-height: 22px;margin: 4px;">
+                                        {%for m2 in m1%}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {%for i in m2%}
+                                        <li>{{i}}</li>
+                                        {%endfor%}
+                                        {% endif %}
+                                        {%endfor%}
+                                        <li>{{m.warranty}}</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="padding-left: 25px;">
+                                    <div class="d-flex flex-row">
+                                        <h5 style="font-family: Roboto, Arial, sans-serif;
+                                    font-size: 25px;
+                                    font-weight: 600;
+                                    line-height: 25px;">₹{{m.price}}&nbsp&nbsp&nbsp</h5>
+                                        <img height="21px" width="77px" style="padding-top:1px;"
+                                            src="{% static 'images/assured.png' %}" alt="">
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        {% for j in ep %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in o %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <p class="extraprices">{{j}}</p>
+                                        <p class="offer">&nbsp&nbsp{{k}}% off</p>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="rightcondiv1 downdiv" style="padding: 25px 25px; background-color:white">
+        <div>
+            <h2>Buy Camera Online – Document Life’s Best Moments</h2>
+
+            <p>In this time and age when social media is a major platform for visibility, the need for good-quality
+                pictures has multiplied sevenfold. A picture taken on a smartphone may be good, but it’s not the same as
+                one taken with a good-quality camera. Smart ones give you plenty of options to play around with
+                lighting, effect, and distance so you have full control of your shots. Start with a basic
+                point-and-shoot camera if you’re a beginner and you can move on to more intense DSLR ones as you get
+                more confident in your photography skills.</p>
+            &nbsp;
+
+            <p><b>Shop Smartly and Conveniently</b></p>
+
+            <p>One of the greatest things about shopping online is that you can check out the latest cameras and compare
+                different models while you’re at home in your pyjamas, sipping on chilled drinks and binge eating
+                comfort food. Online shopping sites also pamper you with enticing discounts on the best-selling cameras
+                from Nikon, Canon, Manfrotto, Sony, Envie, and Sigma regardless of whether it’s sale season or
+                not.</p>
+            &nbsp;
+
+            <p>Pout, pose and click! Don’t you just love cameras? Imagine a world without selfies, no profile pictures,
+                no photography exhibitions and nothing to capture the breath-taking sunset. Basically, imagine a world
+                without cameras. Difficult, right? It doesn’t matter if you are not trained as a photographer, you can
+                still take good pictures provided you have the right camera. And if you are a professional, then there
+                is no better way to improve your skills other than upgrade what you already own. So, knowing a thing or
+                two about the different types of cameras is a must. Give this article a quick read, and make a wise
+                buying decision.</p>
+            &nbsp;
+
+            <p><b>DSLR cameras to get the most beautiful snapshot of a moment</b></p>
+            
+
+            <p>DSLR cameras (Digital Single-Lens Reflex Camera) are being widely bought and used today for various
+                reasons that make them hugely popular. With large sensor area, high shutter speeds ( can capture up to
+                10 frames per second), much better sensitivity to light, ability to use different lenses for different
+                situations, great control over the depth of field( the ability to create beautiful bokeh) and many more
+                such reasons prompt photographers into buying DSLR cameras online. It doesn't matter whether you want to
+                click the photo of a wide landscape for which you would need a wide-angle lens like the Canon 24mm f/2.8
+                lens, or you want to do some bird photography using the telephoto lens like the Nikon 300mm f/4 lens, or
+                clock someone's portrait using portrait lens, they all can be mounted based on your requirement in to
+                the DSLR camera. Go for a Nikon D3300 18-55mm f/3.5-5.6 DSLR camera, Canon EOS 13000 DSLR, Nikon D 810,
+                Pentax K5, Sony Alpha ILCE 6000Y or any such best DSLR cameras. Browse to find the best DSLR camera
+                price online to shop for it at the most reasonable rate.</p>
+            &nbsp;
+
+            <p><b>What are the Different Types of Cameras?</b></p>
+
+            <p><span><b><a href="/cameras/instant-cameras/pr?sid=jek,p31,ysu">Instant Cameras</a></b></span></p>
+
+            <p>The name says it all, instant cameras are a cool balance of vintage cameras that come with film rolls and
+                modern digital cameras. Fujifilm has an adorable collection of colourful instant cameras with some of
+                them shaped like Hello Kitty. These cameras instantly roll out copies of the pictures you click. Some
+                versions of these cameras feature a mirror near the lens so you can take selfies. Play around with your
+                instant camera, take close up shots of objects or capture dreamy images by adjusting the brightness of
+                your camera. Like all cameras, instant ones are also usually powered by batteries.</p>
+            &nbsp;
+
+            <p><b>Point-and-shoot&nbsp;</b></p>
+            
+
+            <p><a href="/cameras/point-and-shoot/pr?sid=jek,p31,nxa">Point and shoot cameras</a> are still cameras that
+                are very compact in size and of lightweight that you can easily slip them into your pockets. They are
+                primarily meant for simple photography operation with a fixed lens that has either focus-free or
+                autofocus capability. You don't need to keep changing lenses while taking pictures in different
+                situations and they also have a massive depth of field. Nikon B700, Sony DSC-W830, Nikon Coolpix B500,
+                Canon IXUS 185 point and shoot cameras are some good ones using which you can learn basic photography.
+                You can adjust the settings like mode and exposure automatically, so you don’t have to do much other
+                than holding the camera steadily. Also, they are usually compact, so you can take them along while going
+                to parties or trips, and capture all your favourite moments. However, advanced point-and-shoot ones come
+                with better features, and are quite a rage these days.</p>
+            &nbsp;
+
+            <p>A couple of things to check with DSLR cameras is their MegaPixel count which describes the resolution,
+                battery type, sensor type and size, and shutter speed. DSLR cameras with good sensor give you pictures
+                that are sharp and detailed even when enlarged. A camera’s sensor size gives you an idea of how wide a
+                view it can cover. The processor of a DSLR camera is another detail to look into. Cameras with a good
+                processor reduce noise and give you equally crisp pictures in both bright and dim lighting. DSLR cameras
+                like the Canon EOS 1300D feature Wi-Fi connectivity and built-in NFC technology which let you transfer
+                pictures and videos from your camera to your smartphone with a finger tap.</p>
+            &nbsp;
+
+            <p><b>DSLR Cameras&nbsp;</b></p>
+            
+
+            <p>A couple of things to check with <a href="/cameras/dslr-mirrorless/pr?sid=jek,p31,trv">DSLR cameras</a>
+                is their MP, battery type, sensor type and size, and shutter speed. DSLR cameras with good sensor give
+                you pictures that are sharp and detailed even when enlarged. A camera’s sensor size gives you an idea of
+                how wide a view it can cover. The processor of a DSLR camera is another detail to look into. Cameras
+                with a good processor reduce noise and give you equally crisp pictures in both bright and dim lighting.
+                DSLR cameras like the Canon EOS 1300D feature Wi-Fi connectivity &amp; <a href="/q/4k-video-camera">4K
+                    Video Camera</a> and built-in NFC technology which let you transfer pictures and videos from your
+                camera to your smartphone with a finger tap.</p>&nbsp;
+
+
+
+            <p><b>Action Cameras</b></p>
+            
+
+            <p>Don’t want to be weighed down with heavy equipment when hiking? Ditch your DSLR camera for compact <a
+                    href="/cameras/sports-action/pr?sid=jek,p31,s3q">action camera</a>s. These cameras are more
+                travel-friendly and are usually waterproof. They can be mounted on almost any surface which helps when
+                you want to click pictures of the view from different angles. Action cameras with the voice control
+                feature are innovative and let you enjoy hands-free control of your camera so you can concentrate on
+                your activity.</p>&nbsp;
+
+
+
+            <p><b>Mirrorless&nbsp;</b></p>
+            
+
+            <p>These cameras are not that popular when it comes to their features. They usually have interchangeable
+                lenses and don’t have the usual mirror, which makes them a lightweight and compact option when compared
+                to DSLR cameras.</p>&nbsp;
+
+            <p><b>Camcorder&nbsp;</b></p>
+            
+
+            <p><span>A combination of a video camera and a video recorder, a <a
+                        href="/cameras/camcorders/pr?sid=jek,p31,enu">camcorder</a> is great for recording. Whether you
+                    want to record Mother Nature at its best or wish to record your child’s first stage performance,
+                    just buy a camcorder that will let you record without having to do much. The new models also have
+                    the luxury of a camera, as they allow you to take pictures as well.</span></p>&nbsp;
+
+            <p><b>Sports and Action Cameras</b></p>
+            
+
+            <p>Don’t want to be weighed down with heavy equipment when hiking? Get yourself a compact action camera.
+                Sports and Action cameras are more travel-friendly and are usually waterproof. They can be mounted on
+                almost any surface which helps when you want to click pictures of the view from different angles. Action
+                cameras with the voice control feature are innovative and let you enjoy hands-free control of your
+                camera so you can concentrate on your activity. The <a href="/q/gopro-hero-7-black">Gopro Hero 7
+                    Black</a>, GoPro Hero 5 Sports &amp; Action camera, Sony HDR -AS300, Mezire <a
+                    href="/q/hd-camera">HD</a> 130 degree wide adventure camera, SJCAM 4000 camera and many more are
+                available online at low prices</p>
+
+            <p>Now you can sit back at home read the reviews of different models, know camera price list online, and buy
+                cameras at online shopping. Bring home a camera today, and capture each and every moment to reminisce
+                them later in life.</p>&nbsp;
+
+
+
+            <p><b>Cameras - Frequently Asked Questions</b></p>
+            
+
+            <p><b>1. Why should I buy a DSLR camera?</b></p>
+            <p>Digital Single Lens Reflex (DSLR) cameras are being widely bought and used today for various reasons that
+                make them hugely popular. With large sensor area, high shutter speeds( can capture up to 10 frames per
+                second), much better sensitivity to light, ability to use different lenses for different situations,
+                great control over the depth of field( the ability to create beautiful bokeh) and many more such reasons
+                prompt photographers into buying DSLR cameras online. These let you change lenses and hence you can
+                manually set exposure and focus. They deliver crispier and cleaner images as they have larger internal
+                image sensors than point-and-shoot cameras.</p>&nbsp;
+
+            <p><b>2. What resolution do I need to get sharp photos?</b></p>
+            <p>For printing out decently clear photographs you can use cameras with the resolution between 16 MP to 24
+                MP. The higher the resolution, the clearer will be the photos. If you only wish to post photos on the
+                web or have a soft copy of the same, you don't really need cameras with very high resolution. You can go
+                for Canon EOS 100D DSLR camera which is of 18 MP or cameras from Nikon, Sony and other good brands.</p>&nbsp;
+
+            <p><b>3. What is the difference between actual pixel count and effective pixel count?</b></p>
+            <p><span>Some brands publish two-pixel count numbers. These are the actual and effective pixel count
+                    numbers. The actual pixel count number is the actual pixel numbers present on the sensor. On the
+                    other hand, effective number is the number of pixels on the sensor that are used for image
+                    formation. All the pixels are not used for image formation.</span></p>&nbsp;
+
+            <p><b>4. Which are some of the good digital cameras under Rs 30,000?</b></p>
+            <p><span>A number of good brands manufacture cameras under Rs 30,000. You can go for some of the best brands
+                    as these will last long, like Nikon D3400 DSLR Camera Body with Single Lens- having an aperture size
+                    of f/3.5-5.6 and focal length of 18-55 mm. You can also go for Canon EOS 1300D DSLR Camera Body with
+                    Single Lens – having an aperture size of f/3.5-5.6, 18-55mm focal length and 18 MP
+                    resolution.</span></p>&nbsp;
+
+
+
+            <p><b>5. What are the factors one must look at while buying a camera?</b></p>
+
+            <p>Most of us only look at the resolution/ the pixel count while buying a big or <a
+                    href="/q/small-cameras">small camera</a>. Although this is an important feature, there are various
+                other aspects that you need to consider. Some of these are the pixel size, sensor size, focal length,
+                aperture size among others. Each of these determines the clarity of the photo by controlling light.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <div class="footerdiv1 d-flex flex-row">
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            ABOUT
+                        </div>
+                        <a href="">Contact Us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">G-mart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">G-mart Wholesales</a>
+                        <a href="">Corporate Information</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            HELP
+                        </div>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringement</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            POLICY
+                        </div>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms Of Use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            SOCIAL
+                        </div>
+                        <a href="">Facebook</a>
+                        <a href="">Twitter</a>
+                        <a href="">YouTube</a>
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="border-left: 1px solid  #454D5E; padding: 0 25px 0 25px;">
+                        <div class="footersubhead">
+                            Mail Us:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="margin: 0 0 10px 0;
+                    padding: 0 0 0 14px;
+                    ">
+                        <div class="footersubhead">
+                            Registered Office Address:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                            <p style="margin: 0px; padding: 0px; line-height: 1.5;">CIN : U51109KA2012PTC066107</p>
+                            <p style="margin: 0px; line-height: 1.5;">Telephone: <a
+                                    style="margin: 0px;line-height: 1.5;color: #2874F0;" href="">1800 202 9898</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerdiv2 d-flex justify-content-evenly" width="100%">
+                <div class="footer2con d-flex align-items-baseline" style="vertical-align: baseline;">
+                    <img src="{% static 'images/1.svg' %}" alt="">
+                    <a href="">&nbsp Sell On G-mart</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/2.svg' %}" alt="">
+                    <a href="">&nbsp Advertise</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/3.svg' %}" alt="">
+                    <a href="">&nbsp Gift Cards</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/4.svg' %}" alt="">
+                    <a href="">&nbsp Help Center</a>
+                </div>
+                <div>
+                    <p class="footer2con ">© 2007-2021 G-mart.com</p>
+                </div>
+                <div>
+                    <img style="vertical-align:inherit" src="{% static 'images/5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

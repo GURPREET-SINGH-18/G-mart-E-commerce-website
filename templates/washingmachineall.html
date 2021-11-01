@@ -1,0 +1,521 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productall.css' %}">
+    <title>G-mart | You Desire We Deliver</title>
+</head>
+
+<body>
+    <!-- Navbar-1 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ps-5 ms-5">
+            <a class="navbar-brand ps-5 ms-5" href="/">G-Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" id="searchbar">
+                <input class="form-control me-2" width="400px" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success bi bi-search" type="submit"></button>
+
+            </form>
+            <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item pe-4">
+                        <a href="" type="button" class="btn btn-outline-light">LOGIN</a>
+                    </li>
+                    <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle drp" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a href="" type="button" class="btn btn-dark position-relative bi bi-cart3"> Cart
+                            <span class="badge bg-danger rounded-pill">0</span>
+                            </span>
+                        </a>
+                        <!-- <a class="nav-link " href="#"></a> -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5 nav2">
+        <div class="container-fluid ps-5 ms-5 pe-5 me-5">
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/mobile">Mobiles</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/fashion/Men">Men</a></li>
+                        <li><a class="dropdown-item" href="/fashion/Women">Women</a></li>
+                        <!-- <li> -->
+                        <!-- <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/fashion/Kids">Kids</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/tablet">Tablets</a></li>
+                        <li><a class="dropdown-item" href="/headphone">Headphones</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/camera">Camera</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/television">Televisions</a></li>
+                        <li><a class="dropdown-item" href="/washingmachine">Washing Machine</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/refrigerator">Refrigerator</a></li>
+                        <li><a class="dropdown-item" href="/airconditioner">Air conditioner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/books">Books</a>
+            </div>
+        </div>
+    </nav>
+    <!-- all item in div -->
+    <div class="maincon" height="5000px">
+        <div class="d-flex flex-row">
+            <div class="leftcon">
+                <img width="100%" height="" src="{% static 'images/wcleft.jpg' %}" alt="">
+            </div>
+            <div class="rightcon">
+                <div class="rightcondiv1">
+                    <p>
+                        Bring home washing machine and let it take the load of your dirty laundry while you give
+                        your time and attention to other important things in life. Leading a hectic lifestyle is no
+                        joke. So, when you can bring down the burden of household chores like washing clothes, then, why
+                        not? If you have a nuclear family, then getting a 5 to 6 kg appliance will do the job easily.
+                        However, a large family of about 6 to 8 people requires a bigger washing machine. With a
+                        multitude of features and benefits, washing machines will make your clothes look spick and
+                        span without any damage or colour loss. You can even wash your delicates with ease. Browse
+                        through our website and select the one that best suits your requirements. Also, it’s crucial to
+                        choose an appliance that saves on water and power. A machine that has a 4-star or a 5-star
+                        rating will always be beneficial for you and for the environment. You will find top-load and
+                        front-load appliances online. washing machine prices are reasonable and well-priced. The
+                        information you are reading has been last updated on {Date}.
+                    </p>
+                    <div class="d-flex flex-row">
+                        <h1>Washing Machines &nbsp</h1>
+                        <p style="margin-bottom: 8px; vertical-align: baseline; line-height: 24.4px">(Showing 1 – 6
+                            products of 6 products)</p>
+                    </div>
+                    <div class="d-flex flex-row" style="width:'100px'">
+                        <h2 class="sortbyhead">Sort by</h2>
+                        <div class="sortby">Popularity</div>
+                        <div class="sortby">Price -- Low to High</div>
+                        <div class="sortby">Price -- High to Low</div>
+                    </div>
+                </div>
+                <a class="divhigh" href="">
+                    {% for m in i %}
+                    <div class="cardd">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex flex-column justify-content-center">
+                                <div class="d-flex justify-content-center" max-height="200px" max-width="200px">
+                                    <img src="{{m.img1.url}}" class="" width="140px" height="87%" alt="">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div style="padding-left: 25px;">
+                                    <h5 class="nav2link" style="margin: 0px;">{{m.product_name}}</h5>
+                                    <div class="d-flex flex-row">
+                                        <p class="card-text" style="margin-bottom: 0.2rem;"><span
+                                                class="badge bg-success">{{m.rating }} <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"
+                                                    style="vertical-align: baseline;">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg></span></p>
+                                        {% for j in r1 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in r2 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <h6 style="color:#878787; font-size:14px;line-height: 28px;margin:0;">&nbsp
+                                            {{j}} Ratings & {{k}} Reviews</h6>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="divhigh"
+                                        style="font-size:14px;font-family: Roboto, Arial, sans-serif;line-height: 22px;margin: 4px;">
+                                        {%for m2 in m1%}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {%for i in m2%}
+                                        <li>{{i}}</li>
+                                        {%endfor%}
+                                        {% endif %}
+                                        {%endfor%}
+                                        <li>{{m.warranty}}</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="padding-left: 25px;">
+                                    <div class="d-flex flex-row">
+                                        <h5 style="font-family: Roboto, Arial, sans-serif;
+                                    font-size: 25px;
+                                    font-weight: 600;
+                                    line-height: 25px;">₹{{m.price}}&nbsp&nbsp&nbsp</h5>
+                                        <img height="21px" width="77px" style="padding-top:1px;"
+                                            src="{% static 'images/assured.png' %}" alt="">
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        {% for j in ep %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in o %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <p class="extraprices">{{j}}</p>
+                                        <p class="offer">&nbsp&nbsp{{k}}% off</p>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="rightcondiv1 downdiv" style="padding: 25px 25px; background-color:white">
+        <div>
+
+            <h2>Washing Machine -  at Your Service</h2>
+
+            <div></div>
+
+            <div>One of the constant needs of humanity is cleanliness and  washing machines are on the list of home
+                appliances that are meant to handle this task. If you are a bachelor, you must be wondering if investing
+                in an  fully automatic washing machine is worth your money. If this is one of the questions on your
+                mind, ask yourself if you have the time and energy to handle this task on your own. In most cases, if
+                you are being honest to yourself, the simple answer to this question is no.&nbsp;</div>
+
+            <div></div>
+
+            <h2>Do You Need a Washing Machine?</h2>
+
+            <div></div>
+
+            <div>A washing machine is an appliance that helps you wash your laundry. The word laundry describes not just
+                garments but other things such as bed linens, table linens, and other items such as curtains and cushion
+                covers. You can also add to this list other items such as backpacks and shoes that also occasionally get
+                thrown into the washing machine for a good wash. Now that we have listed most of the common items among
+                the exhaustive list of laundry items, it's time to ask yourself if you can handle the task of washing
+                such items manually, by hand. Unless you are someone who finds washing your clothes and getting your
+                hands covered in froth therapeutic, this is not a task you will thoroughly enjoy. Washing your clothes
+                by hand exposes them to harsh chemicals which can affect your skin adversely. In some extreme cases,
+                harsh chemicals used in liquid detergents and detergent powders can leave your hands irritated and
+                itchy. Considering this fact, you are only left with one option and that is to hire a housemaid who will
+                wash your laundry by hand. Resorting to this option will lead you to be homebound until the maid leaves.
+                This will also mean that you would have to work your entire day’s schedule around the maid’s
+                availability. This is not going to be easy as you would like to socialize or relax during your free
+                time. Imagine staying up on a Saturday or Sunday afternoon at around 2:30 PM only because your maid is
+                going to come home to get your clothes washed. It’s not a pleasant experience, especially, if you take
+                into consideration that your weekly offs could be on a Saturday or Sunday.&nbsp;</div>
+
+            <div></div>
+
+            <h2>The Solution to This Dilemma&nbsp;</h2>
+
+            <div></div>
+
+            <div>Buying yourself  washing machines such as the  front load washing machine -  8 kg 5 Star Fully
+                Automatic Front Load In-built Heater - (Model - Senator WXS) or  washing machine (top load) -  6.5
+                kg 5 Star Fully Automatic Top Load (Model - TL-REW Aqua) is going to take care of this issue.</div>
+
+            <div></div>
+
+            <h2>Where to Buy</h2>
+
+            <div></div>
+
+            <div></div>
+
+            <div>The best way to check out  washing machine prices and buy them is to use the online shopping method.
+                You can use the filters provided on the shopping website or on the mobile app to sort your  washing
+                machine search results based on search parameters such as price, colour, loading capacity, and other
+                features.&nbsp;</div>
+
+            <div></div>
+
+            <h2></h2>
+
+            <h2> Washing Machines - Get Clean and Dirt-free Clothes with the Least Effort</h2>
+
+            <h2></h2>
+
+            <p>Gone are the days when we used to wash clothes by hand. Our busy lifestyles and tight schedules have made
+                it almost impossible for us to spend time manually doing household chores, especially washing clothes.
+                Hence, many companies have forayed into the field of home appliances and come up with innovative
+                solutions that are sure to simplify this tedious task and make it seem effortless. One such well-known
+                brand that is popular among Indian households is .  washing machines help make the household task
+                of washing clothes so much easier, especially when you have more family members and a growing pile of
+                dirty clothes. An  washing machine (7 kg) is the perfect appliance for a family of 3 to 4 members.
+            </p>
+
+            <p>Many Indian households prefer washing clothes in a washing machine, as it not only helps complete this
+                task within a short span of time, but it also helps get rid of stain and dirt effortlessly. The new
+                technologies and innovative features that are incorporated into a washing machine have made it a breeze
+                to wash all kinds of fabric. A few button presses are all it takes to get an almost perfect wash. Most
+                washing machines wring out maximum moisture from the clothes, so it’s quicker to dry the washed laundry.
+            </p>
+
+            <h2>Take a Look at  Washing Machines (7 kg) Available Online</h2>
+
+            <p>Most of the washing machines from  work on Triadic Pulsator or Tumble Wash systems. The Triadic
+                Pulsator helps wash away the dirt on your garments in three simple steps. Firstly, the stubborn dirt is
+                removed using Soft Scrub Pads. Next, the Powerful Swirl Jets ensure every corner of the fabric is
+                dirt-free. Lastly, the Mechanical Centre Punch feature helps flush out the dirt from your clothes,
+                leaving them soft and clean. You can select from fully automatic front-load washing machines or fully
+                automatic top-load washing machines, according to your preference.&nbsp;</p>
+
+            <h2>Choose an  Washing Machine 6 kg and Remove Stains Easily&nbsp;&nbsp;</h2>
+
+            <p>We all wish for a lot of things in our lives to grow - isn’t it? Except for the pile of laundry; nobody
+                wants that to grow. After all, washing laundry is a hassle, right? Everyone loves wearing fresh pairs of
+                clothes, but a lot of us back out when it comes to cleaning the same. While half of the people who back
+                out do so because they’re lazy, the others do so because they know that their laundry-washing skills are
+                hopeless. And, to make matters worse, getting your dirty clothes dry-cleaned on a regular basis is
+                pretty expensive. So, what does one do? Buy an  washing machine 6 kg.</p>
+
+            <p><b>Why Should I Go for an  Washing Machine 6 kg?</b></p>
+
+            <p> washing machines boast certain features that many other washing machines in the same class don’t
+                have. We’ve listed some of them below for you to see:</p>
+
+            <p><span>Deep Clean Technology - It doesn’t take a lot for clothes to get stained unless they are made from
+                    a certain kind of fabric. And, it is practically impossible for one to keep stains away forever.
+                    This technology ensures that your clothes are cleaned gently, whilst removing the toughest of stains
+                    to help them look new and fresh.&nbsp;</span></p>
+
+            <p>Aqua Energie - It happens often that you try to reach for something in your pocket and all you take of it
+                is detergent residue. This occurs especially when the detergent doesn’t dissolve properly in the water.
+                However, you don’t have to worry about that anymore. Some  washing machines boast a built-in filter
+                that helps the detergent dissolve completely in the water, so your clothes and linen are clean and
+                soft.&nbsp;</p>
+
+            <p>Quick Wash - Not all of us can afford the luxury of time, and that is why a lot of  washing machines
+                come with the Quick Wash feature. Thanks to that, you can wash your laundry in about 30 minutes, so you
+                don’t have a problem in devoting time to the other things that you like.&nbsp;</p>
+
+            <p>Voltage Protection - There are multiple  washing machines 6 kg that function just fine even when the
+                fluctuation in voltage is high.&nbsp;</p>
+
+            <p><b>Why Should I Purchase an  Washing Machine 6 kg Online?&nbsp;&nbsp;</b></p>
+
+            <p>We all know how big and bulky washing machines are - don’t we? And, buying one from a physical store
+                would only cause you to spend extra money on getting it shipped to your place. However, if you purchase
+                one online, the e-commerce website you’re buying from will take care of the shipping and the
+                installation. Also, comparing the prices of different washing machines from  is convenient when you
+                are buying from an online shopping portal. So, before someone notices that you’ve been wearing the same
+                dirty clothes for multiple days in a row, go buy an  washing machine 6 kg online now.</p>
+
+            <h2>Buy  Washing Machines Online</h2>
+
+            <p>If you’re on the lookout for a new washing machine for your home, then you're in the right place. You can
+                find a plethora of washing machines from  online. You can browse through the vast range of 
+                washing machines (7 kg) and select the best one for your home. A fully automatic washing machine is a
+                worthwhile investment as it can efficiently clean your delicates while keeping the materials intact.
+                Moreover, online shopping for a home appliance, like a washing machine has never been simpler. All you
+                need to do is log in to your favorite e-commerce portal, search for  washing machine 7 kg, compare
+                the different products, check their prices, and buy the best one for your home. When you buy these home
+                appliances online, you can either pay for it online or on the day of the delivery. These products will
+                also be safely delivered to your doorstep in a couple of days.</p>
+
+
+        </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <div class="footerdiv1 d-flex flex-row">
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            ABOUT
+                        </div>
+                        <a href="">Contact Us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">G-mart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">G-mart Wholesales</a>
+                        <a href="">Corporate Information</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            HELP
+                        </div>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringement</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            POLICY
+                        </div>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms Of Use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            SOCIAL
+                        </div>
+                        <a href="">Facebook</a>
+                        <a href="">Twitter</a>
+                        <a href="">YouTube</a>
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="border-left: 1px solid  #454D5E; padding: 0 25px 0 25px;">
+                        <div class="footersubhead">
+                            Mail Us:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="margin: 0 0 10px 0;
+                    padding: 0 0 0 14px;
+                    ">
+                        <div class="footersubhead">
+                            Registered Office Address:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                            <p style="margin: 0px; padding: 0px; line-height: 1.5;">CIN : U51109KA2012PTC066107</p>
+                            <p style="margin: 0px; line-height: 1.5;">Telephone: <a
+                                    style="margin: 0px;line-height: 1.5;color: #2874F0;" href="">1800 202 9898</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerdiv2 d-flex justify-content-evenly" width="100%">
+                <div class="footer2con d-flex align-items-baseline" style="vertical-align: baseline;">
+                    <img src="{% static 'images/1.svg' %}" alt="">
+                    <a href="">&nbsp Sell On G-mart</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/2.svg' %}" alt="">
+                    <a href="">&nbsp Advertise</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/3.svg' %}" alt="">
+                    <a href="">&nbsp Gift Cards</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/4.svg' %}" alt="">
+                    <a href="">&nbsp Help Center</a>
+                </div>
+                <div>
+                    <p class="footer2con ">© 2007-2021 G-mart.com</p>
+                </div>
+                <div>
+                    <img style="vertical-align:inherit" src="{% static 'images/5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

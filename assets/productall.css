@@ -1,0 +1,307 @@
+#searchbar {
+    width: 550px;
+    height: 37px;
+}
+
+body {
+    background-color: #f1f3f6;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: 750;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.nav2link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.nav2link:hover {
+    color: #2874f0
+}
+
+.pricelink {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.pricelink:hover {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.nav2 {
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px 0px;
+    height: 40px;
+}
+
+.dropdown-menu:hover a {
+    color: #000;
+}
+
+.footerdiv {
+    height: 346.6px;
+    background-color: #172337;
+}
+
+.footersubhead {
+    color: #878787;
+    margin-bottom: 9px;
+}
+
+.footerdiv1 {
+    margin: 0 78px 0 65px;
+    padding: 40px 0 0 0;
+}
+
+.footerdiv2 {
+    height: 72.8px;
+    border-top: 1px solid #454D5E;
+    margin: 40px 0 0 0;
+    padding: 25px 0 25px 0;
+}
+
+.footerdivcon {
+    flex: 1;
+    font-size: 12px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footerdivm {
+    display: flex;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footerdivc {
+    flex: 1;
+    font-size: 12px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footerdivcon p {
+    color: white;
+    margin: 0px;
+}
+
+.footerdivcon a {
+    text-decoration: none;
+    color: white;
+    line-height: 24px;
+}
+
+.footerdivcon a:hover {
+    text-decoration: underline;
+}
+
+.footer2con {
+    font-size: 14px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer2con a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer2con p {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.maincon {
+    margin: 0 auto;
+    min-width: 978px;
+    max-width: 1680px;
+    padding: 8px;
+    height: 100%;
+}
+
+.leftcon {
+    background-color: white;
+    flex: 0 0 230px;
+    max-width: 280px;
+    margin: 0px 10px 0px 0px;
+    height: fit-content;
+}
+
+
+.rightcon {
+    background-color: white;
+    flex-grow: 1;
+    overflow: auto;
+    /* min-height: 700px; */
+}
+
+.rightcondiv1 {
+    background: #fff;
+    padding: 12px 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    /* height: 100%; */
+    border-bottom: 1px solid #f0f0f0;
+    min-height: 72px;
+}
+
+.rightcondiv1 p {
+    color: #878787;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 17.4px;
+    text-decoration: none solid rgb(135, 135, 135);
+}
+
+.rightcondiv1 h1 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.4px;
+    text-decoration: none solid rgb(33, 33, 33);
+    word-spacing: 0px;
+}
+
+.sortby {
+    margin: 0 10px 0 10px;
+    padding: 0px 0 4px 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+}
+
+.sortbyhead {
+    padding: 0px 10px 4px 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.4px;
+    text-decoration: none solid rgb(33, 33, 33);
+}
+
+.cardd {
+    padding: 24px 0 20px 24px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav2link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.nav2link:hover {
+    color: #2874f0
+}
+
+.divhigh {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding-left: 16px;
+}
+
+.divhigh li {
+    list-style-position: inside;
+    text-indent: -1.4em;
+}
+
+/*
+.divhigh li::before{
+    content: "•";
+    color: rgb(194, 194, 194);
+    padding-right: 8px;
+    font-size: 20px;
+    display: table-cell;
+} */
+
+.divhigh:hover {
+    color: black;
+}
+
+.extraprices {
+    text-decoration: line-through;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: line-through solid rgb(135, 135, 135);
+    color: #878787;
+    padding: 2px 0 0 0;
+}
+
+.offer {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    line-height: 13px;
+    text-decoration: none;
+    word-spacing: 0px;
+    padding: 3px 0 0 0;
+    color: #388E3C;
+}
+
+.downdiv p {
+    margin: 0px;
+    padding: 1px;
+    margin-top: 5px;
+}
+
+.downdiv div {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 17.4px;
+    text-decoration: none solid rgb(135, 135, 135);
+    word-spacing: 0px;
+    color: #878787;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.downdiv h2 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration: none solid rgb(135, 135, 135);
+    text-align: left;
+    word-spacing: 0px;
+    color: #878787;
+    margin: 0px;
+    padding: 0px;
+}
+
+.downdiv h3 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-decoration: none solid rgb(135, 135, 135);
+    text-align: left;
+    word-spacing: 0px;
+    color: #878787;
+    margin: 0px;
+    padding: 0px;
+}

@@ -1,0 +1,543 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productall.css' %}">
+    <title>G-mart | You Desire We Deliver</title>
+</head>
+
+<body>
+    <!-- Navbar-1 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ps-5 ms-5">
+            <a class="navbar-brand ps-5 ms-5" href="/">G-Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" id="searchbar">
+                <input class="form-control me-2" width="400px" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success bi bi-search" type="submit"></button>
+
+            </form>
+            <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item pe-4">
+                        <a href="" type="button" class="btn btn-outline-light">LOGIN</a>
+                    </li>
+                    <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle drp" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a href="" type="button" class="btn btn-dark position-relative bi bi-cart3"> Cart
+                            <span class="badge bg-danger rounded-pill">0</span>
+                            </span>
+                        </a>
+                        <!-- <a class="nav-link " href="#"></a> -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5 nav2">
+        <div class="container-fluid ps-5 ms-5 pe-5 me-5">
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/mobile">Mobiles</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/fashion/Men">Men</a></li>
+                        <li><a class="dropdown-item" href="/fashion/Women">Women</a></li>
+                        <!-- <li> -->
+                        <!-- <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/fashion/Kids">Kids</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/tablet">Tablets</a></li>
+                        <li><a class="dropdown-item" href="/headphone">Headphones</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/camera">Camera</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/television">Televisions</a></li>
+                        <li><a class="dropdown-item" href="/washingmachine">Washing Machine</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/refrigerator">Refrigerator</a></li>
+                        <li><a class="dropdown-item" href="/airconditioner">Air conditioner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/books">Books</a>
+            </div>
+        </div>
+    </nav>
+    <!-- all item in div -->
+    <div class="maincon" height="5000px">
+        <div class="d-flex flex-row">
+            <div class="leftcon">
+                <img width="100%" height="" src="{% static 'images/refleft.jpg' %}" alt="">
+            </div>
+            <div class="rightcon">
+                <div class="rightcondiv1">
+                    <p>
+                        Is your refrigerator getting old? Well, this festive season bring home a new fridge for enhanced
+                        and efficient cooling of your food products. Your shopping experience depends on your cooling
+                        needs, your budget, and the fridge price. So, if you have a small family, then you can opt for a
+                        single door product. Different types of single door products come with different features such
+                        as a base drawer where you can organize your dry vegetables like potatoes and onions. Some
+                        single door options also come with a tall bottle shelf so that you can store large bottles with
+                        ease. On the other hand, if you have a large family or you buy a large number of products that
+                        need refrigeration, then you can opt for a double door fridge. There are several models of
+                        double door products available in the market and each has a unique feature. Some may come with
+                        the freezer at the bottom, others can be converted to suit your needs and more. Your buying
+                        choice here depends on your requirements and the refrigerator price. So, go ahead and find the
+                        product that meets your needs and order it today. Once you place your order, it will be
+                        delivered to your home in no time. Trusted brands like Samsung, LG, Whirlpool, Haier, Godrej,
+                        Hitachi, Panasonic and MarQ by G-mart have a vast range of refrigerators to choose from. This
+                        information is updated on 17-Oct-21
+                    </p>
+                    <div class="d-flex flex-row">
+                        <h1>Refrigerators &nbsp</h1>
+                        <p style="margin-bottom: 8px; vertical-align: baseline; line-height: 24.4px">(Showing 1 – 6
+                            products of 6 products)</p>
+                    </div>
+                    <div class="d-flex flex-row" style="width:'100px'">
+                        <h2 class="sortbyhead">Sort by</h2>
+                        <div class="sortby">Popularity</div>
+                        <div class="sortby">Price -- Low to High</div>
+                        <div class="sortby">Price -- High to Low</div>
+                    </div>
+                </div>
+                <a class="divhigh" href="">
+                    {% for m in i %}
+                    <div class="cardd">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex flex-column justify-content-center">
+                                <div class="d-flex justify-content-center" max-height="180px" max-width="200px">
+                                    <img src="{{m.img1.url}}" class="" width="105px" height="200px" alt="">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div style="padding-left: 25px;">
+                                    <h5 class="nav2link" style="margin: 0px;">{{m.product_name}}</h5>
+                                    <div class="d-flex flex-row">
+                                        <p class="card-text" style="margin-bottom: 0.2rem;"><span
+                                                class="badge bg-success">{{m.rating }} <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"
+                                                    style="vertical-align: baseline;">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg></span></p>
+                                        {% for j in r1 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in r2 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <h6 style="color:#878787; font-size:14px;line-height: 28px;margin:0;">&nbsp
+                                            {{j}} Ratings & {{k}} Reviews</h6>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="divhigh"
+                                        style="font-size:14px;font-family: Roboto, Arial, sans-serif;line-height: 22px;margin: 4px;">
+                                        {%for m2 in m1%}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {%for i in m2%}
+                                        <li>{{i}}</li>
+                                        {%endfor%}
+                                        {% endif %}
+                                        {%endfor%}
+                                        <li>{{m.warranty}}</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="padding-left: 25px;">
+                                    <div class="d-flex flex-row">
+                                        <h5 style="font-family: Roboto, Arial, sans-serif;
+                                    font-size: 25px;
+                                    font-weight: 600;
+                                    line-height: 25px;">₹{{m.price}}&nbsp&nbsp&nbsp</h5>
+                                        <img height="21px" width="77px" style="padding-top:1px;"
+                                            src="{% static 'images/assured.png' %}" alt="">
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        {% for j in ep %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in o %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <p class="extraprices">{{j}}</p>
+                                        <p class="offer">&nbsp&nbsp{{k}}% off</p>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="rightcondiv1 downdiv" style="padding: 25px 25px; background-color:white">
+        <div>
+
+            <h2>Refrigerators: Buy Single, Double &amp; Multi Door Fridges Online | Up to 50% Off</h2>
+            
+            <div>A refrigerator is an essential home appliance for all seasons. It is used to store your perishable food items such as milk, butter, bread, fresh fruits, fresh vegetables, and more. So, buying a fridge is a time-consuming process because it must cater to all of your cooling and preservation needs. The choice of buying this large home appliance depends on several factors such as the size of your family, the amount of food that need preservation, refrigerator price, and more. If you are looking for one such product for your home, then you can find a wide variety of fridges online on shopping sites such as, G-mart which host brands like Samsung, LG, Whirlpool, and more. However, before you buy this product for your home, let’s take a look at the types of refrigerators available in the market so that you can find and buy the best refrigerator for your home at the appropriate fridge price.<br>
+            &nbsp;</div>
+            
+            <p>Good-quality refrigerators come in different sizes, designs, and features that will not only suit your home but also refrigerate all your food essentials (so that nothing goes to waste). You can store large pots of curries, leftovers, veggies, fruits, and more without making the appliance look cluttered or messy. You can even prep your meals for the week and keep everything in glass containers and place them in the fridge for proper refrigeration. Birthday cakes can be conveniently stored in the appliance as well so that the birthday boy or girl can cut a delicious and fresh cake. Effective refrigeration will help maintain the flavour and aroma of all your food items so that you can enjoy eating them the next day or the day after that. Thanks to online shopping, you can buy different brands of refrigerators, such as Samsung, Whirlpool, Haier, LG, Panasonic, and more at the click of a button. You can go through the product images, descriptions, customer reviews, buying guides, etc., to help you find the perfect option for your home. You can choose from single-door options, double-door options, side by side door options, and more.<br>
+            &nbsp;</p>
+            
+            <div>Stocking up on fresh fruits and vegetables, preserving jars of homemade pickles, sipping on chilled drinks and popsicles, or storing leftover food, refrigerators are truly one of the most useful innovations that science and technology has bestowed on us. Imagine a world without these appliances. Think about the amount of food that’ll go to waste, how much more unbearable summer will be, and how limited our culinary experiments will be. With many factors working in their favour, it comes as no surprise that today, these appliances are more of a necessity than a luxury. The question is, how do you know that you’re getting a good deal out of a refrigerator? Are there set factors that distinguish a good fridge from a not-so-reliable one? The answer is yes. For a clear picture on what constitutes a good-quality refrigerator, here’s a list of distinctions that make each refrigerator unique:<br>
+            <br>
+            &nbsp;</div>
+            
+            <h2>Type of refrigerators</h2>
+            
+            <div>One of the first things that pops into anyone’s mind when it comes to fridges is their style. Are they compact enough to fit a small-sized room? Will they be large enough to accommodate the many of a large family? Based on your needs, you can choose from:</div>
+            
+            <div><br>
+            <strong><span>Single door fridges</span></strong>&nbsp;– These are generally small refrigerators that are ideal for bachelors or small families. The freezer compartment is also built into the fridge.&nbsp;<span>A single door fridge is one where only one door is used to house your freezer as well as the cold storage unit. Such products are generally more compact in size and come with lower space, which makes them ideal for small families or for people who live alone. Now, there are different types of these appliances available in the market. However, these products also share some common features. For example, most single door products come with a defrost button to help clear out the ice build-up in the freezer. Nearly all of these products come with a dedicated vegetable box at the bottom so that your fresh fruits and vegetables can be organized in one place. Now, if we look at some unique features, then some of these appliances come with dedicated tall bottle shelves on the inside of the door so that you can store large water bottles or cold drink bottles with ease. Moreover, some of these products also come with drawers at the base where you can organize and arrange dry items such as potatoes, onions, garlic, and more, making it easier for you to access all of your ingredients in one place.&nbsp;</span></div>
+            
+            <div></div>
+            
+            <div><strong><span>Double door fridges</span></strong>&nbsp;–&nbsp;<a href="/home-kitchen/home-appliances/refrigerators/double-door~type/pr?sid=j9e,abm,hzg">Double door fridges</a>&nbsp;feature separate doors for the freezer and fridge. Ideal for a family of four, these kitchen appliances are energy efficient and spacious. A double door refrigerator comes with two doors that clearly divide the freezer and cooling zones. That being said, most of these appliances are frost-free, which means that their compressors are intelligent enough to prevent the buildup of ice so that your appliance remains clean and easily accessible. Now, there are several types of double door fridges available in the market. Some of these appliances are convertible and can be morphed to suit your needs. Others can come with the freezer at the bottom so that you don’t have to bend too much to get your fresh items out. Your choice of buying such a refrigerator depends on your needs, the capacity of the product, the features that can be useful to you, the double door fridge price, and more.</div>
+            
+            <div></div>
+            
+            <div><strong><span>Side-by-side fridges</span></strong>&nbsp;– These cooling appliances have two doors that open up into two separate sections. They offer more storage space than double door fridges, with some of them even featuring ice dispensers.</div>
+            
+            <div></div>
+            
+            <div><strong><span>Triple door fridges</span></strong>&nbsp;– If you have a large family and like to stock up for the week, then a&nbsp;<a href="/home-kitchen/home-appliances/refrigerators/triple-door~type/pr?sid=j9e,abm,hzg">triple door refrigerator</a>&nbsp;is what you need. triple door fridges have separate doors for the&nbsp;<a href="/q/freezers">freezer</a>, vegetable, and main section.</div>
+            
+            <div></div>
+            
+            <div><strong><span>French door bottom mount</span></strong>&nbsp;– These are basically double door fridges, with an additional bottom drawer attached to them.</div>
+            
+            <div></div>
+            
+            <div><strong><span>Portable fridges</span></strong>&nbsp;– Compact in size, these coolers are perfect for when you want to carry around a stash of chilled drinks.&nbsp;</div>
+            
+            <p>The above-mentioned is a brief description of the types of refrigerators available in the market. So, go ahead and pick the one that fits your needs and order it today.<br>
+            <br>
+            &nbsp;</p>
+            
+            <h2><span>Buy a High-end Refrigerator Online to Eat Fresh Food Anytime</span></h2>
+            
+            <p>A healthy lifestyle requires a healthy diet. And, to maintain a healthy diet, you need a powerful and high-end<b> refrigerator</b> in your home. This is an essential home appliance that lets you store vegetables, fruits, dairy products, beverages, poultry items, meals, frozen items, ice creams, and anything else that you like to relish. It keeps your edibles fresh, and helps you to eat delicious homemade food every single day. There are fridges of different features, capacities, and designs, to ensure that you find the right match for your home. There are mini-fridges to meet the needs of one user as well as freezers that can meet the requirements of large families.<br>
+            &nbsp;</p>
+            
+            <p>You can check out and buy this useful and essential home appliance on online shopping websites and get them delivered to you. There are many reputed brands, such as Samsung, LG, Whirlpool, Godrej, Haier, MarQ by G-mart, and Bosch, among others, that offer high-end, feature-rich fridges online. On online electronics stores, you can read product specifications, user reviews, feature details, and see the ratings before buying one. If you are looking for a top brand appliance for your home then keep reading.&nbsp;</p>
+            
+            <p><br>
+            <b>Samsung Refrigerator</b></p>
+            
+            <p>The South Korean tech giant, Samsung, is determined to make your everyday life easy and convenient with innovative, smart, and cutting-edge technologies and appliances. Samsung fridges are among their most popular home appliances, and you can find and buy from a wide range of models. It has stylish and convenient fridges with French doors, side-by-side doors, top-mount freezer, and even single door ones to choose from. Samsung fridges come with various features, such as Samsung Curd Maestro, SpaceMax, Convertible, Base Stand Drawers, and Water Dispenser among others. Apart from choosing a fridge as per its features and capacity, you can also choose as per its design and aesthetic appeal.&nbsp;</p>
+            
+            <p><br>
+            <b>LG Refrigerator</b></p>
+            
+            <p>LG has side-by-side, door-in-door, bottom-freezer, single door, and double door fridges to offer. From 45 L to 700 L, LG has multiple models of this appliance with a stylish exterior and impressive features, such as an Inverter Linear Compressor, LG Door Cooling+, LG ConvertiblePLUS, LG Smart Diagnosis, and LG Auto Smart Connect, among others. The large vegetable box is another useful feature of these fridges that ensure that your kitchen does not run out of fresh vegetables. The door-in-door models have the LG InstaView that features a mirrored glass panel that lets you peek inside to see the easy access compartment. Thus, you do not need to open the door to see what is inside.&nbsp;</p>
+            
+            <p><br>
+            <b>Whirlpool Refrigerator&nbsp;</b></p>
+            
+            <p>A single-door, double-door, three-door, four-door, French door, side-by-side door, bottom-mount, and mini-fridge - Whirlpool has almost anything that you are looking for in your home. This brand has Intellifresh Convertible and Neo Fresh range of refrigerators. When it comes to features, this brand has appliances with Up to 12 Days of Garden Freshness, Whirlpool 6TH SENSE DeepFreeze Technology, MicroBlock Technology, and Fresh Flow Air Tower with Flexi Vents, etc.&nbsp;</p>
+            
+            <p><br>
+            So, log on to an online electronics store and look for a refrigerator for your home.&nbsp;</p>
+            
+            <div><br>
+            <b>Make the Most Out of the <a href="/cooling-days-store">Cooling Days</a> Sale</b></div>
+            
+            <div></div>
+            
+            <div>Summertime is the most popular season of the year as it brings with it the sultry but enjoyable climate and some delightful times on the beach. For most people, the summer season is for unwinding, going on vacations, and basking in the hot sun. However, with every passing year, the intensity of the heat seems to be rising and so are the problems that we face in our daily lives. No matter if you are in your office or at home, the sweltering heat will definitely get to you at some point. However, you can make it a bit easier on yourself with a few appliances that will help you stay cool during this time. Appliances, such as air conditioners, refrigerators, air coolers, fans, etc., are in huge demand due to the approaching summer season. Upgrade your cooling systems at home with new and advanced appliances from our online store. Browse through an array of brands, such as Samsung, LG, Bajaj, Godrej, Voltas, Whirlpool, Carrier, etc., and shop for products that best suit your requirements. Apart from the above-mentioned appliances, we also have a wide range of juicer mixers, inverters, stabilizers, and water purifiers in store for you.<br>
+            &nbsp;</div>
+            
+            <div></div>
+            
+            <div><b>Experience Effective Cooling with These Appliances This Summer</b></div>
+            
+            <div></div>
+            
+            <div>Fans: Fans are a must-have appliance in every household. These electronic devices provide air ventilation and are great for summers. There are various types of fans available in the market, such as ceiling fans, pedestal fans, wall-mounted fans, axial fans, ventilation fans, and so on. As the summer sale is just around the corner, we would recommend you to check out the huge collection of fans and other cooling appliances from our online store. You will find great deals and discounts during the Cooling Days sale.<br>
+            &nbsp;</div>
+            
+            <div></div>
+            
+            <div>Refrigerators: Refrigerators are not only a necessity but these appliances also make sure that we beat the heat with a constant supply of chilled beverages and ice. Along with televisions and smartphones, refrigerators are getting smarter by offering a host of technologies to make your everyday tasks more manageable. You can upgrade your old fridge with a new one, thanks to the summer sale offers online.<br>
+            &nbsp;</div>
+            
+            <div></div>
+            
+            <div>Air Conditioners: An air conditioner is a saviour during summers. These appliances keep your room cool and comfortable. There are two kinds of air conditioners that you can shop for. Split ACs and window ACs. Window ACs are the most commonly used appliances in India and as the name suggests, it is installed inside a window. Whereas, a split AC is mounted on the wall. A split AC has an indoor unit that incorporates an evaporator and a cooling fan. The outdoor unit includes a condenser, a compressor and an expansion valve.</div>
+            
+            <div><br>
+            &nbsp;</div>
+            
+            <div><b>Reap the Benefits of the Summer Sale Deals on G-mart</b></div>
+            
+            <div></div>
+            
+            <div>Apart from appliances, such as air conditioners, refrigerators, air coolers, and fans, G-mart brings to you attractive offers and discounts on juicer mixers, stabilizers, water purifiers, and inverters, as well. You can make juices, purees, and all things palatable with a juicer mixer. In addition to this, you can upgrade to a new stabilizer and protect your TV and AC from voltage fluctuations. Make sure to take advantage of the Cooling Days sale only on G-mart.</div>
+            
+            <div></div>
+            
+            <div></div>
+            
+            <h2>What impact does a star rating have on refrigerators?</h2>
+            
+            <div>Each refrigerator is meted out with a star rating which indicates its energy efficiency level. The higher the star rating, the more energy efficient it is. The star rating ranges from 1 to 5. If you want an an energy-efficient refrigerator, we can think of no better bet than fridges with the inverter technology. These fridges use about 30-50% less energy than regular fridges which helps cut on electricity costs.</div>
+            
+            <div></div>
+            
+            <h2>Defrosting type of refrigerators</h2>
+            
+            <div><a href="/q/frost-free-refrigerator">Frost-free refrigerators</a> do not need to be manually defrosted while direct cool refrigerators defrost ice using a natural convection. The frost-free models are better at maintaining consistent temperatures while the direct cool ones are more energy-efficient. Mini-freezers and coolers feature the thermo electric cooling technology that makes them vibration-free and energy efficient.</div>
+            
+            <div></div>
+            
+            <div><b>Importance of a refrigerator’s capacity</b></div>
+            
+            <div></div>
+            
+            <div>The capacity of these appliances is measured in litres. A refrigerator with a 50 L capacity is equipped to hold more items than a 35 L model.</div>
+            
+            <div></div>
+            
+            <h2>Buy refrigerators online to access the latest and the best of these appliances</h2>
+            
+            <div></div>
+            
+            <div></div>
+            
+            <div><a href="/home-kitchen/home-appliances/refrigerators/sansui~brand/pr?sid=j9e,abm,hzg"><b>Sansui</b></a>, <a href="/refrigerators/lg~brand/pr?sid=j9e,abm,hzg"><b>LG</b></a>, <b><a href="/refrigerators/samsung~brand/pr?sid=j9e,abm,hzg">Samsung</a></b>, <b><a href="/refrigerators/whirlpool~brand/pr?sid=j9e,abm,hzg">Whirlpool</a></b>, <a href="/refrigerators/haier~brand/pr?sid=j9e,abm,hzg"><b>Haier</b></a>, <a href="/home-kitchen/home-appliances/refrigerators/kelvinator~brand/pr?sid=j9e,abm,hzg"><b>Kelvinator</b></a>, <a href="/home-kitchen/home-appliances/refrigerators/bosch~brand/pr?sid=j9e,abm,hzg"><b>Bosch</b></a>, <b><a href="/refrigerators/godrej~brand/pr?sid=j9e,abm,hzg">Godrej</a></b>, <a href="/home-kitchen/home-appliances/refrigerators/bpl~brand/pr?sid=j9e,abm,hzg"><b>BPL</b></a>, <a href="/home-kitchen/home-appliances/refrigerators/panasonic~brand/pr?sid=j9e,abm,hzg"><b>Panasonic</b></a>, <a href="/home-kitchen/home-appliances/refrigerators/videocon~brand/pr?sid=j9e,abm,hzg"><b>Videocon</b></a>, GEM, and Electrolux, are some of the top brands whose refrigerators you can check out, compare, and buy from the comfort of your home if you shop for them online.<br>
+            <br>
+            &nbsp;</div>
+            
+            <h2>Refrigerators FAQ</h2>
+            
+            <p>1. From among the different levels of energy consumption which one is the best?</p>
+            
+            <p>5 star energy rating is the best of all. Refrigerators with this rating consume the lowest amount of energy and also produces the least amount of pollution. You can go some of the best brands like Samsung 192 L refrigerator with 5 star rating, Godrej 190L fridge and so on.</p>
+            
+            <p><br>
+            2. What temperature should I maintain in my refrigerator and freezer?</p>
+            
+            <p>It is preferred to keep an average temperature of 3 to 4°C . Let the upper and lower limits be 0 to 7°C. At 7°C the food will deteriorate more quickly.</p>
+            
+            <p><br>
+            3. Which is the best refrigerator under Rs 20,000?</p>
+            
+            <p>It is important that you understand the ideal size, capacity and usage of the refrigerator you wish to buy and only then invest in it. You have a plethora of options from good brands under Rs 20,000 like the Samsung 192 L direct cool single door refrigerator, LG 235 L direct cool single door refrigerator among others.</p>
+            
+            <p><br>
+            4. What should I do if I find water at the bottom of the self-defrosting refrigerator?</p>
+            
+            <p>This happens because the defrost drain tube gets blocked with some object or it gets ice-clogged. To fix this, you have to simply remove the defrost drain tube and clean it inside.</p>
+            
+            <p><br>
+            5. There is an unpleasant odour inside my fridge. How do I clean it?</p>
+            
+            <p>You can clean the fridge easily by using a mild detergent.</p>
+            </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <div class="footerdiv1 d-flex flex-row">
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            ABOUT
+                        </div>
+                        <a href="">Contact Us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">G-mart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">G-mart Wholesales</a>
+                        <a href="">Corporate Information</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            HELP
+                        </div>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringement</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            POLICY
+                        </div>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms Of Use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            SOCIAL
+                        </div>
+                        <a href="">Facebook</a>
+                        <a href="">Twitter</a>
+                        <a href="">YouTube</a>
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="border-left: 1px solid  #454D5E; padding: 0 25px 0 25px;">
+                        <div class="footersubhead">
+                            Mail Us:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="margin: 0 0 10px 0;
+                    padding: 0 0 0 14px;
+                    ">
+                        <div class="footersubhead">
+                            Registered Office Address:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                            <p style="margin: 0px; padding: 0px; line-height: 1.5;">CIN : U51109KA2012PTC066107</p>
+                            <p style="margin: 0px; line-height: 1.5;">Telephone: <a
+                                    style="margin: 0px;line-height: 1.5;color: #2874F0;" href="">1800 202 9898</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerdiv2 d-flex justify-content-evenly" width="100%">
+                <div class="footer2con d-flex align-items-baseline" style="vertical-align: baseline;">
+                    <img src="{% static 'images/1.svg' %}" alt="">
+                    <a href="">&nbsp Sell On G-mart</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/2.svg' %}" alt="">
+                    <a href="">&nbsp Advertise</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/3.svg' %}" alt="">
+                    <a href="">&nbsp Gift Cards</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/4.svg' %}" alt="">
+                    <a href="">&nbsp Help Center</a>
+                </div>
+                <div>
+                    <p class="footer2con ">© 2007-2021 G-mart.com</p>
+                </div>
+                <div>
+                    <img style="vertical-align:inherit" src="{% static 'images/5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

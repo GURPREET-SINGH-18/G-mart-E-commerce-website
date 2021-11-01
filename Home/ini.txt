@@ -1,0 +1,110 @@
+General
+In The Box
+LED TV 1U , Manual & Warranty Card 1U , Screws 4U , Stand 2U , Remote Control 1U
+Model Name
+L55M5-5XIN
+Display Size
+138.8 cm (55 inch)
+Screen Type
+LED
+HD Technology & Resolution
+Ultra HD (4K), 3840 x 2160
+Series
+4X
+Smart Tv
+Yes
+Motion Sensor
+No
+HDMI
+3
+USB
+2
+Built In Wi-Fi
+Yes
+Launch Year
+2019
+Wall Mount Included
+No
+Video Features
+Picture Engine
+Vivid Picture Engine (VPE)
+Picture And Picture (PAP)
+No
+Analog TV Reception
+Yes
+Digital TV Reception
+No
+View Angle
+178 Degree
+Digital Noise Filter
+Yes
+LED Display Type
+Direct LED
+Aspect Ratio
+0.672916667
+Refresh Rate
+60 Hz
+Supported Video Formats
+H.265, H.264, H.263, VP8/VP9/VC1, MPEG1/2/4
+Other Video Features
+Standard, Movie, Vivid, Sport and Custom
+Audio Features
+Number of Speakers
+2
+Speaker Type
+Box
+Sound Technology
+Dolby Audio, DTS-HD
+Surround Sound
+Stereo Sound
+Speaker Output RMS
+20 W
+Sound Mode
+Standard, News, Movie, Game, Custom
+Supported Audio Formats
+Dolby Audio, DTS, FLAC, AMR, AAC, OGG
+Smart Tv Features
+Number of Cores
+4
+Processor
+Amlogic
+Graphic Processor
+Mali-450 MP3
+Ram Capacity
+2 GB
+Storage Memory
+8 GB
+Clocking Speed
+1.5 GHz
+Supported App - Netflix
+Yes
+Supported App - Youtube
+Yes
+Supported App - Disney+Hotstar
+Yes
+Supported App - Prime Video
+Yes
+Supported Mobile Operating System
+Android, iOS
+Operating System Present
+Yes
+Operating System
+Android Based
+Screen Mirroring
+Yes
+App Store Type
+Google App Store
+Pre Installed Browser
+No
+Content Providers
+Netflix, Prime Video, Disney+ Hotstar, Help, Sensy TV Guide, YouTube, Play Movies, Play Music, Play Store, Miracast, Gallery, Media Player, TV Manager
+Bluetooth
+Yes
+Built In Wi-Fi
+Yes
+3G Dongle Plug and Play
+No
+Ethernet (RJ45)
+1
+Other Internet Features
+PatchWall - Content Across 20+ Content Partners, Universal Search, One-Click Playback, User Center, Live Channels, Kid's Mode, Android TV 9 with Google Assistant, Google Play Store with 5000+ Apps, Chromecast Built-in

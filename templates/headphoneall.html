@@ -1,0 +1,487 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productall.css' %}">
+    <title>G-mart | You Desire We Deliver</title>
+</head>
+
+<body>
+    <!-- Navbar-1 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ps-5 ms-5">
+            <a class="navbar-brand ps-5 ms-5" href="/">G-Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" id="searchbar">
+                <input class="form-control me-2" width="400px" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success bi bi-search" type="submit"></button>
+
+            </form>
+            <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item pe-4">
+                        <a href="" type="button" class="btn btn-outline-light">LOGIN</a>
+                    </li>
+                    <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle drp" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a href="" type="button" class="btn btn-dark position-relative bi bi-cart3"> Cart
+                            <span class="badge bg-danger rounded-pill">0</span>
+                            </span>
+                        </a>
+                        <!-- <a class="nav-link " href="#"></a> -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5 nav2">
+        <div class="container-fluid ps-5 ms-5 pe-5 me-5">
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/mobile">Mobiles</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/fashion/Men">Men</a></li>
+                        <li><a class="dropdown-item" href="/fashion/Women">Women</a></li>
+                        <!-- <li> -->
+                        <!-- <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/fashion/Kids">Kids</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/tablet">Tablets</a></li>
+                        <li><a class="dropdown-item" href="/headphone">Headphones</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/camera">Camera</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/television">Televisions</a></li>
+                        <li><a class="dropdown-item" href="/washingmachine">Washing Machine</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/refrigerator">Refrigerator</a></li>
+                        <li><a class="dropdown-item" href="/airconditioner">Air conditioner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/books">Books</a>
+            </div>
+        </div>
+    </nav>
+    <!-- all item in div -->
+    <div class="maincon" height="5000px">
+        <div class="d-flex flex-row">
+            <div class="leftcon">
+                <img width="100%" height="" src="{% static 'images/headphoneleft.gif' %}" alt="">
+            </div>
+            <div class="rightcon">
+                <div class="rightcondiv1">
+                    <p>
+                        There are many benefits of using headphones. They are easy and comfortable to wear, they don’t
+                        fall out of your ears (like earphones), they are stylish, and so on. You can find wireless
+                        headphones, Bluetooth headphones, etc. With these devices, you can listen to music and even game
+                        with ease. You can use them while exercising, working in the office, commuting, etc. You can
+                        cheer yourself up or motivate yourself by listening to all your favourite tracks before your
+                        work day begins. You can even power through tough days at work by listening to pumped-up songs
+                        that will raise your spirit. Apple AirPods, realme Buds, boAt Rockerz 400, Samsung Level U,
+                        realme Buds Air, and more are some of the options that you can buy online. Some of these devices
+                        come with features that help you enjoy hands-free use for a long time, thanks to their
+                        innovative features. These devices can be used by people of all ages and come in a variety of
+                        designs to suit all preferences. Shopping sites offer frequent sales and discounts, you can buy
+                        them at a steal. These devices also serve as suitable gift options for your loved ones. Explore
+                        best headphone brands Bose, Boat, JBL, Skullcandy, Sony to Sennheiser, G-mart is home to the
+                        world’s biggest headphone brands you can possibly imagine.
+
+                        Trending Now: True Wireless Earphones
+                    </p>
+                    <div class="d-flex flex-row">
+                        <h1>Headphones &nbsp</h1>
+                        <p style="margin-bottom: 8px; vertical-align: baseline; line-height: 24.4px">(Showing 1 – 6
+                            products of 6 products)</p>
+                    </div>
+                    <div class="d-flex flex-row" style="width:'100px'">
+                        <h2 class="sortbyhead">Sort by</h2>
+                        <div class="sortby">Popularity</div>
+                        <div class="sortby">Price -- Low to High</div>
+                        <div class="sortby">Price -- High to Low</div>
+                    </div>
+                </div>
+                <a class="divhigh" href="">
+                    {% for m in i %}
+                    <div class="cardd">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex flex-column justify-content-center">
+                                <div class="d-flex justify-content-center" max-height="200px" max-width="200px">
+                                    <img src="{{m.img1.url}}" class="" width="175px" height="85%" alt="">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div style="padding-left: 25px;">
+                                    <h5 class="nav2link" style="margin: 0px;">{{m.product_name}}</h5>
+                                    <div class="d-flex flex-row">
+                                        <p class="card-text" style="margin-bottom: 0.2rem;"><span
+                                                class="badge bg-success">{{m.rating }} <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"
+                                                    style="vertical-align: baseline;">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg></span></p>
+                                        {% for j in r1 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in r2 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <h6 style="color:#878787; font-size:14px;line-height: 28px;margin:0;">&nbsp
+                                            {{j}} Ratings & {{k}} Reviews</h6>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="divhigh"
+                                        style="font-size:14px;font-family: Roboto, Arial, sans-serif;line-height: 22px;margin: 4px;">
+                                        {%for m2 in m1%}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {%for i in m2%}
+                                        <li>{{i}}</li>
+                                        {%endfor%}
+                                        {% endif %}
+                                        {%endfor%}
+                                        <li>{{m.warranty}}</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="padding-left: 25px;">
+                                    <div class="d-flex flex-row">
+                                        <h5 style="font-family: Roboto, Arial, sans-serif;
+                                    font-size: 25px;
+                                    font-weight: 600;
+                                    line-height: 25px;">₹{{m.price}}&nbsp&nbsp&nbsp</h5>
+                                        <img height="21px" width="77px" style="padding-top:1px;"
+                                            src="{% static 'images/assured.png' %}" alt="">
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        {% for j in ep %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in o %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <p class="extraprices">{{j}}</p>
+                                        <p class="offer">&nbsp&nbsp{{k}}% off</p>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="rightcondiv1 downdiv" style="padding: 25px 25px; background-color:white">
+        <div>
+
+            <h2>Buy Headphones Online - Don’t Stop Grooving&nbsp;</h2>
+            
+            <div>It isn’t always possible to enjoy your music using speakers, and that’s where a good pair of headphones can come in handy. Headphones not only let you listen to your favorite form of music peacefully, but they also help you shut yourself away from the things that bother you. Today, there are so many different types of headphones and a hundred or more brands to choose from. But, to ensure that you are putting your money on the right set of headphones, it is of key importance that you learn a little something about some of the common headset types and the popular brands that manufacture them. Here’s what you need to know:&nbsp;</div>
+            
+            <div></div>
+            
+            <h2>New Launches:</h2>
+            
+            <div></div>
+            
+            <h2>Enjoy Songs, Podcasts, and More with the OnePlus Bullets Wireless Z&nbsp;</h2>
+            
+            <div></div>
+            
+            <div>One of the most important accessories today is a pair of earphones. It not only helps you listen to audio content without bothering others, but also lets you attend calls easily, especially when your hands are busy. A great example of one such headset is the <a href="/q/oneplus-bullets-wireless-z">OnePlus Bullets Wireless Z</a>. Not only are these earphones pretty great to look at, but they also tick all the boxes when it comes to their performance-related features. One of the factors that separates this headset from ordinary wired ones is its wireless design, which makes it highly convenient for one to carry around everywhere. Do the OnePlus Bullets Wireless Z in-ear buds already have your interest? Here a few other facts about them that you should know to understand why they are they real deal when it comes to wireless earphones:</div>
+            
+            <div></div>
+            
+            <div><b>Lightweight</b></div>
+            
+            <div>If you are used to wearing your earphones around your neck all day, then you wouldn’t want them to weigh you down - would you? That’s where these OnePlus earphones are game-changing. With a weight of about 28 g, these earbuds are comfortable, offer a snug fit, and they feel as light as a fly. You can enjoy all your playlists or even indulge in podcasts that are several hours long without feeling any discomfort.</div>
+            
+            <div></div>
+            
+            <div><b>Battery</b></div>
+            
+            <div>Ordinary earphones are notorious for not offering enough battery life, but that’s not the case with these bad boys from OnePlus. Rocking a powerful battery, these earbuds deliver a whopping battery life of about 20 hours on a single full charge. Now, that’s quite a lot of juice to exhaust - isn’t it? But, let’s assume you somehow managed to exhaust the battery of these earphones. You can still get them up and running in about 10 minutes of time - yes, that's how long it takes for these earbuds to offer up to 10 hours of battery life.&nbsp;</div>
+            
+            <div></div>
+            
+            <div><b>Connectivity</b></div>
+            
+            <div>With the jacks out of the equation, these earphones are all the more easy to connect to your smartphone or any other Bluetooth playback device. These earbuds support Bluetooth 5.0, and you won’t have to worry about the hassle of going through a set-up process. Pairing these babies is as simple as separating the earbuds and then tapping on “Connect”. Now, is that magic or what?</div>
+            
+            <div></div>
+            
+            <div><b>IP55 Rating</b></div>
+            
+            <div>Travelling for long hours or working out at the gym can cause you to sweat profusely, isn’t it? In cases like these, an ordinary headset would probably give up, but not the OnePlus Bullets Wireless Z. These earphones boast an IP55 rating, which makes them dust- and sweat-resistant, to ensure that you don’t get the heebie-jeebies every time you use them to listen to music when you are sweating from a workout or you are outdoors.</div>
+            
+            <div></div>
+            
+            <div>If these features are what you’re looking for in a wireless headset, go online and order a pair of OnePlus Bullets Wireless Z earphones.</div>
+            
+            <div><br>
+            <br>
+            <b>Types of Earphones</b><br>
+            <span>&nbsp;</span></div>
+            
+            <p><b>Wireless&nbsp;</b>&nbsp;<b>Headphones</b></p>
+            
+            <div>Just like the traditional <a href="/audio-video/headphones/wired~wiredwireless/pr?sid=0pm%2Cfcn">wired headphones</a>, there are wireless headphones that are available online. But, what separates wireless earbuds from the wired ones is how convenient and hassle-free they are as compared to wired headsets. With these headsets, you don’t have to worry about ensuring that their wires don’t get damaged. That’s because these headphones connect to your phone/tablet or any other compatible smart device using Bluetooth and radio frequencies, among other options. This feature not only helps you indulge in high-quality audio, but it also saves you the trouble of untangling the wires every time you wish to listen to good music. You can easily find some great-quality radio frequency headphones or Bluetooth headphones on online stores.&nbsp;&nbsp;<br>
+            <br>
+            <b>Sports&nbsp;</b><span><b>Headphones</b></span>&nbsp;</div>
+            
+            <div></div>
+            
+            <div><span>When was the last time that you went to the gym for a workout and your earphones stayed put in your ears? Never, right? You’re probably starting to think, “How do I ensure that my headphones stay in place even during complex movements?” Aren’t you? Well, you certainly need to try sports earphones. These babies not only offer a snug fit to ensure that you’re pumped up throughout your workout sessions, but they are also sweat-resistant so that their performance isn’t affected by it.&nbsp; &nbsp;</span></div>
+            
+            <div></div>
+            
+            <div><span>&nbsp;</span><br>
+            <b>Travel&nbsp;</b><span>&nbsp;</span><span><b>Headphones</b></span></div>
+            
+            <div></div>
+            
+            <div><span>Go to anyone who travels frequently and ask him/her, “What’s the one piece of advice that you have for an aspiring traveller?’ And, 9 out of 10 times, that person will probably tell you to travel light. Yep, there’s barely anyone who likes dealing with excess baggage weight, especially if it’s in the form of your favorite headphones. And, travel headphones were invented to help people overcome such problems. These headsets aren’t just lightweight, they are easy to pack too. Slide them in your backpack or wear them around your neck - travel headphones won’t be a burden.&nbsp;</span></div>
+            
+            <div></div>
+            
+            <div><span>&nbsp;</span><br>
+            <b>Extra Bass&nbsp;</b><span>&nbsp;</span><span><b>Headphones</b></span></div>
+            
+            <div></div>
+            
+            <div><span>Not everyone has an ear for music that has powerful lows. But, if you are a glutton for that kind of music, then extra-bass headphones are something that you really need to consider before making a buying decision. Brands such as Sony are famous for manufacturing this type of headphones. Basically, what these headphones do is digitally increase the low-frequency sounds in the audio that you’re listening to and then maximize it to offer you a punchy sound that every bass lover longs to hear.&nbsp;</span><span>&nbsp;</span></div>
+            
+            <div><span>&nbsp;</span>&nbsp;</div>
+            
+            <div><b>Noise-canceling Headphones&nbsp;</b><span>&nbsp;</span></div>
+            
+            <div><span>&nbsp;</span>&nbsp;</div>
+            
+            <div><span>Be it dealing with a bunch of people who just won’t keep quiet or with the annoying noise coming from your neighborhood, situations like these can be quite annoying. But, let me tell you this - you won’t have to deal with such situations if you had a pair of noise-cancellation headphones. Noise-canceling headsets, in general, reduce/eliminate unwanted ambient sounds, and they do so by using active noise control. This helps you enjoy audio content in great quality without even having to raise the volume significantly. Another great thing about these headsets is that they increase the signal-to-noise ratio when you are in an aviation environment, ensuring that you don’t miss out on important announcements. How cool is that?&nbsp;&nbsp;</span></div>
+            
+            <div></div>
+            
+            <div><span>&nbsp;</span><br>
+            <span>Now that you are aware of some of the types of headphones that are available in the market today, it would only be fair if we shared the name of some reliable brands that you can consider, right? Well, in that case, you can always go for brands, such as G-mart Smartbuy, Mi, Bose, JBL, Sennheiser, Skullcandy, Audio Technica, and Sony, among other options. But remember, although these brands make some really cool headphones, they are not the only options that you have. By searching online, you can find hundreds of other headphone manufacturers that make equally good headphones.&nbsp;</span><span>&nbsp;</span></div>
+            
+            <div><span>&nbsp;</span>&nbsp;</div>
+            
+            <div><b>Why Should I Buy Headphones Online?</b><span>&nbsp;</span></div>
+            
+            <div><span>&nbsp;</span>&nbsp;</div>
+            
+            <div><span>There’s way more to earphones than their brands and types. Some of the other things that you might want to take into consideration before making a buying decision are the earphones’ design and the earphones’ prices. And, what’s a better option than online shopping to compare all of the aforementioned parameters? By choosing to shop from a reliable online shopping portal, you can select from a variety of earphones/headphones, such as in-ear and over-ear headphones, depending on which one’s the most comfortable for you to use. You can even select a host of headphones, compare them and see which features you need the most, and then come to a decision. A lot of online shops offer amazing discounts at regular intervals, making their products more affordable for one to buy. E-commerce websites even let you save the earphones of your choice in your wishlist so that you can buy them later. They even offer you a host of secure online payment methods that you can use to pay for your items, depending on which one of them is the most convenient for you use. One of the other great things about shopping online is that your product will be delivered right to the doorstep of your house so that you don’t have to step out. Convenient, right? So, what’s stopping you now? Go order a pair of headphones online today.&nbsp;</span></div>
+            
+            <div></div>
+            
+            <div></div>
+            
+            <p>Trending Now: <a href="/q/best-earphones-under-1000">Best Earphones under 1000</a>, <a href="/q/best-earphones-under-500">Best Earphones under 500</a>, <a href="/q/powerbeats-pro">Powerbeats Pro</a>, <a href="/q/noise-cancelling-headphones">Noise Cancelling Headphones</a>, <a href="/q/noise-isolating-earbuds">Noise isolating earbuds</a></p>
+            
+            
+            </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <div class="footerdiv1 d-flex flex-row">
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            ABOUT
+                        </div>
+                        <a href="">Contact Us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">G-mart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">G-mart Wholesales</a>
+                        <a href="">Corporate Information</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            HELP
+                        </div>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringement</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            POLICY
+                        </div>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms Of Use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            SOCIAL
+                        </div>
+                        <a href="">Facebook</a>
+                        <a href="">Twitter</a>
+                        <a href="">YouTube</a>
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="border-left: 1px solid  #454D5E; padding: 0 25px 0 25px;">
+                        <div class="footersubhead">
+                            Mail Us:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="margin: 0 0 10px 0;
+                    padding: 0 0 0 14px;
+                    ">
+                        <div class="footersubhead">
+                            Registered Office Address:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                            <p style="margin: 0px; padding: 0px; line-height: 1.5;">CIN : U51109KA2012PTC066107</p>
+                            <p style="margin: 0px; line-height: 1.5;">Telephone: <a
+                                    style="margin: 0px;line-height: 1.5;color: #2874F0;" href="">1800 202 9898</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerdiv2 d-flex justify-content-evenly" width="100%">
+                <div class="footer2con d-flex align-items-baseline" style="vertical-align: baseline;">
+                    <img src="{% static 'images/1.svg' %}" alt="">
+                    <a href="">&nbsp Sell On G-mart</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/2.svg' %}" alt="">
+                    <a href="">&nbsp Advertise</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/3.svg' %}" alt="">
+                    <a href="">&nbsp Gift Cards</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/4.svg' %}" alt="">
+                    <a href="">&nbsp Help Center</a>
+                </div>
+                <div>
+                    <p class="footer2con ">© 2007-2021 G-mart.com</p>
+                </div>
+                <div>
+                    <img style="vertical-align:inherit" src="{% static 'images/5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

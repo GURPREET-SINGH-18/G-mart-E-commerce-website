@@ -1,0 +1,619 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'productall.css' %}">
+    <title>G-mart | You Desire We Deliver</title>
+</head>
+
+<body>
+    <!-- Navbar-1 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid ps-5 ms-5">
+            <a class="navbar-brand ps-5 ms-5" href="/">G-Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" id="searchbar">
+                <input class="form-control me-2" width="400px" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success bi bi-search" type="submit"></button>
+
+            </form>
+            <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item pe-4">
+                        <a href="" type="button" class="btn btn-outline-light">LOGIN</a>
+                    </li>
+                    <li class="nav-item dropdown pe-4">
+                        <a class="nav-link dropdown-toggle drp" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a href="" type="button" class="btn btn-dark position-relative bi bi-cart3"> Cart
+                            <span class="badge bg-danger rounded-pill">0</span>
+                            </span>
+                        </a>
+                        <!-- <a class="nav-link " href="#"></a> -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-2 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5 nav2">
+        <div class="container-fluid ps-5 ms-5 pe-5 me-5">
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/mobile">Mobiles</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/fashion/Men">Men</a></li>
+                        <li><a class="dropdown-item" href="/fashion/Women">Women</a></li>
+                        <!-- <li> -->
+                        <!-- <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/fashion/Kids">Kids</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/tablet">Tablets</a></li>
+                        <li><a class="dropdown-item" href="/headphone">Headphones</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/camera">Camera</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <div class="dropdown">
+                    <a class="dropdown-toggle drp nav2link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/television">Televisions</a></li>
+                        <li><a class="dropdown-item" href="/washingmachine">Washing Machine</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="/refrigerator">Refrigerator</a></li>
+                        <li><a class="dropdown-item" href="/airconditioner">Air conditioner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center citem">
+                <a class="nav2link" href="/books">Books</a>
+            </div>
+        </div>
+    </nav>
+    <!-- all item in div -->
+    <div class="maincon" height="5000px">
+        <div class="d-flex flex-row">
+            <div class="leftcon">
+                <img width="100%" height="" src="{% static 'images/laptopleft.jpg' %}" alt="">
+            </div>
+            <div class="rightcon">
+                <div class="rightcondiv1">
+                    <p>
+                        Shop from a wide range of laptops from HP, Dell, Lenovo, Realme, Asus, Acer, Vaio & more at
+                        India's Best Online Shopping Store. Avail benefits such as free shipping, no cost EMI, product
+                        exchange, extended warranty and assured buyback. G-mart offers laptops for all kinds of need-
+                        Students, Work, Gaming, Thin & Light, Premium etc. Buy laptops that fit in your budget and
+                        explore best deals- Under 30,000, Under 40,000 & Under 50,000. Shop laptop by latest processors
+                        and built- Intel Laptops & Ryzen Powered Laptops.
+
+                        Choose among: Business Laptops | Entertainment Laptops | Gaming Laptops | Everyday use laptops
+
+                        Trending: Back to College Season, Realme Book(slim), Laptops at upto 40% Off, Acer Aspire 7,
+                        Asus Chromebook
+
+                        GST Invoice Available! Save up to 28% with GST input credit on business Purchase. Check out our
+                        Laptops and Desktops GST Store
+                    </p>
+                    <div class="d-flex flex-row">
+                        <h1>Laptops &nbsp</h1>
+                        <p style="margin-bottom: 8px; vertical-align: baseline; line-height: 24.4px">(Showing 1 – 6
+                            products of 6 products)</p>
+                    </div>
+                    <div class="d-flex flex-row" style="width:'100px'">
+                        <h2 class="sortbyhead">Sort by</h2>
+                        <div class="sortby">Popularity</div>
+                        <div class="sortby">Price -- Low to High</div>
+                        <div class="sortby">Price -- High to Low</div>
+                    </div>
+                </div>
+                <a class="divhigh" href="">
+                    {% for m in i %}
+                    <div class="cardd">
+                        <div class="row g-0">
+                            <div class="col-md-2 d-flex flex-column justify-content-center">
+                                <div class="d-flex justify-content-center" max-height="200px" max-width="200px">
+                                    <img src="{{m.img1.url}}" class="" width="180px" height="100%" alt="">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div style="padding-left: 25px;">
+                                    <h5 class="nav2link" style="margin: 0px;">{{m.product_name}}</h5>
+                                    <div class="d-flex flex-row">
+                                        <p class="card-text" style="margin-bottom: 0.2rem;"><span
+                                                class="badge bg-success">{{m.rating }} <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"
+                                                    style="vertical-align: baseline;">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg></span></p>
+                                        {% for j in r1 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in r2 %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <h6 style="color:#878787; font-size:14px;line-height: 28px;margin:0;">&nbsp
+                                            {{j}} Ratings & {{k}} Reviews</h6>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="divhigh"
+                                        style="font-size:14px;font-family: Roboto, Arial, sans-serif;line-height: 22px;margin: 4px;">
+                                        {%for m2 in m1%}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {%for i in m2%}
+                                        <li>{{i}}</li>
+                                        {%endfor%}
+                                        {% endif %}
+                                        {%endfor%}
+                                        <li>{{m.warranty}}</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="padding-left: 25px;">
+                                    <div class="d-flex flex-row">
+                                        <h5 style="font-family: Roboto, Arial, sans-serif;
+                                    font-size: 25px;
+                                    font-weight: 600;
+                                    line-height: 25px;">₹{{m.price}}&nbsp&nbsp&nbsp</h5>
+                                        <img height="21px" width="77px" style="padding-top:1px;"
+                                            src="{% static 'images/assured.png' %}" alt="">
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        {% for j in ep %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        {% for k in o %}
+                                        {% if forloop.counter == forloop.parentloop.counter %}
+                                        <p class="extraprices">{{j}}</p>
+                                        <p class="offer">&nbsp&nbsp{{k}}% off</p>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="rightcondiv1 downdiv" style="padding: 25px 25px; background-color:white">
+        <div>
+            <div>
+
+                <h2>Buy laptops online at the best prices in India</h2>
+
+                <div></div>
+
+                <div>Laptops, since the time of their advent, have managed to set a trend that completely altered the
+                    way people work with computers. The main reason behind this is the portability factor that leads to
+                    instant access to information. With time, many variants of laptops came into being, like
+                    the&nbsp;<span><a href="/laptops/~notebook/pr?sid=6bo,b5g">notebook</a></span>,&nbsp;<span><a
+                            href="/laptops/ultrabook~type/pr?sid=6bo,b5g">ultrabook</a></span>,&nbsp;<span><a
+                            href="/laptops/netbook~type/pr?sid=6bo,b5g">netbook</a>,<a
+                            href="/laptops/~2-in-1-laptops/pr?sid=6bo,b5g">2 in one Laptops</a></span>&nbsp;and more.
+                    Choosing the best laptop online that satisfies your requirements as a user is very important. The
+                    best laptop brands including <a href="/laptops/dell~brand/pr?sid=6bo,b5g">Dell
+                        Laptops</a>,&nbsp;<span><a href="/laptops/hp~brand/pr?sid=6bo,b5g">HP
+                            laptops</a></span>,&nbsp;<a href="/laptops/lenovo~brand/pr?sid=6bo,b5g"><span>Lenovo
+                            laptops</span></a>,&nbsp;<span><a href="/laptops/acer~brand/pr?sid=6bo,b5g">Acer
+                            laptops</a></span>,&nbsp;<span><a href="/laptops/apple~brand/pr?sid=6bo,b5g">Apple
+                            MacBooks</a></span>,<span><a href="/laptops/asus~brand/pr?sid=6bo,b5g"> Asus
+                            Laptops</a></span>&nbsp;and more, always assure you of quality service and can be blindly
+                    relied upon.</div>
+
+                <h2>Latest technology in laptops- Find the striking features &amp; specifications</h2>
+
+                <div>When you look to buy a laptop online, the first thing that you must consider is the kind of
+                    application you want to use it for. Is gaming your priority or you want the device for your business
+                    needs or travel or the like, or do you need one for usual everyday activities? After deciding on
+                    this, you must go to the next step of zeroing in on the specifications and features you want to in
+                    your laptop.</div>
+
+                <div></div>
+
+                <div>The operating system, processor type and RAM are the primary factors you must consider. Some of the
+                    popular operating systems used are Microsoft Windows 10, Windows 10 Pro and Mac OS while other
+                    open-source operating systems options are DOS, Linux and Ubuntu.</div>
+
+                <div></div>
+
+                <div>While selecting the right laptop processor for your application type, you can either choose from
+                    mainstream processors like AMD A8 and Intel Core i3 or, if you are looking for high-performance
+                    processors you can go for AMD A10, Intel Core i5 and Core i7.For everyday use laptops, AMD E1, E2,
+                    A4, A6, Intel Celeron Dual core and Pentium Quad Core should do the trick.</div>
+
+                <div></div>
+
+                <p><span><b>Multitasking and Processing requirement can be fulfilled by choosing RAM from various option
+                            ranging from 2GB to 16GB.</b></span></p>
+
+                <div></div>
+
+                <div>Other factors you should look for are the hard disk capacity (ranging from 32GB up to 2TB), screen
+                    size and the type of laptop. The type includes variants like notebooks, 2-in-1 laptops, netbooks,
+                    ultrabooks and <a href="/q/chromebook">Chromebooks</a>. A notebook is smaller than a briefcase and
+                    can be easily carried around and used in aeroplanes, libraries, etc. Ultrabook, the name coined by
+                    Intel, are stylish and sleek looking laptops which also give an impressive performance. A netbook is
+                    a small form computer that is aimed at very low intense processing requirements like word
+                    processing, running a Web browser and connecting wirelessly to the Internet.</div>
+
+                <div></div>
+
+                <div>Cloud computing is all over the place and a Chromebook lets you utilize this awesome technology.
+                    Chromebooks run on Google's Chrome OS and these have most applications and documents living in the
+                    cloud.<span>Laptops with and without touchscreen can also be chosen from. Other options include a
+                        Backlit keyboard, HD Webcam, Optical DVD drive, Number of USB ports, HDMI port availability and
+                        WLAN port availability.</span></div>
+
+                <div></div>
+
+                <h2><span>The best laptops to invest in</span></h2>
+
+                <div>Unarguably, the top brands under laptops are always the go-to for finding the best laptop model you
+                    can invest in. Apart from the aforementioned brands, Dell, Asus, Microsoft, Micromax, i-ball are
+                    other laptops that are reliable and worthy of their price.</div>
+
+                <div></div>
+
+                <div>You can choose from a deluge of great models like the HP Core i3 6th Gen- this one is a good
+                    investment for those who are looking for budget laptops aimed at everyday normal use. It has a
+                    robust configuration, good battery back-up, ample storage at an affordable price.</div>
+
+                <div></div>
+
+                <div>The Lenovo Ideapad 110 laptop (Core i3 6th Gen) is another good option. This is a decently priced
+                    laptop and is great for entertainment-related usage. It houses a powerful processor and can hence
+                    take on multitasking with ease. It also has excellent battery back up.</div>
+
+                <div></div>
+
+                <div>The Apple MacBook Air Core i5 5th Gen is one model which is always an entirely reliable option.
+                    From its slim and stylish look to its great performance, the MacBook is go-to for those who look for
+                    great quality.</div>
+
+                <div>The Acer ES 15 Core i3 6th Gen is another budget-friendly laptop which is worthy of its price. It
+                    boasts of outstanding battery backup, superior RAM, fast processor and much more.</div>
+
+                <div></div>
+
+                <div>The aforementioned models are only some of the top trending models of the day. Apart from them,
+                    many other latest models like HP APU Quad Core E2 6th Gen, Dell Inspiron Core i3 6th Gen, Micromax
+                    Canvas Laptop II (WIFI) Atom 4th Gen and many more are also available at the best laptop prices
+                    online.</div>
+
+                <div></div>
+
+                <p><span><b>Types of laptops based on application</b></span></p>
+
+                <div></div>
+
+                <div>These days, with the gaming mania spreading really fast, gaming freaks are bent upon getting the
+                    best gaming laptop online from the plethora of choices.</div>
+
+                <h2><span>How to buy a gaming laptop?</span></h2>
+
+                <div></div>
+
+                <div><b>Answer: Look for the following specifications:</b></div>
+
+                <div></div>
+
+                <div>1. GPU( Graphics Card): This is the most important aspect you must check on a gaming laptop. Choose
+                    from AMD Radeon and NVIDIA GeForce graphics to get high-quality experience.</div>
+
+                <div>2. Processor(CPU): You can choose between Intel and AMD. A quad-core i5 processor would be enough
+                    for most gamers. An octa-core i7 will give the best power output.</div>
+
+                <div>3.RAM: 8GB RAM is the basic and better choice for gaming. But if you aim to stream your games, or
+                    do a lot of video editing, you can go for 12GB or 16GB RAM.</div>
+
+                <div>4. Drive: You must always go for SSD over HDD owing to the speed boost it can give for booting up
+                    and loading games.</div>
+
+                <div>Some of the best gaming laptop brands that you can purchase are&nbsp;<span><a
+                            href="/laptops/alienware~brand/pr?sid=6bo,b5g">Alienware</a></span>,&nbsp;<span><a
+                            href="/laptops/msi~brand/pr?sid=6bo,b5g">MSI</a></span>, Predator, ROG – Republic of gamers,
+                    Omen and Legion.</div>
+
+                <div></div>
+
+                <div>Other types are laptops used primarily for business or travel, everyday use, for better performance
+                    and multitasking and more.</div>
+
+                <h3></h3>
+
+                <p>Laptops - Frequently Asked Questions</p>
+
+                <p><b>&nbsp;1. Which is the best laptop to buy under Rs 50,000?</b></p>
+
+                <p>Answer: While buying a laptop online, you must consider what application you want to use it for. Do
+                    you want to buy a laptop for your business needs, everyday activities or gaming? Once you decide
+                    this, you can zero in on the specifications and features. Under Rs 50,000 there is a wide range of
+                    laptop from top brands that you can choose from. Some of the good models are HP Imprint Core i3 6th
+                    Gen laptop, Acer Aspire 3 Celeron Dual Core laptop, Dell Inspiron Core i3 6th Gen and many more
+                    options can be found under 50,000.</p>
+
+                <p><b>2. Which laptop is best for gaming?</b></p>
+
+                <p>Answer: These are some of the factors you should look into while buying a gaming laptop:</p>
+
+                <p>GPU (Graphics Processing Unit)- choose from AMD Radeon and NVIDIA GeForce and the like, the CPU for
+                    assuring smooth performance- choose from Intel, AMD and the like, RAM – the amount of RAM is
+                    important for smooth gaming. Go for laptops like Acer Predator Helios 300 Core i7 7th Gen, MSI CX
+                    Core i7 7th Gen, Lenovo Legion Core i7 7th Gen among others.</p>
+
+                <p><b>3. How can I increase my laptop's speed? It is a Windows-based device.</b></p>
+
+                <p>Answer: To increase the speed of a laptop you can do the following activities:</p>
+
+                <p>i) Clean your laptop- remove all software that you are not using on a regular basis. Use a PC cleaner
+                    and optimization tool like CC Cleaner to clean up your PC.</p>
+
+                <p><span>ii) Keep your Windows OS updated.</span></p>
+
+                <p>iii) Increase your RAM if possible.</p>
+
+                <p><span>iv) Check with a malware scanner if your PC is affected by some malware infection or rogue
+                        programs.</span></p>
+
+                <p>Follow the above steps in order to ensure better performance of your laptop.</p>
+
+                <p><b>4. What is the difference between an engineering laptop and one for art students?</b></p>
+
+                <p>Answer: Engineering students need to install and use a number of technical software like CAD,
+                    AutoCAD, ANSYS, Solidworks, MATLAB and the like for various designing and project related work.
+                    Hence, a lot of disk space and smooth and fast operation are necessary. Hence, choosing a laptop
+                    with high-speed CPU, large RAM, large hard-disk drive memory are essential. Good options are HP 15
+                    Core i5 6th Gen Notebook, Lenovo core i5 7th Gen Notebook, Dell Inspiron 7000 core Notebook, Apple
+                    MacBook Air Core i5 5th Gen laptop and more.</p>
+
+                <p>Arts students install and use a lot of designing software like Photoshop, Indesign, Lightroom and the
+                    like for their design and editing work. You can opt for an i3 core processor laptop like HP Pentium
+                    quad-core notebook, Dell Inspiron Core i3 6th Gen Notebook, Lenovo Core i3 6th Gen Ideapad Notebook
+                    among others.</p>
+
+                <p><b>5. What are the factors to be considered before buying a laptop?</b></p>
+
+                <p>Answer: Based on what application your laptop is to be used for, you can buy one with an appropriate
+                    RAM, processor, storage type and so on:</p>
+
+                <p>i) <b>Processor:</b> If you are buying a laptop only for your everyday activities and do not plan to
+                    install a lot of software that might take up a huge space inside, then you can go for 13 or 15
+                    processors from Intel. On the other hand, if you are into gaming and also want to install many
+                    spaces consuming software, then go to i7. AMD and ARM are also other good processor brands.</p>
+
+                <p>ii) <b>RAM:</b> If you are buying a <a href="/q/macbook">MacBook </a>where it is not possible to
+                    expand the RAM post buying, then buy one with maximum RAM. Otherwise, a laptop from Lenovo, HP,
+                    Dell, Asus etc., with 16GB RAM should serve the purpose. The RAM can always be expanded in future.
+                </p>
+
+                <p>iii) Storage type: If your applications are not very heavy on the software side, you can go for an
+                    HDD type storage. Otherwise, it is best to go for SSD type storage. SSDs make everything
+                    significantly faster. It speeds up the computer a lot.&nbsp;</p>
+
+                <p><b>Laptop with Processors</b>:</p>
+
+                <p><a href="/computers/laptops/~best-dell-i3-laptops/pr?sid=6bo,b5g" title="Dell i3 laptops">Dell i3
+                        Laptops</a>, <a href="/computers/laptops/~best-dell-i5-laptops/pr?sid=6bo,b5g"
+                        title="Dell i5 laptops">Dell i5 Laptops</a>, <a
+                        href="/computers/laptops/~best-dell-i7-laptops/pr?sid=6bo,b5g" title="Dell i7 laptops">Dell i7
+                        Laptops</a>, <a href="/computers/laptops/~best-lenovo-i3-laptops/pr?sid=6bo,b5g"
+                        title="Lenovo i3 laptops">Lenovo i3 Laptops</a>, <a
+                        href="/computers/laptops/~best-lenovo-i5-laptops/pr?sid=6bo,b5g"
+                        title="Lenovo i5 laptops">Lenovo i5 Laptops</a>, <a
+                        href="/computers/laptops/~best-lenovo-i7-laptops/pr?sid=6bo,b5g"
+                        title="Lenovo i7 laptops">Lenovo i7 Laptops</a>, <a
+                        href="/computers/laptops/~best-hp-i3-laptops/pr?sid=6bo,b5g" title="HP i3 laptops">HP i3
+                        Laptops</a>, <a href="/computers/laptops/~best-hp-i5-laptops/pr?sid=6bo,b5g"
+                        title="HP i5 laptops">HP i5 Laptops</a>, <a
+                        href="/computers/laptops/~best-hp-i7-laptops/pr?sid=6bo,b5g" title="HP i7 laptops">HP i7
+                        Laptops</a>, <a href="/computers/laptops/~best-asus-i3-laptops/pr?sid=6bo,b5g"
+                        title="Asus i3 laptops">Asus i3 Laptops</a>, <a
+                        href="/computers/laptops/~best-asus-i5-laptops/pr?sid=6bo,b5g" title="Asus i5 laptops">Asus i5
+                        Laptops</a>, <a href="/computers/laptops/~best-asus-i7-laptops/pr?sid=6bo,b5g"
+                        title="Asus i7 laptops">Asus i7 Laptops</a>, <a
+                        href="/computers/laptops/~best-acer-i5-laptops/pr?sid=6bo,b5g" title="Acer i5 laptops">Acer i5
+                        Laptops</a>, <a href="/computers/laptops/~best-acer-i7-laptops/pr?sid=6bo,b5g"
+                        title="Acer i7 laptops">Acer i7 Laptops</a></p>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footerdiv">
+            <div class="footerdiv1 d-flex flex-row">
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            ABOUT
+                        </div>
+                        <a href="">Contact Us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">G-mart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">G-mart Wholesales</a>
+                        <a href="">Corporate Information</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            HELP
+                        </div>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringement</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            POLICY
+                        </div>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms Of Use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column">
+                        <div class="footersubhead">
+                            SOCIAL
+                        </div>
+                        <a href="">Facebook</a>
+                        <a href="">Twitter</a>
+                        <a href="">YouTube</a>
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="border-left: 1px solid  #454D5E; padding: 0 25px 0 25px;">
+                        <div class="footersubhead">
+                            Mail Us:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerdivcon">
+                    <div class="d-flex flex-column" style="margin: 0 0 10px 0;
+                    padding: 0 0 0 14px;
+                    ">
+                        <div class="footersubhead">
+                            Registered Office Address:
+                        </div>
+                        <div style="white-space: nowrap;">
+                            <p>G-mart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                            </p>
+                            <p>Bengaluru, 560103,</p>
+                            <p>Karnataka, India</p>
+                            <p style="margin: 0px; padding: 0px; line-height: 1.5;">CIN : U51109KA2012PTC066107</p>
+                            <p style="margin: 0px; line-height: 1.5;">Telephone: <a
+                                    style="margin: 0px;line-height: 1.5;color: #2874F0;" href="">1800 202 9898</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerdiv2 d-flex justify-content-evenly" width="100%">
+                <div class="footer2con d-flex align-items-baseline" style="vertical-align: baseline;">
+                    <img src="{% static 'images/1.svg' %}" alt="">
+                    <a href="">&nbsp Sell On G-mart</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/2.svg' %}" alt="">
+                    <a href="">&nbsp Advertise</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/3.svg' %}" alt="">
+                    <a href="">&nbsp Gift Cards</a>
+                </div>
+                <div class="footer2con d-flex align-items-baseline">
+                    <img src="{% static 'images/4.svg' %}" alt="">
+                    <a href="">&nbsp Help Center</a>
+                </div>
+                <div>
+                    <p class="footer2con ">© 2007-2021 G-mart.com</p>
+                </div>
+                <div>
+                    <img style="vertical-align:inherit" src="{% static 'images/5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
